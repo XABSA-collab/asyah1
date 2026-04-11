@@ -7,42 +7,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--teal:#1a8fa0;--teal-dark:#0d6e80;--teal-deeper:#0b3d3d;--teal-light:#2ab5cc;--teal-pale:#e0f5f8;--text:#1a2f2f;--muted:#5a8585}
-body{font-family:"Noto Kufi Arabic",Tahoma,sans-serif;direction:rtl;background:#f0f6f8;color:var(--text)}
+:root{--teal:#1a6b6b;--teal-dark:#0d5252;--teal-deeper:#0b3d3d;--teal-light:#2a8080;--teal-pale:#e0f0f0;--text:#1a2f2f;--muted:#5a8585}
+body{font-family:"Noto Kufi Arabic",Tahoma,sans-serif;direction:rtl;background:#f0f4f4;color:var(--text)}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(226,75,74,0.6)}70%{box-shadow:0 0 0 8px rgba(226,75,74,0)}100%{box-shadow:0 0 0 0 rgba(226,75,74,0)}}
-.top-info{background:#071f1f;padding:6px 1.5rem;display:flex;align-items:center;justify-content:space-between;font-family:"Noto Kufi Arabic",sans-serif;font-size:12px;color:#7ecfca;border-bottom:1px solid rgba(255,255,255,0.06)}
+.top-info{background:#061e1e;padding:6px 1.5rem;display:flex;align-items:center;justify-content:space-between;font-family:"Noto Kufi Arabic",sans-serif;font-size:12px;color:#e0f0f0;border-bottom:1px solid rgba(255,255,255,0.06)}
 .top-bar{background:var(--teal-deeper);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:62px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{height:44px;object-fit:contain}
-.brand-name{font-size:15px;font-weight:700;color:#fff;line-height:1.3}
-.brand-name span{display:block;font-size:11px;color:#7ecfca;font-weight:400}
-nav{background:var(--teal);position:sticky;top:0;z-index:200}
+.brand-name{font-size:15px;font-weight:700;color:#e0f0f0;line-height:1.3}
+.brand-name span{display:block;font-size:11px;color:#e0f0f0;font-weight:400;opacity:0.8}
+nav{background:#165858;position:sticky;top:0;z-index:200}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:stretch;justify-content:center;height:52px}
 .nav-item{position:relative}
-.nav-btn{height:52px;padding:0 16px;background:none;border:none;cursor:pointer;font-family:"Noto Kufi Arabic",sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.9);display:flex;align-items:center;gap:5px;white-space:nowrap;transition:background 0.15s;text-decoration:none;border-bottom:3px solid transparent}
+.nav-btn{height:52px;padding:0 16px;background:none;border:none;cursor:pointer;font-family:"Noto Kufi Arabic",sans-serif;font-size:13px;font-weight:600;color:#e0f0f0;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:background 0.15s;text-decoration:none;border-bottom:3px solid transparent}
 .nav-btn:hover,.nav-btn.open{background:rgba(0,0,0,0.15);color:#fff;border-bottom-color:#fff}
 .arr{font-size:9px;transition:transform 0.2s}
 .nav-btn.open .arr{transform:rotate(180deg)}
 .dropdown{display:none;position:absolute;top:100%;right:0;background:#fff;border-top:3px solid var(--teal-light);border-radius:0 0 10px 10px;padding:6px;min-width:230px;box-shadow:0 8px 28px rgba(0,0,0,0.13);z-index:300}
 .dropdown.show{display:block}
-.dd-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:6px;font-size:13px;font-weight:500;color:#1a5f6f;text-decoration:none;transition:background 0.12s;font-family:"Noto Kufi Arabic",sans-serif}
+.dd-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:6px;font-size:13px;font-weight:500;color:#1a5555;text-decoration:none;transition:background 0.12s;font-family:"Noto Kufi Arabic",sans-serif}
 .dd-item:hover{background:var(--teal-pale);color:var(--teal-dark)}
 .dd-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-light);flex-shrink:0}
-.dd-divider{height:0.5px;background:#d0eaf0;margin:4px 0}
+.dd-divider{height:0.5px;background:#d0e8e8;margin:4px 0}
 .dd-new{font-size:10px;padding:2px 7px;border-radius:100px;background:#faeeda;color:#854f0b;margin-right:auto}
-.hero{position:relative;height:300px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0b3d3d 0%,#1a8fa0 40%,#2ab5cc 70%,#0d6e80 100%)}
-.hero-content{position:relative;z-index:2;text-align:center;padding:0 2rem}
-.hero-content h1{font-size:40px;font-weight:700;color:#fff;margin-bottom:10px}
-.hero-content p{font-size:14px;color:rgba(255,255,255,0.85);max-width:680px;margin:0 auto;line-height:1.8}
-.hero-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
-.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4)}
+.hero{position:relative;height:300px;overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.7s ease;z-index:1}
+.slide.active{opacity:1;z-index:2}
+.slide-content{position:relative;z-index:2;text-align:center;padding:0 2rem;pointer-events:none}
+.slide-content h1{font-size:40px;font-weight:700;color:#fff;margin-bottom:10px}
+.slide-content p{font-size:14px;color:#e0f0f0;max-width:680px;margin:0 auto;line-height:1.8}
+.hero-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;border:none}
 .hero-dot.active{background:#fff;width:24px;border-radius:4px}
 .content{max-width:1200px;margin:0 auto;padding:1.5rem}
 .sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.sec-title{font-size:18px;font-weight:700;color:#0b5060;display:flex;align-items:center;gap:10px}
+.sec-title{font-size:18px;font-weight:700;color:#0b3d3d;display:flex;align-items:center;gap:10px}
 .icon{width:28px;height:28px;flex-shrink:0}
-.sec-more{font-size:13px;font-weight:600;color:var(--teal);text-decoration:none;border:1.5px solid var(--teal);padding:6px 16px;border-radius:6px;transition:background 0.15s}
+.sec-more{font-size:13px;font-weight:600;color:#1a6b6b;text-decoration:none;border:1.5px solid #1a6b6b;padding:6px 16px;border-radius:6px;transition:background 0.15s}
 .sec-more:hover{background:var(--teal);color:#fff}
 .services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:2rem}
 .svc-card{background:#fff;border-radius:12px;padding:20px 16px;text-align:center;cursor:pointer;text-decoration:none;color:inherit;transition:transform 0.18s,box-shadow 0.18s;border:1.5px solid transparent;display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -50,7 +51,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
 .svc-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px}
 .svc-title{font-size:13px;font-weight:600;color:var(--text)}
 .svc-desc{font-size:11px;color:var(--muted)}
-.rayat-band{background:linear-gradient(135deg,var(--teal-deeper) 0%,var(--teal-dark) 100%);border-radius:14px;padding:20px 24px;margin-bottom:2rem}
+.rayat-band{background:linear-gradient(135deg,#0b3d3d 0%,#0d5252 100%);border-radius:14px;padding:20px 24px;margin-bottom:2rem}
 .rayat-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .rayat-head h2{font-size:16px;font-weight:700;color:#fff}
 .rayat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -58,24 +59,24 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
 .r-card:hover{background:rgba(255,255,255,0.18)}
 .r-card .r-icon{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .wide-links{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem}
-.w-link{background:#fff;border:1.5px solid #c8e8ed;border-radius:10px;padding:13px 18px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;font-family:"Noto Kufi Arabic",sans-serif;transition:border-color 0.15s}
+.w-link{background:#fff;border:1.5px solid #c0e0e0;border-radius:10px;padding:13px 18px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;font-family:"Noto Kufi Arabic",sans-serif;transition:border-color 0.15s}
 .w-link:hover{border-color:var(--teal)}
 .w-link .new{font-size:11px;padding:2px 10px;border-radius:100px;background:#e24b4a;color:#fff;margin-right:auto}
 .tl-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:2rem}
-.tl-card{background:#fff;border:1.5px solid #c8e8ed;border-radius:10px;padding:14px;text-align:center;border-top:4px solid var(--teal-light)}
+.tl-card{background:#fff;border:1.5px solid #c0e0e0;border-radius:10px;padding:14px;text-align:center;border-top:4px solid var(--teal-light)}
 .tl-title{font-size:12px;font-weight:600;color:var(--teal-dark);margin-bottom:6px;line-height:1.5}
 .tl-dates{font-size:11px;color:var(--muted);line-height:1.8}
 .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:2rem}
-.news-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);border:1px solid #d8eef2}
+.news-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);border:1px solid #c8e8e8}
 .news-img{height:200px;overflow:hidden}
 .news-img img{width:100%;height:100%;object-fit:cover}
 .news-body{padding:16px}
 .news-date{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:10px}
 .news-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.7;margin-bottom:12px}
 .news-more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none}
-.news-mid{background:linear-gradient(135deg,var(--teal-dark),var(--teal));border-radius:12px;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center}
-.qb-btn{width:46px;height:46px;border-radius:10px 0 0 10px;background:var(--teal);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:18px;box-shadow:-3px 3px 12px rgba(0,0,0,0.15);transition:width 0.2s;text-decoration:none}
-.qb-btn:hover{background:var(--teal-dark);width:54px}
+.news-mid{background:linear-gradient(135deg,#0d5252,#1a6b6b);border-radius:12px;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center}
+.qb-btn{width:46px;height:46px;border-radius:10px 0 0 10px;background:#1a6b6b;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:18px;box-shadow:-3px 3px 12px rgba(0,0,0,0.15);transition:width 0.2s;text-decoration:none}
+.qb-btn:hover{background:#0d5252;width:54px}
 #search-input{transition:width 0.3s,padding 0.3s,opacity 0.3s}
 @media(max-width:800px){
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -92,19 +93,19 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
 <!-- شريط التاريخ والوقت -->
 <div class="top-info">
   <div style="display:flex;align-items:center;gap:14px">
-    <span id="ksa-time" style="color:#b0e0e6;font-weight:700;min-width:90px"></span>
-    <span style="color:rgba(255,255,255,0.15)">|</span>
-    <span id="ksa-date-m" style="color:#8ecfca"></span>
-    <span style="color:rgba(255,255,255,0.15)">|</span>
-    <span id="ksa-date-h" style="color:#8ecfca"></span>
+    <span id="ksa-time" style="color:#e0f0f0;font-weight:700;min-width:90px"></span>
+    <span style="color:rgba(224,240,240,0.3)">|</span>
+    <span id="ksa-date-m" style="color:#e0f0f0"></span>
+    <span style="color:rgba(224,240,240,0.3)">|</span>
+    <span id="ksa-date-h" style="color:#e0f0f0"></span>
   </div>
   <div style="display:flex;align-items:center;gap:14px">
-    <span style="color:#7ecfca;display:flex;align-items:center;gap:5px">
+    <span style="color:#e0f0f0;display:flex;align-items:center;gap:5px">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7a6aba6b4bea6afeab3b1b3a487b3b1b3a4e9a0a8b1e9b4a6">[email&#160;protected]</a>
     </span>
-    <span style="color:rgba(255,255,255,0.15)">|</span>
-    <a href="tel:0163972804" style="color:#7ecfca;text-decoration:none;display:flex;align-items:center;gap:5px">
+    <span style="color:rgba(224,240,240,0.3)">|</span>
+    <a href="tel:0163972804" style="color:#e0f0f0;text-decoration:none;display:flex;align-items:center;gap:5px">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       0163972804
     </a>
@@ -118,7 +119,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
       <input id="search-input" type="text" placeholder="ابحث في البوابة..."
         style="width:0;padding:0;border:none;background:rgba(255,255,255,0.12);border-radius:20px;color:#fff;font-family:'Noto Kufi Arabic',sans-serif;font-size:12px;outline:none;opacity:0;direction:rtl"
         oninput="doSearch(this.value)" onblur="closeSearch()">
-      <div style="width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:#b0dde6" onclick="toggleSearch()">
+      <div style="width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:#e0f0f0" onclick="toggleSearch()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </div>
       <div id="search-results" style="display:none;position:absolute;top:44px;right:0;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.15);min-width:280px;max-height:300px;overflow-y:auto;z-index:500;font-family:'Noto Kufi Arabic',sans-serif"></div>
@@ -170,17 +171,41 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
 </nav>
 
 <!-- Hero -->
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h1>البوابة الإلكترونية</h1>
-    <p>الكلية التقنية بالأسياح — جميع الخدمات والروابط الإدارية في مكان واحد</p>
+<div class="hero" id="hero-slider">
+  <!-- شريحة 1 -->
+  <div class="slide active" style="background:linear-gradient(135deg,#0b3d3d 0%,#1a6b6b 40%,#2a8080 70%,#0d5252 100%)">
+    <div class="slide-content">
+      <h1>البوابة الإلكترونية</h1>
+      <p>الكلية التقنية بالأسياح — جميع الخدمات والروابط الإدارية في مكان واحد</p>
+    </div>
   </div>
+  <!-- شريحة 2 — روابط رايات -->
+  <div class="slide" style="background:linear-gradient(135deg,#0d5252 0%,#0b3d3d 50%,#164040 100%);cursor:pointer" onclick="document.querySelector('.rayat-band').scrollIntoView({behavior:'smooth'})">
+    <div class="slide-content">
+      <div style="font-size:36px;margin-bottom:12px;opacity:0.9">🔗</div>
+      <h1 style="font-size:30px">روابط الدخول على نظام رايات</h1>
+      <p>اضغط للانتقال مباشرة إلى روابط رايات</p>
+      <div style="margin-top:16px;display:inline-block;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);padding:8px 24px;border-radius:20px;font-size:13px;color:#fff;font-family:'Noto Kufi Arabic',sans-serif">انتقل الآن ←</div>
+    </div>
+  </div>
+  <!-- شريحة 3 — الخدمات -->
+  <div class="slide" style="background:linear-gradient(135deg,#1a6b6b 0%,#0b3d3d 50%,#0d5252 100%);cursor:pointer" onclick="document.getElementById('services-grid').style.display='grid';document.getElementById('svc-toggle').textContent='−';document.querySelector('.services-grid').scrollIntoView({behavior:'smooth'})">
+    <div class="slide-content">
+      <div style="font-size:36px;margin-bottom:12px;opacity:0.9">⚙️</div>
+      <h1 style="font-size:30px">الخدمات الإلكترونية</h1>
+      <p>اضغط للانتقال إلى جميع الخدمات المتاحة</p>
+      <div style="margin-top:16px;display:inline-block;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);padding:8px 24px;border-radius:20px;font-size:13px;color:#fff;font-family:'Noto Kufi Arabic',sans-serif">استعرض الخدمات ←</div>
+    </div>
+  </div>
+  <!-- النقاط -->
   <div class="hero-dots">
-    <div class="hero-dot active"></div>
-    <div class="hero-dot"></div>
-    <div class="hero-dot"></div>
+    <div class="hero-dot active" onclick="goSlide(0)"></div>
+    <div class="hero-dot" onclick="goSlide(1)"></div>
+    <div class="hero-dot" onclick="goSlide(2)"></div>
   </div>
+  <!-- أسهم -->
+  <button onclick="nextSlide()" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;z-index:5">‹</button>
+  <button onclick="prevSlide()" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;z-index:5">›</button>
 </div>
 
 <div class="content">
@@ -192,7 +217,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
   </div>
   <div class="rayat-band" style="margin-bottom:2rem">
     <div class="rayat-head">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.15)"/><path d="M5 12h14M12 5v14" stroke="#7ecfca" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.15)"/><path d="M5 12h14M12 5v14" stroke="#7ec0b8" stroke-width="2.5" stroke-linecap="round"/></svg>
       <h2>روابط الدخول على نظام رايات</h2>
     </div>
     <div class="rayat-grid">
@@ -219,44 +244,44 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
 
   <!-- الخدمات الإلكترونية -->
   <div style="margin-bottom:2rem">
-    <div class="sec-header">
+    <div class="sec-header" onclick="toggleServices()" style="cursor:pointer">
       <div class="sec-title">
-        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a8fa0" opacity=".15"/><path d="M7 14h14M14 7v14" stroke="#1a8fa0" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a6b6b" opacity=".15"/><path d="M7 14h14M14 7v14" stroke="#1a6b6b" stroke-width="2.5" stroke-linecap="round"/></svg>
         الخدمات الإلكترونية
       </div>
-      <a class="sec-more" href="#">← جميع الخدمات</a>
+      <div id="svc-toggle" style="width:28px;height:28px;border-radius:50%;background:#1a6b6b;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:300;transition:transform 0.3s;flex-shrink:0">−</div>
     </div>
-    <div class="services-grid">
+    <div id="services-grid" class="services-grid" style="transition:opacity 0.3s">
       <a class="svc-card" href="https://drive.google.com/file/d/1qB29DS_JEaPunmVk55xYaSM2WQPu8ok6/view" target="_blank">
-        <div class="svc-icon" style="background:#e8f7fb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="svc-icon" style="background:#e4f0f0"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
         <div class="svc-title">دليل المتدرب</div><div class="svc-desc">الدليل الشامل للمتدربين</div>
       </a>
       <a class="svc-card" href="https://drive.google.com/drive/folders/1FDnI_SUlU3aqGy5y0Hn1AOX8xj39MWCs?usp=sharing" target="_blank">
-        <div class="svc-icon" style="background:#e8f0fb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="svc-icon" style="background:#e4efef"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
         <div class="svc-title">الخطط التدريبية</div><div class="svc-desc">خطط الفصل الدراسي</div>
       </a>
       <a class="svc-card" href="https://lms.elearning.edu.sa" target="_blank">
-        <div class="svc-icon" style="background:#edf8e8"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="svc-icon" style="background:#e4f0ee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <div class="svc-title">التدريب الإلكتروني</div><div class="svc-desc">منصة التعلم الإلكتروني</div>
       </a>
       <a class="svc-card" href="https://ethaq.tvtc.gov.sa/ethaqplus/index.php/login" target="_blank">
-        <div class="svc-icon" style="background:#f0f8e8"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div class="svc-icon" style="background:#eaf0ee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
         <div class="svc-title">إيثاق</div><div class="svc-desc">نظام إيثاق المؤسسة</div>
       </a>
       <a class="svc-card" href="https://alasyah.my.canva.site/file-explorer-172-17-20-45" target="_blank">
-        <div class="svc-icon" style="background:#f8f0e8"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+        <div class="svc-icon" style="background:#eef0ea"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         <div class="svc-title">مجلد المشاركة</div><div class="svc-desc">الملفات المشتركة</div>
       </a>
       <a class="svc-card" href="https://t.me/+h_cMFk4etnM3ZGI0" target="_blank">
-        <div class="svc-icon" style="background:#e8f3fb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+        <div class="svc-icon" style="background:#e4eeee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
         <div class="svc-title">Telegram المتدربين</div><div class="svc-desc">قناة شؤون المتدربين</div>
       </a>
       <a class="svc-card" href="https://forms.office.com/r/aacpqZTfQ8" target="_blank">
-        <div class="svc-icon" style="background:#fef5e8"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="svc-icon" style="background:#eef0e8"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <div class="svc-title">الخدمات والصيانة</div><div class="svc-desc">طلبات الصيانة</div>
       </a>
       <a class="svc-card" href="https://drive.google.com/file/d/1kTjnmke1yzA6NE5xObYZ_g81JGr_Dfi8/view?usp=sharing" target="_blank">
-        <div class="svc-icon" style="background:#fce8ec"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="svc-icon" style="background:#e8eeee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <div class="svc-title">التحويلات الهاتفية</div><div class="svc-desc">دليل أرقام الكلية</div>
       </a>
     </div>
@@ -266,26 +291,26 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
   <div style="margin-bottom:2rem">
     <div class="sec-header">
       <div class="sec-title">
-        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a8fa0" opacity=".15"/><path d="M8 10h12M8 14h8M8 18h5" stroke="#1a8fa0" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a6b6b" opacity=".15"/><path d="M8 10h12M8 14h8M8 18h5" stroke="#1a6b6b" stroke-width="2" stroke-linecap="round"/></svg>
         استبانات قياس تجربة المستفيد
       </div>
     </div>
     <div class="wide-links">
       <a class="w-link" href="https://forms.office.com/r/BFXLd07ie4" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
         استبانة قياس تجربة المستفيد (المتدرب) – مرحلة القبول والتسجيل
       </a>
       <a class="w-link" href="https://forms.office.com/r/Mq0JiE40jR" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
         استبانة قياس تجربة المستفيد (المتدرب) – مرحلة التدريب
       </a>
       <a class="w-link" href="https://forms.office.com/r/KGp5HnUeUL" target="_blank" style="border-color:#e24b4a">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
         استبانة قياس تجربة المستفيد (المتدرب) – لخدمة الأنشطة 2025
         <span class="new">جديد</span>
       </a>
       <a class="w-link" href="https://forms.office.com/r/BYSLAFKSns?origin=lprLink" target="_blank" style="border-color:#e24b4a">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a8fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
         قياس رضا المتدربين عن العملية التدريبية
         <span class="new">جديد</span>
       </a>
@@ -296,7 +321,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
   <div style="margin-bottom:2rem">
     <div class="sec-header">
       <div class="sec-title">
-        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a8fa0" opacity=".15"/><path d="M7 8h14M7 13h10M7 18h7" stroke="#1a8fa0" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a6b6b" opacity=".15"/><path d="M7 8h14M7 13h10M7 18h7" stroke="#1a6b6b" stroke-width="2" stroke-linecap="round"/></svg>
         الأخبار
       </div>
       <a class="sec-more" href="https://twitter.com/tvtc_g_alasyah" target="_blank">← جميع الأخبار</a>
@@ -308,7 +333,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
           <div class="news-date">📅 أبريل 2026</div>
           <p class="news-title">شاركت الكلية التقنية بمحافظة الأسياح في المرحلة السابعة عشرة من حملة #أرض_القصيم_خضراء</p>
           <a href="https://twitter.com/tvtc_g_alasyah" target="_blank" class="news-more">
-            <span style="width:22px;height:22px;background:#1a8fa0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>
+            <span style="width:22px;height:22px;background:#1a6b6b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>
             اقرأ المزيد
           </a>
         </div>
@@ -324,7 +349,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
           <div class="news-date">📅 فبراير 2026</div>
           <p class="news-title">جانب من احتفاء منسوبي الكلية التقنية بمحافظة الأسياح بـ #يوم_التأسيس</p>
           <a href="https://twitter.com/tvtc_g_alasyah" target="_blank" class="news-more">
-            <span style="width:22px;height:22px;background:#1a8fa0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>
+            <span style="width:22px;height:22px;background:#1a6b6b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>
             اقرأ المزيد
           </a>
         </div>
@@ -336,7 +361,7 @@ nav{background:var(--teal);position:sticky;top:0;z-index:200}
   <div style="margin-bottom:2rem">
     <div class="sec-header">
       <div class="sec-title">
-        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a8fa0" opacity=".15"/><path d="M14 7v7l4 4" stroke="#1a8fa0" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a6b6b" opacity=".15"/><path d="M14 7v7l4 4" stroke="#1a6b6b" stroke-width="2.5" stroke-linecap="round"/></svg>
         الخط الزمني — الفصل التدريبي الثاني 1446 هـ
       </div>
     </div>
@@ -425,7 +450,7 @@ function doSearch(q){
   if(!q.trim()){box.style.display='none';return;}
   const res=searchData.filter(d=>d.t.includes(q));
   if(!res.length){box.innerHTML='<div style="padding:14px;color:#888;font-size:13px;text-align:center">لا توجد نتائج</div>';box.style.display='block';return;}
-  box.innerHTML=res.map(d=>`<a href="${d.u}" target="_blank" style="display:flex;align-items:center;gap:10px;padding:10px 14px;text-decoration:none;color:#1a2f2f;font-size:13px;border-bottom:0.5px solid #f0f0f0" onmouseover="this.style.background='#e8f7fb'" onmouseout="this.style.background=''">${d.t}</a>`).join('');
+  box.innerHTML=res.map(d=>`<a href="${d.u}" target="_blank" style="display:flex;align-items:center;gap:10px;padding:10px 14px;text-decoration:none;color:#1a2f2f;font-size:13px;border-bottom:0.5px solid #f0f0f0" onmouseover="this.style.background='#e4f0f0'" onmouseout="this.style.background=''">${d.t}</a>`).join('');
   box.style.display='block';
 }
 function toggleDD(btn,id){
@@ -433,6 +458,28 @@ function toggleDD(btn,id){
   document.querySelectorAll('.nav-btn').forEach(b=>{if(b!==btn)b.classList.remove('open')});
   document.getElementById(id).classList.toggle('show');
   btn.classList.toggle('open');
+}
+let currentSlide=0;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.hero-dot');
+function goSlide(n){
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide=n;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+function nextSlide(){goSlide((currentSlide+1)%slides.length);}
+function prevSlide(){goSlide((currentSlide-1+slides.length)%slides.length);}
+setInterval(()=>nextSlide(),5000);
+function toggleServices(){
+  const grid=document.getElementById('services-grid');
+  const btn=document.getElementById('svc-toggle');
+  const hidden=grid.style.display==='none';
+  grid.style.display=hidden?'grid':'none';
+  grid.style.opacity=hidden?'1':'0';
+  btn.textContent=hidden?'−':'+';
+  btn.style.transform=hidden?'rotate(0deg)':'rotate(45deg)';
 }
 document.addEventListener('click',e=>{
   if(!e.target.closest('.nav-item')){

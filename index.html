@@ -371,17 +371,25 @@ nav{background:#165858;position:sticky;top:0;z-index:200}
         الخط الزمني — الفصل التدريبي الثاني 1446 هـ
       </div>
     </div>
-    <div class="tl-grid">
-      <div class="tl-card"><div class="tl-title">التسجيل أونلاين للمستمرين</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
-      <div class="tl-card"><div class="tl-title">طلبات تغيير التخصص والتأجيل والنقل</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
-      <div class="tl-card"><div class="tl-title">إتاحة التسجيل — الفترة الأولى</div><div class="tl-dates">من 1447/07/03<br>حتى 1447/07/16</div></div>
-      <div class="tl-card"><div class="tl-title">إتاحة التسجيل — الفترة الثانية</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/08/12</div></div>
-      <div class="tl-card"><div class="tl-title">إعادة القيد</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
-      <div class="tl-card"><div class="tl-title">التحويل من صباحي إلى مسائي</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
-      <div class="tl-card"><div class="tl-title">معادلة المقررات</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/08/19</div></div>
-      <div class="tl-card"><div class="tl-title">الانسحاب من مقرر</div><div class="tl-dates">من 1447/08/13<br>حتى 1447/09/09</div></div>
-      <div class="tl-card" style="grid-column:span 2"><div class="tl-title">الانسحاب الفصلي</div><div class="tl-dates">من 1447/07/29 حتى 1447/10/14</div></div>
-      <div class="tl-card" style="grid-column:span 2"><div class="tl-title">طلب المتدربين إعادة القيد</div><div class="tl-dates">من 1447/07/24 حتى 1447/07/28</div></div>
+    <!-- صف 1: 4 بطاقات -->
+    <div class="tl-grid" style="margin-bottom:10px">
+      <div class="tl-card" data-end="14470728"><div class="tl-title">التسجيل أونلاين للمستمرين</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
+      <div class="tl-card" data-end="14470728"><div class="tl-title">طلبات تغيير التخصص والتأجيل والنقل</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
+      <div class="tl-card" data-end="14470716"><div class="tl-title">إتاحة التسجيل — الفترة الأولى</div><div class="tl-dates">من 1447/07/03<br>حتى 1447/07/16</div></div>
+      <div class="tl-card" data-end="14470812"><div class="tl-title">إتاحة التسجيل — الفترة الثانية</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/08/12</div></div>
+    </div>
+    <!-- صف 2: 4 بطاقات -->
+    <div class="tl-grid" style="margin-bottom:10px">
+      <div class="tl-card" data-end="14470728"><div class="tl-title">إعادة القيد</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
+      <div class="tl-card" data-end="14470728"><div class="tl-title">التحويل من صباحي إلى مسائي</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
+      <div class="tl-card" data-end="14470819"><div class="tl-title">معادلة المقررات</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/08/19</div></div>
+      <div class="tl-card" data-end="14470909"><div class="tl-title">الانسحاب من مقرر</div><div class="tl-dates">من 1447/08/13<br>حتى 1447/09/09</div></div>
+    </div>
+    <!-- صف 3: 3 بطاقات -->
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+      <div class="tl-card" data-end="14471014"><div class="tl-title">الانسحاب الفصلي</div><div class="tl-dates">من 1447/07/29<br>حتى 1447/10/14</div></div>
+      <div class="tl-card" data-end="14470728"><div class="tl-title">طلب المتدربين إعادة القيد</div><div class="tl-dates">من 1447/07/24<br>حتى 1447/07/28</div></div>
+      <div class="tl-card" data-end="14471225"><div class="tl-title">طلب طي قيد</div><div class="tl-dates">حتى 1447/12/25</div></div>
     </div>
   </div>
 
@@ -493,6 +501,36 @@ document.addEventListener('click',e=>{
     document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('open'));
   }
 });
+
+// Mark expired timeline cards
+(function(){
+  const now = new Date();
+  const hijriParts = new Intl.DateTimeFormat('en-u-ca-islamic',{
+    year:'numeric',month:'2-digit',day:'2-digit',timeZone:'Asia/Riyadh'
+  }).formatToParts(now);
+  let hy='',hm='',hd='';
+  hijriParts.forEach(p=>{
+    if(p.type==='year')hy=p.value;
+    if(p.type==='month')hm=p.value.padStart(2,'0');
+    if(p.type==='day')hd=p.value.padStart(2,'0');
+  });
+  const todayNum = parseInt(hy+hm+hd);
+  document.querySelectorAll('.tl-card[data-end]').forEach(card=>{
+    const endNum = parseInt(card.dataset.end);
+    if(todayNum > endNum){
+      card.style.opacity='0.7';
+      const badge = document.createElement('div');
+      badge.textContent='منتهي';
+      badge.style.cssText='display:inline-block;background:#e24b4a;color:#fff;font-size:10px;padding:2px 8px;border-radius:100px;margin-top:6px;font-family:"Helvetica Arabic",sans-serif';
+      card.querySelector('.tl-dates').insertAdjacentElement('afterend', badge);
+    } else if(todayNum >= parseInt(card.dataset.end.slice(0,8)) && todayNum <= endNum){
+      const badge = document.createElement('div');
+      badge.textContent='جارٍ الآن';
+      badge.style.cssText='display:inline-block;background:#1a6b6b;color:#fff;font-size:10px;padding:2px 8px;border-radius:100px;margin-top:6px;font-family:"Helvetica Arabic",sans-serif';
+      card.querySelector('.tl-dates').insertAdjacentElement('afterend', badge);
+    }
+  });
+})();
 </script>
 </body>
 </html>

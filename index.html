@@ -108,7 +108,7 @@ nav{background:#165858;position:sticky;top:0;z-index:200}
   <div style="display:flex;align-items:center;gap:14px">
     <span style="color:#1a6b6b;display:flex;align-items:center;gap:5px">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7a6aba6b4bea6afeab3b1b3a487b3b1b3a4e9a0a8b1e9b4a6">[email&#160;protected]</a>
+      <span id="em"></span>
     </span>
     <span style="color:#c0d0d0">|</span>
     <a href="tel:0163972804" style="color:#1a6b6b;text-decoration:none;display:flex;align-items:center;gap:5px">
@@ -530,6 +530,14 @@ document.addEventListener('click',e=>{
       card.querySelector('.tl-dates').insertAdjacentElement('afterend', badge);
     }
   });
+})();
+
+// Write email to prevent Cloudflare obfuscation
+(function(){
+  var u='alasyah-tvtc';
+  var d='tvtc.gov.sa';
+  var el=document.getElementById('em');
+  if(el) el.textContent=u+'@'+d;
 })();
 </script>
 </body>

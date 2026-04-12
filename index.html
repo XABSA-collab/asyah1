@@ -173,6 +173,8 @@ nav{background:#0b3d3d;position:sticky;top:0;z-index:200;box-shadow:0 3px 16px r
       </div>
     </div>
     <a class="nav-btn" href="https://drive.google.com/file/d/1VYoRtS_DYN2cwgvjsJbGj1jbteRz1zxD/view?usp=sharing" target="_blank">التقويم التدريبي</a>
+    <a class="nav-btn" href="https://tvtc.gov.sa/ar/Pages/default1.aspx" target="_blank">بوابة المؤسسة</a>
+    <a class="nav-btn" href="#" onclick="event.preventDefault();document.getElementById('vision-modal').style.display='flex'">الرؤية والرسالة</a>
   </div>
 </nav>
 
@@ -864,5 +866,37 @@ function renderCountdown(){
 renderCountdown();
 setInterval(renderCountdown, 60000);
 </script>
+
+<!-- مودال الرؤية والرسالة -->
+<div id="vision-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:16px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+    <div style="background:#0b3d3d;padding:20px 24px;border-radius:16px 16px 0 0;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:17px;font-weight:700;color:#e0f0f0;font-family:'Helvetica Arabic',sans-serif">الرؤية والرسالة</div>
+      <button onclick="document.getElementById('vision-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#e0f0f0;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+    </div>
+    <div style="padding:24px;font-family:'Helvetica Arabic',sans-serif;direction:rtl">
+      <div style="margin-bottom:24px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="width:4px;height:28px;background:#0b3d3d;border-radius:2px"></div>
+          <h3 style="font-size:16px;font-weight:700;color:#0b3d3d;margin:0">الرؤية</h3>
+        </div>
+        <p style="font-size:14px;color:#2a4040;line-height:2;margin:0">الإسهام الفاعل في التنمية الاقتصادية والاجتماعية والبيئية بتوفير التدريب التقني والمهني لأبناء وبنات الوطن بالجودة والكفاية التي يتطلبها سوق العمل، وتحقيق ريادة عالمية تكفل الاستقلالية والاكتفاء الذاتي.</p>
+      </div>
+      <div style="border-top:1px solid #e0f0f0;padding-top:24px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+          <div style="width:4px;height:28px;background:#0b3d3d;border-radius:2px"></div>
+          <h3 style="font-size:16px;font-weight:700;color:#0b3d3d;margin:0">الرسالة</h3>
+        </div>
+        <p style="font-size:14px;color:#2a4040;line-height:2;margin-bottom:14px">تسعى المؤسسة العامة للتدريب التقني والمهني إلى:</p>
+        <ol style="font-size:14px;color:#2a4040;line-height:2.2;padding-right:20px;margin:0">
+          <li>تقديم وتطوير وترخيص البرامج التدريبية التقنية والمهنية؛ حسب الطلب الكمي والنوعي لسوق العمل للذكور والإناث، وسن التنظيمات المختصة بجودتها وكفايتها والإشراف عليها.</li>
+          <li>توعية المجتمع بأهمية التدريب التقني والمهني وإتاحة فرصة التدرب لجميع الفئات العمرية بغض النظر عن الوضع المهني أو الوظيفي والتشجيع على العمل الحر.</li>
+          <li>القيام بالأبحاث والمشاريع الضرورية لمتابعة التطورات التقنية والتوجهات العالمية في مجال التدريب التقني والمهني.</li>
+          <li>المشاركة في البرامج الوطنية التي تتبنى نقل وتوطين التقنية وتوفير الدعم لها ودعم وتشجيع القطاع الخاص للاستثمار في مجال التدريب التقني والمهني.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

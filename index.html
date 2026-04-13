@@ -286,10 +286,10 @@ nav{background:#0b3d3d;position:sticky;top:0;z-index:200;box-shadow:0 3px 16px r
         <div class="svc-icon" style="background:#eaf0ee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
         <div class="svc-title">إيثاق</div><div class="svc-desc">منصة البيانات والتحقق المؤسسي</div>
       </a>
-      <a class="svc-card" href="https://alasyah.my.canva.site/file-explorer-172-17-20-45" target="_blank">
+      <div class="svc-card" onclick="document.getElementById('share-overlay').style.display='flex'" style="cursor:pointer">
         <div class="svc-icon" style="background:#eef0ea"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         <div class="svc-title">مجلد المشاركة</div><div class="svc-desc">ملفات وموارد الكلية المشتركة</div>
-      </a>
+      </div>
       <a class="svc-card" href="https://t.me/+h_cMFk4etnM3ZGI0" target="_blank">
         <div class="svc-icon" style="background:#e4eeee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
         <div class="svc-title">Telegram المتدربين</div><div class="svc-desc">تواصل مع إدارة شؤون المتدربين</div>
@@ -301,6 +301,34 @@ nav{background:#0b3d3d;position:sticky;top:0;z-index:200;box-shadow:0 3px 16px r
       <a class="svc-card" href="https://sportal.tvtc.gov.sa/my.logout.php3?errorcode=19" target="_blank">
         <div class="svc-icon" style="background:#e8eeee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 22V12h6v10"/><path d="M9 7h1"/><path d="M14 7h1"/></svg></div>
         <div class="svc-title">بوابة الموظفين</div><div class="svc-desc">بدون ربط مع المؤسسة</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- روابط مفيدة -->
+  <div style="margin-bottom:2rem">
+    <div class="sec-header">
+      <div class="sec-title">
+        <svg class="icon" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1a6b6b" opacity=".15"/><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#1a6b6b" stroke-width="2" stroke-linecap="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#1a6b6b" stroke-width="2" stroke-linecap="round"/></svg>
+        روابط مفيدة
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+      <a href="https://www.vision2030.gov.sa/ar/" target="_blank" class="svc-card">
+        <div class="svc-icon" style="background:#e8f4f4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="svc-title">رؤية 2030</div><div class="svc-desc">البوابة الرسمية لرؤية المملكة</div>
+      </a>
+      <a href="https://neti.etec.gov.sa/" target="_blank" class="svc-card">
+        <div class="svc-icon" style="background:#e8f4f4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="svc-title">هيئة تقويم التعليم والتدريب</div><div class="svc-desc">ETEC - اختبارات وتقييم</div>
+      </a>
+      <a href="https://www.office.com/" target="_blank" class="svc-card">
+        <div class="svc-icon" style="background:#e8f4f4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
+        <div class="svc-title">Microsoft 365</div><div class="svc-desc">تطبيقات Office السحابية</div>
+      </a>
+      <a href="https://www.google.com/" target="_blank" class="svc-card">
+        <div class="svc-icon" style="background:#e8f4f4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="svc-title">Google</div><div class="svc-desc">محرك البحث العالمي</div>
       </a>
     </div>
   </div>
@@ -429,7 +457,7 @@ nav{background:#0b3d3d;position:sticky;top:0;z-index:200;box-shadow:0 3px 16px r
         <button onclick="closeOrg()" style="background:#e8f4f4;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;color:#0b3d3d">×</button>
       </div>
       <div style="background:#196767;color:#e0f0f0;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;margin-bottom:8px">وكالة الجودة</div>
-      <div style="background:#e8f4f4;color:#4a7070;border-radius:8px;padding:12px 14px;font-size:12px;text-align:center">لم يظهر تقسيم داخلي في الهيكل التنظيمي</div>
+      <div style="background:#e8f4f4;color:#4a7070;border-radius:8px;padding:12px 14px;font-size:12px;text-align:center">—</div>
     </div>
 
     <div id="org5" class="org-modal" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:16px;padding:28px;min-width:320px;max-width:460px;width:90%;z-index:1000;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
@@ -1165,6 +1193,24 @@ function closeOrg(){
 <div style="position:relative;text-align:center;padding:20px;margin-top:10px">
   <div id="credit-btn" style="display:inline-block;width:80px;height:8px;border-radius:4px;background:#d0e8e8;cursor:pointer;transition:background 0.2s" onmouseenter="this.style.background='#b0d8d8';document.getElementById('credit-card').style.opacity='1';document.getElementById('credit-card').style.transform='translateY(0)'" onmouseleave="this.style.background='#d0e8e8';document.getElementById('credit-card').style.opacity='0';document.getElementById('credit-card').style.transform='translateY(6px)'"></div>
   <div id="credit-card" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%) translateY(6px);background:#0b3d3d;color:#e0f0f0;font-size:12px;font-family:'Helvetica Arabic',Tahoma,sans-serif;padding:8px 18px;border-radius:20px;white-space:nowrap;opacity:0;transition:opacity 0.25s,transform 0.25s;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,0.15)">تصميم الموقع م/عبدالله سعد الشبرمي</div>
+</div>
+
+<!-- مودال مجلد المشاركة -->
+<div id="share-overlay" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:16px;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family:'Helvetica Arabic',Tahoma,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+      <div style="font-size:16px;font-weight:700;color:#0b3d3d">مجلد المشاركة</div>
+      <button onclick="document.getElementById('share-overlay').style.display='none'" style="background:#e8f4f4;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;color:#0b3d3d">×</button>
+    </div>
+    <div style="background:#f0f8f8;border:1px solid #c0e0e0;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#2a4040;line-height:2">
+      للوصول إلى ملفات المشاركة، تأكد أنك متصل بشبكة الكلية الداخلية.<br>
+      ثم انسخ الرابط التالي وافتحه في <strong>File Explorer</strong>:
+    </div>
+    <div style="background:#0b3d3d;border-radius:8px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+      <code style="color:#e0f0f0;font-size:14px;font-family:monospace;direction:ltr">\\172.17.20.19</code>
+      <button onclick="navigator.clipboard.writeText('\\\\172.17.20.19');this.textContent='✓ تم';setTimeout(()=>{this.textContent='نسخ'},2000)" style="background:#196767;border:none;color:#e0f0f0;font-size:12px;padding:6px 14px;border-radius:6px;cursor:pointer;white-space:nowrap">نسخ</button>
+    </div>
+  </div>
 </div>
 </body>
 </html>

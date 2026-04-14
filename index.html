@@ -1221,49 +1221,5 @@ function closeOrg(){
     </div>
   </div>
 </div>
-<script>
-// === صوت نقر ماوس حقيقي ===
-(function(){
-  var audioCtx;
-  function playMouseClick(){
-    try{
-      if(!audioCtx) audioCtx=new(window.AudioContext||window.webkitAudioContext)();
-      var t=audioCtx.currentTime;
-      var bufSize=audioCtx.sampleRate*0.035;
-      var buf=audioCtx.createBuffer(1,bufSize,audioCtx.sampleRate);
-      var data=buf.getChannelData(0);
-      for(var i=0;i<bufSize;i++){
-        var p=i/bufSize;
-        // نبضة حادة تنطفئ بسرعة مثل نقرة ماوس ميكانيكية
-        data[i]=(Math.random()*2-1)*Math.pow(1-p,18)*0.7;
-        // اضافة نقرة اولية حادة
-        if(i<bufSize*0.08) data[i]+=(Math.random()*2-1)*0.5*Math.pow(1-p*12,3);
-      }
-      var src=audioCtx.createBufferSource();
-      src.buffer=buf;
-      // فلتر لجعل الصوت اكثر واقعية
-      var hp=audioCtx.createBiquadFilter();
-      hp.type='highpass';
-      hp.frequency.value=2500;
-      hp.Q.value=0.5;
-      var lp=audioCtx.createBiquadFilter();
-      lp.type='lowpass';
-      lp.frequency.value=6000;
-      var gain=audioCtx.createGain();
-      gain.gain.setValueAtTime(0.6,t);
-      gain.gain.exponentialRampToValueAtTime(0.001,t+0.03);
-      src.connect(hp);
-      hp.connect(lp);
-      lp.connect(gain);
-      gain.connect(audioCtx.destination);
-      src.start(t);
-    }catch(e){}
-  }
-  document.addEventListener('click',function(e){
-    var t=e.target.closest('a,button,.nav-btn,.svc-card,.r-card,.w-link,.dd-item,.hero-dot,.news-card,.news-more,.sec-more,.qb-btn,.tl-card');
-    if(t) playMouseClick();
-  });
-})();
-</script>
 </body>
 </html>

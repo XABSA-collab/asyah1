@@ -749,19 +749,11 @@ function updateClock(){
   const days=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
   const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
   document.getElementById('ksa-date-m').textContent=days[ksa.getDay()]+'، '+ksa.getDate()+' '+months[ksa.getMonth()]+' '+ksa.getFullYear();
-  const hijri=new Intl.DateTimeFormat('en-u-ca-islamic',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).formatToParts(ksa);
-  // Use Arabic locale directly for Hijri
-  const hijriAr = new Intl.DateTimeFormat('ar-SA-u-ca-islamic',{
+  // Hijri date: use Arabic locale then replace Arabic-Indic numerals with Western
+  const hijriStr = new Intl.DateTimeFormat('ar-SA-u-ca-islamic',{
     day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'
-  }).format(ksa);
-  // Extract only numbers for day and year, keep Arabic month
-  const hijriParts2 = new Intl.DateTimeFormat('en-u-ca-islamic',{
-    day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'
-  }).formatToParts(ksa);
-  const hm2={'Muharram':'محرم','Safar':'صفر','Rabi al-Awwal':'ربيع الأول','Rabi al-Thani':'ربيع الثاني','Jumada al-Awwal':'جمادى الأولى','Jumada al-Thani':'جمادى الثانية','Rajab':'رجب','Shaaban':'شعبان','Ramadan':'رمضان','Shawwal':'شوال','Dhu al-Qidah':'ذو القعدة',"Dhu al-Qi'dah":'ذو القعدة','Dhu al-Hijjah':'ذو الحجة'};
-  let hd2='',hmo2='',hy2='';
-  hijriParts2.forEach(p=>{if(p.type==='day')hd2=p.value;if(p.type==='month')hmo2=hm2[p.value]||p.value;if(p.type==='year')hy2=p.value;});
-  document.getElementById('ksa-date-h').textContent=hd2+' '+hmo2+' '+hy2+' هـ';
+  }).format(ksa).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/\s*هـ\s*$/,'');
+  document.getElementById('ksa-date-h').textContent=hijriStr+' هـ';
 }
 updateClock();setInterval(updateClock,1000);
 

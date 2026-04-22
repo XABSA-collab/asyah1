@@ -747,10 +747,18 @@ function updateClock(){
   const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
   document.getElementById('ksa-date-m').textContent=days[ksa.getDay()]+'، '+ksa.getDate()+' '+months[ksa.getMonth()]+' '+ksa.getFullYear();
   const hijri=new Intl.DateTimeFormat('en-u-ca-islamic',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).formatToParts(ksa);
-  const hm={'Muharram':'محرم','Safar':'صفر','Rabi al-Awwal':'ربيع الأول','Rabi al-Thani':'ربيع الثاني','Jumada al-Awwal':'جمادى الأولى','Jumada al-Thani':'جمادى الثانية','Rajab':'رجب','Shaaban':'شعبان','Ramadan':'رمضان','Shawwal':'شوال','Dhu al-Qidah':'ذو القعدة','Dhu al-Hijjah':'ذو الحجة'};
-  let hd='',hmo='',hy='';
-  hijri.forEach(p=>{if(p.type==='day')hd=p.value;if(p.type==='month')hmo=hm[p.value]||p.value;if(p.type==='year')hy=p.value;});
-  document.getElementById('ksa-date-h').textContent=hd+' '+hmo+' '+hy+' هـ';
+  // Use Arabic locale directly for Hijri
+  const hijriAr = new Intl.DateTimeFormat('ar-SA-u-ca-islamic',{
+    day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'
+  }).format(ksa);
+  // Extract only numbers for day and year, keep Arabic month
+  const hijriParts2 = new Intl.DateTimeFormat('en-u-ca-islamic',{
+    day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'
+  }).formatToParts(ksa);
+  const hm2={'Muharram':'محرم','Safar':'صفر','Rabi al-Awwal':'ربيع الأول','Rabi al-Thani':'ربيع الثاني','Jumada al-Awwal':'جمادى الأولى','Jumada al-Thani':'جمادى الثانية','Rajab':'رجب','Shaaban':'شعبان','Ramadan':'رمضان','Shawwal':'شوال','Dhu al-Qidah':'ذو القعدة',"Dhu al-Qi'dah":'ذو القعدة','Dhu al-Hijjah':'ذو الحجة'};
+  let hd2='',hmo2='',hy2='';
+  hijriParts2.forEach(p=>{if(p.type==='day')hd2=p.value;if(p.type==='month')hmo2=hm2[p.value]||p.value;if(p.type==='year')hy2=p.value;});
+  document.getElementById('ksa-date-h').textContent=hd2+' '+hmo2+' '+hy2+' هـ';
 }
 updateClock();setInterval(updateClock,1000);
 
@@ -884,7 +892,7 @@ function renderCal(){
   // Hijri month name
   const firstDay = new Date(calYear, calMonth, 1);
   const hijriParts = new Intl.DateTimeFormat('en-u-ca-islamic',{month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).formatToParts(firstDay);
-  const hm={'Muharram':'محرم','Safar':'صفر','Rabi al-Awwal':'ربيع الأول','Rabi al-Thani':'ربيع الثاني','Jumada al-Awwal':'جمادى الأولى','Jumada al-Thani':'جمادى الثانية','Rajab':'رجب','Shaaban':'شعبان','Ramadan':'رمضان','Shawwal':'شوال','Dhu al-Qidah':'ذو القعدة','Dhu al-Hijjah':'ذو الحجة'};
+  const hm={'Muharram':'محرم','Safar':'صفر','Rabi al-Awwal':'ربيع الأول','Rabi al-Thani':'ربيع الثاني','Jumada al-Awwal':'جمادى الأولى','Jumada al-Thani':'جمادى الثانية','Rajab':'رجب','Shaaban':'شعبان','Ramadan':'رمضان','Shawwal':'شوال','Dhu al-Qidah':'ذو القعدة','Dhu al-Qi\'dah':'ذو القعدة','Dhu al-Hijjah':'ذو الحجة'};
   let hijriStr='';
   hijriParts.forEach(p=>{if(p.type==='month')hijriStr=hm[p.value]||p.value;if(p.type==='year')hijriStr+=' '+p.value+' هـ';});
   document.getElementById('cal-hijri-month').textContent = hijriStr;

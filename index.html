@@ -52,6 +52,52 @@ html body #hero-slider .slide-content,
 html body #hero-slider .slide-content * {
   color: #025E87 !important;
 }
+
+/* ---------- First-paint loader overlay ----------
+   Visible from the very first frame, blurs the page beneath
+   for exactly 1 second, then fades out (250ms) and is
+   removed from the DOM by the inline script in <body>. */
+#first-paint-loader {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important;
+  background: rgba(245, 250, 252, 0.78) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 1;
+  transition: opacity 250ms ease;
+  pointer-events: auto;
+}
+#first-paint-loader.fp-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+#first-paint-loader .fp-spinner {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  border: 3px solid rgba(2, 94, 135, 0.18) !important;
+  border-top-color: #025E87 !important;
+  box-sizing: border-box !important;
+  animation: fp-spin 0.9s linear infinite;
+}
+@keyframes fp-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #first-paint-loader .fp-spinner { animation-duration: 1.8s; }
+}
 </style>
 
 <title>البوابة الإلكترونية — الكلية التقنية بمحافظة الأسياح</title>
@@ -1582,7 +1628,22 @@ body.site-high-contrast .org-redesign-wrap{
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&amp;display=swap" rel="stylesheet"/>
 </head>
-<body><a class="skip-link" href="#main-content" id="skip-to-content">تخطي إلى المحتوى</a>
+<body><div id="first-paint-loader" aria-hidden="true" role="presentation"><div class="fp-spinner"></div></div>
+<script>
+/* First-paint loader: 1000ms visible, 250ms fade, then removed from DOM.
+   Self-contained, no dependencies, runs the instant parser hits this script. */
+(function(){
+  var L = document.getElementById('first-paint-loader');
+  if(!L) return;
+  setTimeout(function(){
+    L.classList.add('fp-fading');
+    setTimeout(function(){
+      if(L && L.parentNode){ L.parentNode.removeChild(L); }
+    }, 260);
+  }, 1000);
+})();
+</script>
+<a class="skip-link" href="#main-content" id="skip-to-content">تخطي إلى المحتوى</a>
 <!-- شريط التاريخ والوقت -->
 <div class="top-info rebuilt-top-info">
 <div class="site-shell top-info-shell">

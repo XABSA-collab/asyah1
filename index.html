@@ -1726,7 +1726,7 @@ body.site-high-contrast .org-redesign-wrap{
 <div class="nav-inner">
 <a class="nav-btn" href="https://tvtc.gov.sa/ar/Pages/default1.aspx" target="_blank">بوابة المؤسسة</a>
 <a class="nav-btn" href="#" onclick="event.preventDefault();document.getElementById('vision-modal').style.display='flex'">الرؤية والرسالة</a>
-<a class="nav-btn" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank">بوابة الموظفين</a>
+<a class="nav-btn" data-employee-portal="true" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank">بوابة الموظفين</a>
 <a class="nav-btn" href="https://mail.tvtc.gov.sa/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.tvtc.gov.sa%2fowa%2f" target="_blank">البريد الإلكتروني</a>
 <div class="nav-item">
 <button class="nav-btn" onclick="toggleDD(this,'dd1')">رايات <span class="arr">▾</span></button>
@@ -1766,6 +1766,15 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- شريحة 1 -->
 <div class="slide active" style="background:linear-gradient(135deg,#005B85,#0271A2)">
 <div class="slide-content" style="pointer-events:auto">
+<!-- ====== EMPLOYEE PORTAL HERO BUTTON — visible at top, hidden on scroll ====== -->
+<div class="hero-employee-portal-wrap">
+<a class="hero-employee-portal-btn" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank" rel="noopener" aria-label="بوابة الموظفين">
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12a4.9 4.9 0 1 0 0-9.8 4.9 4.9 0 0 0 0 9.8zm0 2.2c-3.3 0-9.8 1.6-9.8 4.9v2.7h19.6v-2.7c0-3.3-6.5-4.9-9.8-4.9z"/></svg>
+<span>بوابة الموظفين</span>
+</a>
+</div>
+<div id="hero-employee-sentinel" aria-hidden="true"></div>
+<!-- ====== /EMPLOYEE PORTAL HERO BUTTON ====== -->
 <h1>البوابة الإلكترونية</h1>
 <p>الكلية التقنية بمحافظة الأسياح — جميع الخدمات والروابط الإدارية في مكان واحد</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px">
@@ -1779,33 +1788,8 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 </div>
 </div>
-<!-- شريحة 2 — روابط رايات -->
-<div class="slide" onclick="document.querySelector('.rayat-band').scrollIntoView({behavior:'smooth'})" style="background:linear-gradient(135deg,#005B85 0%,#0271A2 100%);cursor:pointer">
-<div class="slide-content">
-<svg fill="none" height="48" stroke="#EAF5FA" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="margin-bottom:12px;opacity:0.9" viewbox="0 0 24 24" width="48"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-<h1 style="font-size:30px">روابط الدخول على نظام رايات</h1>
-<p>اضغط للانتقال مباشرة إلى روابط رايات</p>
-<div style="margin-top:16px;display:inline-block;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);padding:8px 24px;border-radius:20px;font-size:13px;color:#fff;font-family: 'Helvetica Neue W23 for SKY',sans-serif">انتقل الآن ←</div>
-</div>
-</div>
-<!-- شريحة 3 — الخدمات -->
-<div class="slide" onclick="document.getElementById('services-grid').style.display='grid';document.getElementById('svc-toggle').textContent='−';document.querySelector('.services-grid').scrollIntoView({behavior:'smooth'})" style="background:linear-gradient(135deg,#005B85 0%,#0271A2 100%);cursor:pointer">
-<div class="slide-content">
-<svg fill="none" height="48" stroke="#EAF5FA" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="margin-bottom:12px;opacity:0.9" viewbox="0 0 24 24" width="48"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-<h1 style="font-size:30px">الخدمات الإلكترونية</h1>
-<p>اضغط للانتقال إلى جميع الخدمات المتاحة</p>
-<div style="margin-top:16px;display:inline-block;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);padding:8px 24px;border-radius:20px;font-size:13px;color:#fff;font-family: 'Helvetica Neue W23 for SKY',sans-serif">استعرض الخدمات ←</div>
-</div>
-</div>
-<!-- النقاط -->
-<div class="hero-dots">
-<div class="hero-dot active" onclick="goSlide(0)"></div>
-<div class="hero-dot" onclick="goSlide(1)"></div>
-<div class="hero-dot" onclick="goSlide(2)"></div>
-</div>
-<!-- أسهم -->
-<button onclick="nextSlide()" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;z-index:5">‹</button>
-<button onclick="prevSlide()" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;z-index:5">›</button>
+<!-- ====== تم حذف الشريحتين 2 و 3 (رايات + الخدمات) بناءً على طلب الإبقاء على صفحة واحدة فقط ====== -->
+<!-- ====== تم حذف نقاط التنقل (hero-dots) وأسهم التالي/السابق لعدم الحاجة إليها ====== -->
 </div>
 <div class="content" id="main-content">
 <!-- الاستبانة -->
@@ -2591,15 +2575,16 @@ let currentSlide=0;
 const slides=document.querySelectorAll('.slide');
 const dots=document.querySelectorAll('.hero-dot');
 function goSlide(n){
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
+  if(slides.length<=1)return;
+  if(slides[currentSlide])slides[currentSlide].classList.remove('active');
+  if(dots[currentSlide])dots[currentSlide].classList.remove('active');
   currentSlide=n;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
+  if(slides[currentSlide])slides[currentSlide].classList.add('active');
+  if(dots[currentSlide])dots[currentSlide].classList.add('active');
 }
-function nextSlide(){goSlide((currentSlide+1)%slides.length);}
-function prevSlide(){goSlide((currentSlide-1+slides.length)%slides.length);}
-setInterval(()=>nextSlide(),5000);
+function nextSlide(){if(slides.length<=1)return;goSlide((currentSlide+1)%slides.length);}
+function prevSlide(){if(slides.length<=1)return;goSlide((currentSlide-1+slides.length)%slides.length);}
+if(slides.length>1){setInterval(()=>nextSlide(),5000);}
 function toggleServices(){
   const grid=document.getElementById('services-grid');
   const btn=document.getElementById('svc-toggle');
@@ -6875,6 +6860,144 @@ html body .survey-card.hide-survey-card{
   display:none !important;
 }
 
+/* ================================================================
+   EMPLOYEE PORTAL — Prominent hero button + scroll-linked nav reveal
+   ================================================================
+   Behavior:
+     - At top of page: large pill button shown inside hero (above <h1>),
+       nav link `[data-employee-portal="true"]` is hidden.
+     - On scroll past hero: pill fades out, nav link slides in next to
+       "الرؤية والرسالة" via body.scrolled-past-hero (added by JS).
+   To remove this feature entirely:
+     - Delete this block.
+     - Remove .hero-employee-portal-wrap, .hero-employee-portal-btn,
+       and #hero-employee-sentinel from the first slide-content.
+     - Remove the data-employee-portal="true" attribute from the nav <a>.
+     - Remove the matching IntersectionObserver block from
+       FORCE-LIGHT-THEME-SCRIPT.
+   ---------------------------------------------------------------- */
+
+/* Hero button container */
+html body .hero-employee-portal-wrap{
+  display:flex !important;
+  justify-content:center !important;
+  width:100% !important;
+  margin:0 auto 18px !important;
+  max-height:80px;
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .4s ease, transform .4s ease,
+             max-height .4s ease, margin .4s ease;
+  position:relative;
+  z-index:5;
+}
+
+/* The button itself — pill with brand gradient */
+html body .hero-employee-portal-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  padding:13px 30px !important;
+  background:linear-gradient(135deg,#224877 0%,#2cb3a5 100%) !important;
+  color:#ffffff !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  font-weight:700 !important;
+  font-size:16px !important;
+  line-height:1 !important;
+  border-radius:999px !important;
+  text-decoration:none !important;
+  box-shadow:0 6px 20px rgba(34,72,119,.28),
+             0 2px 6px rgba(44,179,165,.22) !important;
+  transition:transform .25s ease, box-shadow .25s ease, background .35s ease !important;
+  position:relative;
+  isolation:isolate;
+  border:1.5px solid rgba(255,255,255,.35) !important;
+}
+html body .hero-employee-portal-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px rgba(34,72,119,.40),
+             0 4px 10px rgba(44,179,165,.30) !important;
+  background:linear-gradient(135deg,#2cb3a5 0%,#224877 100%) !important;
+  color:#ffffff !important;
+}
+html body .hero-employee-portal-btn:focus-visible{
+  outline:3px solid #ffffff;
+  outline-offset:3px;
+}
+html body .hero-employee-portal-btn svg{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+  flex:0 0 auto;
+}
+html body .hero-employee-portal-btn span{
+  color:#ffffff !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  font-weight:700 !important;
+}
+
+/* Invisible scroll sentinel placed inside the hero */
+#hero-employee-sentinel{
+  position:absolute;
+  width:1px;
+  height:1px;
+  pointer-events:none;
+  visibility:hidden;
+}
+
+/* On scroll past hero — fade the pill out cleanly */
+body.scrolled-past-hero .hero-employee-portal-wrap{
+  opacity:0;
+  transform:translateY(-12px);
+  max-height:0;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  pointer-events:none;
+}
+
+/* Nav link — hidden by default at top of page */
+nav .nav-btn[data-employee-portal="true"]{
+  opacity:0;
+  max-width:0;
+  padding-inline:0 !important;
+  margin-inline:0 !important;
+  overflow:hidden;
+  white-space:nowrap;
+  pointer-events:none;
+  transition:opacity .35s ease, max-width .4s ease,
+             padding .35s ease, margin .35s ease;
+}
+
+/* Nav link — revealed on scroll-past-hero */
+body.scrolled-past-hero nav .nav-btn[data-employee-portal="true"]{
+  opacity:1;
+  max-width:220px;
+  padding-inline:14px !important;
+  margin-inline:4px !important;
+  pointer-events:auto;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html body .hero-employee-portal-wrap,
+  html body .hero-employee-portal-btn,
+  nav .nav-btn[data-employee-portal="true"]{
+    transition:opacity .15s linear !important;
+    transform:none !important;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px){
+  html body .hero-employee-portal-btn{
+    padding:11px 24px !important;
+    font-size:14px !important;
+  }
+  html body .hero-employee-portal-wrap{
+    margin-bottom:14px !important;
+  }
+}
+
 </style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){
@@ -6888,6 +7011,43 @@ html body .survey-card.hide-survey-card{
     document.documentElement.classList.add('light','theme-light');
     document.body.classList.add('light','theme-light');
   }catch(e){}
+})();
+
+/* ================================================================
+   EMPLOYEE PORTAL — scroll-linked visibility toggle
+   Adds/removes body.scrolled-past-hero based on a sentinel inside
+   the hero. No MutationObserver, no setInterval — passive only.
+   ================================================================ */
+(function(){
+  var BODY_CLASS = 'scrolled-past-hero';
+  var sentinel  = document.getElementById('hero-employee-sentinel');
+
+  function setState(past){
+    if (past) document.body.classList.add(BODY_CLASS);
+    else      document.body.classList.remove(BODY_CLASS);
+  }
+
+  // Preferred path: IntersectionObserver on the in-hero sentinel
+  if (sentinel && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ setState(!e.isIntersecting); });
+    }, { root: null, threshold: 0 });
+    io.observe(sentinel);
+    return;
+  }
+
+  // Fallback: throttled scroll handler at ~240px threshold
+  var threshold = 240, ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      setState(window.scrollY > threshold);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
 </script>
 

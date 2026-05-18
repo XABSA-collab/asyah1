@@ -1676,6 +1676,9 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 </div>
 <div class="header-tools">
+<!-- ====== شريط البحث المزدوج: بحث الموقع + بحث التحويلات الهاتفية ====== -->
+<div class="dual-search-wrap">
+<!-- البحث في الموقع -->
 <div class="header-search">
 <input id="search-input" onblur="closeSearch()" oninput="doSearch(this.value)" placeholder="ابحث في الموقع" type="text"/>
 <button class="portal-action-btn search-action" onclick="toggleSearch()" title="بحث" type="button">
@@ -1685,6 +1688,18 @@ body.site-high-contrast .org-redesign-wrap{
 </svg>
 </button>
 <div id="search-results"></div>
+</div>
+<!-- البحث في دليل التحويلات الهاتفية -->
+<div class="header-phone-search">
+<span class="phone-search-icon" aria-hidden="true">
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</span>
+<input id="phone-search" oninput="filterPhones(this.value); if(this.value.length===1){var s=document.getElementById('phone-section'); if(s){s.scrollIntoView({behavior:'smooth',block:'start'})}}" placeholder="ابحث في دليل التحويلات الهاتفية..." type="text" autocomplete="off"/>
+<span class="phone-search-icon-search" aria-hidden="true">
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+</span>
+<div id="phone-search-results" class="phone-search-results" role="listbox" aria-label="نتائج بحث التحويلات"></div>
+</div>
 </div>
 <div aria-label="أدوات الموقع" class="portal-actions">
 <button class="portal-action-btn" onclick="siteTools.changeFont(1)" title="تكبير النص" type="button"><span class="font-symbol">ع+</span></button>
@@ -1973,11 +1988,13 @@ body.site-high-contrast .org-redesign-wrap{
       </div>
 </div>
 <div style="background:#fff;border:1.5px solid rgba(2,94,135,.18);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(11,61,61,0.08)">
-<!-- خانة البحث -->
-<div style="padding:16px 20px;background:#F5FAFC;border-bottom:1px solid rgba(2,94,135,.18);display:flex;align-items:center;gap:10px">
-<svg fill="none" height="20" width="20" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-<input id="phone-search" oninput="filterPhones(this.value)" placeholder="ابحث بالاسم أو الوظيفة أو رقم التحويلة..." style="flex:1;border:none;background:transparent;font-size:14px;font-family: 'Helvetica Neue W23 for SKY',sans-serif;color:#005B85;outline:none;direction:rtl" type="text"/>
-<span id="phone-count" style="font-size:12px;color:#005B85;font-family: 'Helvetica Neue W23 for SKY',sans-serif;white-space:nowrap"></span>
+<!-- شريط الحالة (بديل خانة البحث - البحث أصبح في أعلى الصفحة) -->
+<div style="padding:14px 20px;background:#F5FAFC;border-bottom:1px solid rgba(2,94,135,.18);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:8px;color:#005B85;font-family:'Cairo','Tahoma',sans-serif;font-size:13px;font-weight:600">
+<svg fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<span>استخدم مربع البحث في أعلى الصفحة للبحث بالاسم أو الوظيفة أو رقم التحويلة</span>
+</div>
+<span id="phone-count" style="font-size:12px;color:#005B85;font-family:'Cairo','Tahoma',sans-serif;font-weight:700;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:999px;border:1px solid rgba(2,94,135,.18)"></span>
 </div>
 <!-- رأس الجدول -->
 <div style="display:grid;grid-template-columns:2fr 1fr 2fr;background:linear-gradient(135deg,#005B85,#0271A2);padding:10px 20px">
@@ -2496,7 +2513,7 @@ function setText(id, value){
   if(el) el.textContent = forceLatinDigits(value);
 }
 function formatHijriArabic(date, withDay=true){
-  const parts = new Intl.DateTimeFormat('en-u-ca-islamic-nu-latn', {
+  const parts = new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', {
     day:'numeric', month:'numeric', year:'numeric', timeZone:'Asia/Riyadh'
   }).formatToParts(date);
   let y='',m='',d='';
@@ -2689,7 +2706,7 @@ function renderCal(){
 
     // Get Hijri day
     const gregDate = new Date(calYear, calMonth, d);
-    const hijriDay = forceLatinDigits(new Intl.DateTimeFormat('en-u-ca-islamic-nu-latn',{day:'numeric',timeZone:'Asia/Riyadh'}).format(gregDate));
+    const hijriDay = forceLatinDigits(new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn',{day:'numeric',timeZone:'Asia/Riyadh'}).format(gregDate));
 
     const num = document.createElement('div');
     num.textContent = forceLatinDigits(d);
@@ -2817,10 +2834,65 @@ function renderPhones(list){
 }
 
 function filterPhones(q){
+  renderPhoneSearchResults(q);
   if(!q.trim()){renderPhones(phoneDir);return;}
   const r = phoneDir.filter(p=>p.name.includes(q)||p.dept.includes(q)||p.ext.includes(q));
   renderPhones(r);
 }
+
+/* ── صندوق نتائج بحث التحويلات المنسدل (تحت حقل بحث الهيدر) ── */
+function escapeHtmlPS(s){
+  return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function renderPhoneSearchResults(q){
+  const box = document.getElementById('phone-search-results');
+  if(!box) return;
+  const query = (q||'').trim();
+  if(!query){
+    box.classList.remove('is-open');
+    box.innerHTML = '';
+    return;
+  }
+  const matches = phoneDir.filter(p=>p.name.includes(query)||p.dept.includes(query)||(p.ext||'').includes(query));
+  if(!matches.length){
+    box.innerHTML = '<div class="ps-empty">لا توجد نتائج مطابقة</div>';
+    box.classList.add('is-open');
+    return;
+  }
+  box.innerHTML = matches.slice(0,12).map(function(p){
+    return '<div class="ps-item" tabindex="0" role="option">'
+      + '<div class="ps-meta">'
+      +   '<div class="ps-name">'+escapeHtmlPS(p.name)+'</div>'
+      +   '<div class="ps-dept">'+escapeHtmlPS(p.dept||'')+'</div>'
+      + '</div>'
+      + '<div class="ps-ext">'+(p.ext?forceLatinDigits(p.ext):'—')+'</div>'
+      + '</div>';
+  }).join('');
+  box.classList.add('is-open');
+}
+(function(){
+  document.addEventListener('click', function(e){
+    const wrap = document.querySelector('.header-phone-search');
+    const box = document.getElementById('phone-search-results');
+    if(!wrap || !box) return;
+    if(!wrap.contains(e.target)){
+      box.classList.remove('is-open');
+    }
+  });
+  const inp = document.getElementById('phone-search');
+  if(inp){
+    inp.addEventListener('focus', function(){
+      if(inp.value.trim()) renderPhoneSearchResults(inp.value);
+    });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Escape'){
+        const box = document.getElementById('phone-search-results');
+        if(box){ box.classList.remove('is-open'); }
+        inp.value=''; filterPhones('');
+      }
+    });
+  }
+})();
 
 // Show empty state initially
 document.getElementById('phone-list').innerHTML='<div style="padding:32px;text-align:center;color:#888;font-size:14px;font-family:var(--f,sans-serif)">ابحث عن موظف بالاسم أو الوظيفة أو رقم التحويلة</div>';
@@ -6996,6 +7068,323 @@ body.scrolled-past-hero nav .nav-btn[data-employee-portal="true"]{
   html body .hero-employee-portal-wrap{
     margin-bottom:14px !important;
   }
+}
+
+/* ================================================================
+   شريط البحث المزدوج في الهيدر
+   ================================================================
+   ▸ يضم: «ابحث في الموقع» (#search-input) + «بحث دليل التحويلات
+     الهاتفية» (#phone-search) جنبًا إلى جنب على الشاشات الكبيرة،
+     وفوق بعضهما في شاشات الجوال.
+   ▸ الـ id «phone-search» الأصلي بقي مرتبطًا بدالة filterPhones()
+     ونتائج البحث تظهر في #phone-list كما هي. الصندوق السفلي القديم
+     استُبدل بشريط حالة فيه #phone-count فقط (الدالة لم تتغير).
+   لإلغاء الميزة: احذف هذه الكتلة + .dual-search-wrap من الهيدر
+   + أعد <div id="phone-search"...> القديم إلى قسم #phone-section.
+   ============================================================== */
+html body .dual-search-wrap{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  flex-wrap:wrap !important;
+  direction:ltr !important;
+}
+html body .header-phone-search{
+  position:relative !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+}
+/* أيقونة الهاتف داخل المربع — على جانب اليمين بصريًا (RTL) */
+html body .header-phone-search .phone-search-icon{
+  position:absolute !important;
+  top:50% !important;
+  right:12px !important;
+  transform:translateY(-50%) !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  color:#005B85 !important;
+  pointer-events:none !important;
+  z-index:2 !important;
+}
+html body .header-phone-search .phone-search-icon svg{
+  stroke:#005B85 !important;
+  fill:none !important;
+}
+/* مربع الإدخال — مطابق بالضبط لأبعاد #search-input */
+html body #phone-search{
+  width:240px !important;
+  height:38px !important;
+  box-sizing:border-box !important;
+  padding:8px 36px 8px 14px !important; /* مسافة لأيقونة الهاتف يمينًا */
+  border:1px solid rgba(2,94,135,.18) !important;
+  background:#F5FAFC !important;
+  color:#005B85 !important;
+  border-radius:999px !important;
+  outline:none !important;
+  direction:rtl !important;
+  text-align:right !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  font-weight:700 !important;
+  font-size:13.5px !important;
+  transition:border-color .2s ease, box-shadow .2s ease !important;
+}
+html body #phone-search::placeholder,
+html body #phone-search::-webkit-input-placeholder{
+  color:#5D7480 !important;
+  font-weight:500 !important;
+  opacity:1 !important;
+}
+html body #phone-search:focus{
+  border-color:#005B85 !important;
+  background:#FFFFFF !important;
+  box-shadow:0 0 0 3px rgba(0,91,133,.14) !important;
+}
+/* توحيد ارتفاع #search-input مع #phone-search */
+html body #search-input{
+  height:38px !important;
+  box-sizing:border-box !important;
+}
+/* زر الأيقونة بجانب بحث التحويلات (يرث .portal-action-btn) */
+html body .portal-action-btn.phone-search-action{
+  background:#FFFFFF !important;
+  color:#005B85 !important;
+}
+html body .portal-action-btn.phone-search-action:hover{
+  background:#005B85 !important;
+  color:#FFFFFF !important;
+}
+/* التجاوب: على الشاشات الصغيرة المربعان فوق بعض */
+@media (max-width: 900px){
+  html body .dual-search-wrap{
+    flex-direction:column !important;
+    align-items:stretch !important;
+    width:100% !important;
+    gap:8px !important;
+  }
+  html body .dual-search-wrap .header-search,
+  html body .dual-search-wrap .header-phone-search{
+    width:100% !important;
+  }
+  html body .dual-search-wrap #search-input,
+  html body .dual-search-wrap #phone-search{
+    width:100% !important;
+    flex:1 !important;
+  }
+}
+@media (max-width: 640px){
+  html body #phone-search{
+    font-size:13px !important;
+    padding:8px 34px 8px 34px !important;
+  }
+}
+
+/* ===== المشروع 1: أيقونة البحث داخل الحقل — جهة اليسار ===== */
+html body .header-phone-search .phone-search-icon-search{
+  position:absolute !important;
+  top:50% !important;
+  left:12px !important;
+  transform:translateY(-50%) !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  color:#005B85 !important;
+  pointer-events:none !important;
+  z-index:2 !important;
+}
+html body .header-phone-search .phone-search-icon-search svg{
+  stroke:#005B85 !important;
+  fill:none !important;
+}
+/* padding على الجانبين لمنع تداخل النص مع الأيقونتين */
+html body #phone-search{
+  padding:8px 36px 8px 36px !important;
+}
+
+/* ===== المشروع 2: صندوق نتائج بحث التحويلات ===== */
+html body .header-phone-search .phone-search-results{
+  position:absolute !important;
+  top:calc(100% + 6px) !important;
+  right:0 !important;
+  left:0 !important;
+  max-height:340px !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  background:#FFFFFF !important;
+  border:1px solid rgba(2,94,135,.18) !important;
+  border-radius:14px !important;
+  box-shadow:0 10px 26px rgba(0,0,0,.14), 0 2px 6px rgba(0,0,0,.06) !important;
+  z-index:9999 !important;
+  display:none !important;
+  direction:rtl !important;
+  text-align:right !important;
+  padding:6px !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+}
+html body .header-phone-search .phone-search-results.is-open{
+  display:block !important;
+}
+html body .phone-search-results .ps-item{
+  display:grid !important;
+  grid-template-columns:1fr auto !important;
+  gap:10px !important;
+  align-items:center !important;
+  padding:10px 12px !important;
+  border-radius:10px !important;
+  border-bottom:1px solid #EAF5FA !important;
+  background:#FFFFFF !important;
+  cursor:default !important;
+  transition:background .12s ease !important;
+}
+html body .phone-search-results .ps-item:last-child{
+  border-bottom:none !important;
+}
+html body .phone-search-results .ps-item:hover,
+html body .phone-search-results .ps-item:focus{
+  background:#F2F8FB !important;
+  outline:none !important;
+}
+html body .phone-search-results .ps-meta{
+  min-width:0 !important;
+}
+html body .phone-search-results .ps-name{
+  font-size:13.5px !important;
+  font-weight:700 !important;
+  color:#1B2F3A !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+  line-height:1.4 !important;
+}
+html body .phone-search-results .ps-dept{
+  font-size:12px !important;
+  font-weight:500 !important;
+  color:#005B85 !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  margin-top:2px !important;
+  white-space:nowrap !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+  line-height:1.4 !important;
+}
+html body .phone-search-results .ps-ext{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:48px !important;
+  padding:5px 12px !important;
+  background:#E2EFF6 !important;
+  color:#005B85 !important;
+  font-weight:700 !important;
+  font-size:13px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(0,91,133,.18) !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+  letter-spacing:.5px !important;
+  white-space:nowrap !important;
+}
+html body .phone-search-results .ps-empty{
+  padding:18px 14px !important;
+  text-align:center !important;
+  color:#1B2F3A !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+  font-family:'Cairo','Tahoma','Arial',sans-serif !important;
+}
+/* شريط تمرير منسجم */
+html body .header-phone-search .phone-search-results::-webkit-scrollbar{
+  width:8px !important;
+}
+html body .header-phone-search .phone-search-results::-webkit-scrollbar-thumb{
+  background:rgba(0,91,133,.25) !important;
+  border-radius:4px !important;
+}
+html body .header-phone-search .phone-search-results::-webkit-scrollbar-track{
+  background:transparent !important;
+}
+@media (max-width: 900px){
+  html body .header-phone-search .phone-search-results{
+    max-height:280px !important;
+  }
+}
+
+/* ============================================================
+   إصلاح لون نص نتائج بحث التحويلات داخل القائمة المنسدلة
+   ------------------------------------------------------------
+   القاعدة الكاسحة `div.top-bar.rebuilt-top-bar .header-tools *`
+   (specificity 0,0,3,1) تجبر color:#FFFFFF !important على كل
+   ما داخل الهيدر — بما في ذلك نتائج البحث. هذه القواعد ترفع
+   الخصوصية لتجاوز ذلك بدون التأثير على أي عنصر آخر في الهيدر.
+   ============================================================ */
+
+/* الحاوية نفسها — خلفية بيضاء صريحة */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results{
+  background:#FFFFFF !important;
+  color:#1B2F3A !important;
+}
+
+/* عنصر النتيجة — خلفية بيضاء، لون نص افتراضي غامق */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results .ps-item{
+  background:#FFFFFF !important;
+  color:#1B2F3A !important;
+}
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item:hover,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item:focus{
+  background:#F2F8FB !important;
+  color:#1B2F3A !important;
+}
+
+/* الاسم — أزرق واضح */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item .ps-name,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results .ps-item .ps-name,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-meta .ps-name{
+  color:#005B85 !important;
+  background:transparent !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#005B85 !important;
+  font-weight:700 !important;
+}
+
+/* القسم — رمادي مزرق واضح */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item .ps-dept,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results .ps-item .ps-dept,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-meta .ps-dept{
+  color:#1B2F3A !important;
+  background:transparent !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#1B2F3A !important;
+  font-weight:600 !important;
+}
+
+/* شارة رقم التحويلة — خلفية زرقاء فاتحة + خط أزرق غامق */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item .ps-ext,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results .ps-item .ps-ext{
+  background:#E2EFF6 !important;
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+  border:1px solid rgba(0,91,133,.22) !important;
+  opacity:1 !important;
+  font-weight:700 !important;
+}
+
+/* رسالة "لا توجد نتائج" — غامقة واضحة */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-empty,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.phone-search-results .ps-empty{
+  color:#1B2F3A !important;
+  background:transparent !important;
+  -webkit-text-fill-color:#1B2F3A !important;
+  opacity:1 !important;
+  font-weight:600 !important;
+}
+
+/* حماية إضافية: حتى لو طُبّق inherit/currentColor على svg أو أي عنصر مضمَّن */
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item *{
+  color:inherit !important;
 }
 
 </style>

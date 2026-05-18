@@ -1692,11 +1692,11 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- البحث في دليل التحويلات الهاتفية -->
 <div class="header-phone-search">
 <span class="phone-search-icon" aria-hidden="true">
-<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 </span>
-<input id="phone-search" oninput="filterPhones(this.value); if(this.value.length===1){var s=document.getElementById('phone-section'); if(s){s.scrollIntoView({behavior:'smooth',block:'start'})}}" placeholder="ابحث في دليل التحويلات الهاتفية..." type="text" autocomplete="off"/>
+<input id="phone-search" oninput="filterPhones(this.value)" placeholder="ابحث في دليل التحويلات الهاتفية..." type="text" autocomplete="off"/>
 <span class="phone-search-icon-search" aria-hidden="true">
-<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" fill="none"/><path d="M20 20l-4-4"/></svg>
 </span>
 <div id="phone-search-results" class="phone-search-results" role="listbox" aria-label="نتائج بحث التحويلات"></div>
 </div>
@@ -7385,6 +7385,28 @@ html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search div.pho
 /* حماية إضافية: حتى لو طُبّق inherit/currentColor على svg أو أي عنصر مضمَّن */
 html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-results .ps-item *{
   color:inherit !important;
+}
+
+/* ============================================================
+   ضمان أيقونات Outline (لا Solid) لحقل بحث التحويلات
+   ------------------------------------------------------------
+   إلزام fill:none ومنع أي قاعدة أخرى من ملء الأيقونات بلون
+   صلب، مع تخفيف وزن الخط ليظهر الشكل واضحًا غير ثقيل.
+   ============================================================ */
+html body .header-phone-search .phone-search-icon svg,
+html body .header-phone-search .phone-search-icon svg *,
+html body .header-phone-search .phone-search-icon-search svg,
+html body .header-phone-search .phone-search-icon-search svg *,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-icon svg,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-icon svg *,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-icon-search svg,
+html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-search-icon-search svg *{
+  fill:none !important;
+  stroke:#005B85 !important;
+  stroke-width:1.4 !important;
+  stroke-linecap:round !important;
+  stroke-linejoin:round !important;
+  -webkit-text-fill-color:initial !important;
 }
 
 </style>

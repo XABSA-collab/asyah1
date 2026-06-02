@@ -1792,6 +1792,7 @@ body.site-high-contrast .org-redesign-wrap{
 <a href="#timeline-section" onclick="document.getElementById('timeline-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">الخط الزمني</a>
 <a href="#countdown-section" onclick="document.getElementById('countdown-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">الأحداث القادمة</a>
 <a href="#calendar-section" onclick="document.getElementById('calendar-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">التقويم</a>
+<a href="#etec-surveys-section" onclick="document.getElementById('etec-surveys-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">استطلاعات الهيئة</a>
 </div>
 </div>
 </div>
@@ -1830,6 +1831,31 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 </div>
 </div>
+<!-- ====== زر عائم: استطلاعات الهيئة ====== -->
+<a id="etec-float-btn" href="#etec-surveys-section" onclick="var t=document.getElementById('etec-surveys-section');if(t){t.scrollIntoView({behavior:'smooth'});}return false;" aria-label="الانتقال إلى استطلاعات هيئة تقويم التعليم والتدريب"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg><span>استطلاعات الهيئة</span></a>
+<!-- ====== استطلاعات هيئة تقويم التعليم والتدريب (قسم مستقل) ====== -->
+<section id="etec-surveys-section" class="etec-surveys" aria-labelledby="etec-surveys-title">
+<div class="etec-card">
+<div class="etec-head">
+<div class="etec-head-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+<div class="etec-head-text">
+<h2 id="etec-surveys-title">استطلاعات هيئة تقويم التعليم والتدريب</h2>
+<p>روابط الاستطلاعات الوطنية المعتمدة، يرجى مشاركة كل رابط مع الفئة المستهدفة فقط.</p>
+</div>
+<span class="etec-badge">هيئة تقويم التعليم والتدريب</span>
+</div>
+<div class="etec-body">
+<div class="etec-grid">
+<div class="etec-survey-card"><div class="etec-num">1</div><div class="etec-survey-info"><div class="etec-survey-name">الخريجون</div><div class="etec-survey-desc">استطلاع موجّه لخريجي الكلية لقياس جودة المخرجات وملاءمتها لسوق العمل.</div></div><a class="etec-open-btn" href="https://survey.etec.gov.sa/s/dead79e5" target="_blank" rel="noopener">فتح الاستطلاع</a></div>
+<div class="etec-survey-card"><div class="etec-num">2</div><div class="etec-survey-info"><div class="etec-survey-name">المتدربون</div><div class="etec-survey-desc">استطلاع لقياس رضا المتدربين عن البيئة التدريبية والخدمات المقدّمة.</div></div><a class="etec-open-btn" href="https://survey.etec.gov.sa/s/103a34a0" target="_blank" rel="noopener">فتح الاستطلاع</a></div>
+<div class="etec-survey-card"><div class="etec-num">3</div><div class="etec-survey-info"><div class="etec-survey-name">المدربون</div><div class="etec-survey-desc">استطلاع لاستطلاع آراء المدربين حول العملية التدريبية والدعم المؤسسي.</div></div><a class="etec-open-btn" href="https://survey.etec.gov.sa/s/ba5656f2" target="_blank" rel="noopener">فتح الاستطلاع</a></div>
+<div class="etec-survey-card"><div class="etec-num">4</div><div class="etec-survey-info"><div class="etec-survey-name">قادة المنشأة التدريبية</div><div class="etec-survey-desc">استطلاع موجّه لقيادات المنشأة التدريبية حول الأداء المؤسسي.</div></div><a class="etec-open-btn" href="https://survey.etec.gov.sa/s/6c338820" target="_blank" rel="noopener">فتح الاستطلاع</a></div>
+<div class="etec-survey-card"><div class="etec-num">5</div><div class="etec-survey-info"><div class="etec-survey-name">جهات التوظيف</div><div class="etec-survey-desc">استطلاع لجهات التوظيف لقياس جودة الخريجين في بيئة العمل.</div></div><a class="etec-open-btn" href="https://survey.etec.gov.sa/s/8eba80ba" target="_blank" rel="noopener">فتح الاستطلاع</a></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ====== /استطلاعات هيئة تقويم التعليم والتدريب ====== -->
 <!-- ربط مباشر مع المؤسسة + رايات -->
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:8px;width:fit-content">
 <span style="width:10px;height:10px;border-radius:50%;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
@@ -2752,7 +2778,7 @@ initCal();
 const phoneDir = [
   {name:'صالح راشد الفهيد', ext:'800', dept:'عميد الكلية'},
   {name:'علي عبدالله الخليف', ext:'806', dept:'وكيل التدريب'},
-  {name:'عبد الله سعد الشبرمي', ext:'888', dept:'وكيل شؤون المتدربين'},
+  {name:'عبدالله سعد الشبرمي', ext:'888', dept:'وكيل شؤون المتدربين'},
   {name:'ياسر عبيد الطويان', ext:'822', dept:'وكيل الجودة'},
   {name:'يوسف صالح العوض', ext:'824', dept:'رئيس قسم التقنية الميكانيكية'},
   {name:'سالم عبدالله الجندي', ext:'805', dept:'رئيس قسم التقنية الإدارية'},
@@ -2765,11 +2791,11 @@ const phoneDir = [
   {name:'الحراسات الأمنية', ext:'', dept:'البوابة الجنوبية'},
   {name:'محمد عبد العزيز الفهيد', ext:'807', dept:'الاتصالات الإدارية'},
   {name:'مرضي درهوم الحربي', ext:'814', dept:'مدرب'},
-  {name:'عبد الله عبدالعزيز الشمالي', ext:'', dept:'مدرب'},
-  {name:'عبد الله محمد الزميع', ext:'', dept:'مدرب'},
+  {name:'عبدالله عبدالعزيز الشمالي', ext:'', dept:'مدرب'},
+  {name:'عبدالله محمد الزميع', ext:'', dept:'مدرب'},
   {name:'سليمان عبدالله اللاحم', ext:'815', dept:'مدرب'},
-  {name:'عبد الله غنام الحربي', ext:'', dept:'مدرب'},
-  {name:'عبد الرحمن فيصل الخميس', ext:'', dept:'مدرب'},
+  {name:'عبدالله غنام الحربي', ext:'', dept:'مدرب'},
+  {name:'عبدالرحمن فيصل الخميس', ext:'', dept:'مدرب'},
   {name:'فهد ابراهيم الرميح', ext:'823', dept:'مدرب'},
   {name:'مكتب المدربين بالميكانيكا', ext:'818', dept:'مكتب المدربين'}
 ];
@@ -7911,6 +7937,43 @@ html body .svc-card:hover{
   box-shadow:0 8px 28px rgba(34, 72, 119, .20) !important;
 }
 
+
+/* ===================== etec-surveys-added-styles (START) =====================
+   قسم مستقل: استطلاعات هيئة تقويم التعليم والتدريب + الزر العائم.
+   جميع القواعد مقيّدة تحت #etec-surveys-section و #etec-float-btn فقط — لا تأثير على باقي الموقع.
+   موضوعة داخل FORCE-LIGHT-THEME-FINAL التزامًا بقاعدة (آخر طبقة CSS). */
+html body #etec-surveys-section{ scroll-margin-top:90px; margin-bottom:2rem; font-family:'Cairo','Tahoma','Arial',sans-serif; }
+html body #etec-surveys-section .etec-card{ background:#fff; border:1.5px solid rgba(34,72,119,.18); border-radius:16px; overflow:hidden; }
+html body #etec-surveys-section .etec-head{ background:#224877; padding:18px 24px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+html body #etec-surveys-section .etec-head-icon{ width:44px; height:44px; border-radius:12px; background:rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+html body #etec-surveys-section .etec-head-text{ display:flex; flex-direction:column; gap:4px; min-width:0; flex:1 1 240px; }
+html body #etec-surveys-section .etec-head-text h2{ margin:0; color:#fff; font-size:17px; font-weight:700; line-height:1.4; }
+html body #etec-surveys-section .etec-head-text p{ margin:0; color:rgba(255,255,255,.88); font-size:12.5px; font-weight:500; line-height:1.6; }
+html body #etec-surveys-section .etec-badge{ background:rgba(255,255,255,.2); color:#fff; font-size:11px; font-weight:700; padding:5px 14px; border-radius:20px; white-space:nowrap; }
+html body #etec-surveys-section .etec-body{ padding:20px 24px; }
+html body #etec-surveys-section .etec-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+html body #etec-surveys-section .etec-survey-card{ display:flex; align-items:center; gap:12px; background:#F6FAFC; border:1px solid rgba(34,72,119,.14); border-radius:12px; padding:14px 16px; }
+html body #etec-surveys-section .etec-num{ width:30px; height:30px; border-radius:50%; background:#224877; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+html body #etec-surveys-section .etec-survey-info{ flex:1; min-width:0; }
+html body #etec-surveys-section .etec-survey-name{ color:#224877; font-size:14px; font-weight:700; margin-bottom:3px; }
+html body #etec-surveys-section .etec-survey-desc{ color:#5D7480; font-size:12px; font-weight:500; line-height:1.6; }
+html body #etec-surveys-section .etec-open-btn{ display:inline-block; background:#224877; color:#fff; font-size:12px; font-weight:700; padding:8px 16px; border-radius:8px; text-decoration:none; white-space:nowrap; flex-shrink:0; transition:background .15s; }
+html body #etec-surveys-section .etec-open-btn:hover{ background:#1B3B62; }
+/* الزر العائم — أعلى اليسار في سطح المكتب */
+html body #etec-float-btn{ position:fixed; top:140px; left:0; z-index:300; display:flex; align-items:center; gap:8px; background:#224877; color:#fff; font-family:'Cairo','Tahoma','Arial',sans-serif; font-size:13px; font-weight:700; padding:10px 16px 10px 14px; border-radius:0 26px 26px 0; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,.18); transition:background .15s, transform .15s; }
+html body #etec-float-btn:hover{ background:#1B3B62; transform:translateX(3px); }
+html body #etec-float-btn svg{ flex-shrink:0; }
+/* الجوال — ينتقل الزر العائم إلى أسفل الوسط، والبطاقات إلى عمود واحد */
+@media (max-width:768px){
+  html body #etec-surveys-section .etec-grid{ grid-template-columns:1fr; }
+  html body #etec-surveys-section .etec-survey-card{ flex-wrap:wrap; }
+  html body #etec-surveys-section .etec-open-btn{ width:100%; text-align:center; }
+  html body #etec-surveys-section .etec-head{ padding:16px; }
+  html body #etec-surveys-section .etec-body{ padding:16px; }
+  html body #etec-float-btn{ top:auto; bottom:18px; left:50%; transform:translateX(-50%); border-radius:26px; padding:9px 18px; }
+  html body #etec-float-btn:hover{ transform:translateX(-50%); }
+}
+/* ===================== etec-surveys-added-styles (END) ===================== */
 </style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){

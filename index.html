@@ -1796,6 +1796,10 @@ body.site-high-contrast .org-redesign-wrap{
 <a href="#calendar-section" onclick="document.getElementById('calendar-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">التقويم</a>
 <a href="#etec-surveys-section" onclick="document.getElementById('etec-surveys-section').scrollIntoView({behavior:'smooth'});return false" onmouseout="this.style.background='rgba(255,255,255,0.12)'" onmouseover="this.style.background='rgba(255,255,255,0.22)'" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:12px;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background 0.15s;font-family:Tahoma,sans-serif">استطلاعات الهيئة</a>
 </div>
+<!-- ====== شريط العد التنازلي للعام التدريبي (أفقي RTL) — يُملأ عبر JS في FORCE-LIGHT-THEME-SCRIPT.
+     للإخفاء: أضف class="hide-hero-countdown" على #hero-countdown (راجع طبقة final-hero-countdown-strip)،
+     أو علّق هذه الكتلة. لتعديل التواريخ: عدّل مصفوفة HERO_CD_EVENTS في السكربت. ====== -->
+<div id="hero-countdown" class="hero-cd" dir="rtl" aria-label="العد التنازلي للعام التدريبي ١٤٤٨/١٤٤٩ هـ"></div>
 </div>
 </div>
 <!-- ====== تم حذف الشريحتين 2 و 3 (رايات + الخدمات) بناءً على طلب الإبقاء على صفحة واحدة فقط ====== -->
@@ -7485,7 +7489,7 @@ html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-
   --primary: #224877 !important;
   --primary-dark: #1B3B62 !important;
   --primary-deep: #1F4642 !important;
-  --accent: #A5CE9F !important;
+  --accent: #247971 !important;
   --accent-soft: rgba(165, 206, 159, 0.22) !important;
   --white: #FFFFFF !important;
   --text: #1B2F3A !important;
@@ -7497,8 +7501,8 @@ html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-
 
 /* ============================================================
    GREEN IDENTITY — HOVER ON WHITE CARDS
-   الحالة العادية: خلفية بيضاء، نص #224877، حد #A5CE9F
-   عند hover: خلفية #224877، نص + أيقونات #A5CE9F، حد #A5CE9F
+   الحالة العادية: خلفية بيضاء، نص #224877، حد #247971
+   عند hover: خلفية #224877، نص + أيقونات #247971، حد #247971
    ============================================================ */
 .card-box,
 .svc-card,
@@ -7514,21 +7518,21 @@ html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-
 .r-card:hover,
 .category__list__item:hover .category__list__item__container{
   background: #224877 !important;
-  color: #A5CE9F !important;
+  color: #247971 !important;
   border-color: transparent !important;
 }
 .card-box:hover *,
 .svc-card:hover *,
 .r-card:hover *,
 .category__list__item:hover *{
-  color: #A5CE9F !important;
+  color: #247971 !important;
 }
 .card-box:hover svg *,
 .svc-card:hover svg *,
 .r-card:hover svg *,
 .category__list__item:hover svg *{
-  fill: #A5CE9F !important;
-  stroke: #A5CE9F !important;
+  fill: #247971 !important;
+  stroke: #247971 !important;
 }
 /* استثناء: شعار الكلية وأي SVG يحمل class="brand-logo-colored" 
    يحتفظ بألوانه الأصلية */
@@ -7543,12 +7547,12 @@ html body div.top-bar.rebuilt-top-bar .header-tools .header-phone-search .phone-
 .dd-item:hover,
 .r-link:hover{
   background: #224877 !important;
-  color: #A5CE9F !important;
+  color: #247971 !important;
 }
 .nav-btn:hover *,
 .dd-item:hover *,
 .r-link:hover *{
-  color: #A5CE9F !important;
+  color: #247971 !important;
 }
 
 /* === استبدال أي تدرّجات زرقاء متبقّية === */
@@ -8176,6 +8180,106 @@ html body .awareness-band.hide-awareness{ display:none !important; }
 html body #etec-surveys-section{ display:none !important; }
 html body .hero a[href="#etec-surveys-section"]{ display:none !important; }
 </style>
+<style id="final-hero-countdown-strip">
+/* ==========================================================
+   شريط العد التنازلي داخل الهيرو (أفقي RTL)
+   - يجعل ارتفاع الهيرو تلقائيًا ليتّسع للشريط (الشريحة الوحيدة تتدفق طبيعيًا)
+   - بطاقات أفقية تلتف على الجوال
+   - رقم العداد بالأخضر التفافي (#247971)؛ قريب/اليوم بالأحمر (#E01B21)
+   آخر طبقة CSS فعلية. أي طبقة لاحقة تُوضع بعدها وتُوثّق في CHANGELOG.
+   ========================================================== */
+
+/* ارتفاع الهيرو تلقائي + جعل الشريحة النشطة تتدفق (شريحة واحدة فقط) */
+html body #hero-slider.hero,
+html body .hero#hero-slider{ height:auto !important; min-height:300px !important; }
+html body #hero-slider .slide.active{ position:relative !important; inset:auto !important; }
+html body #hero-slider .slide-content{ padding-top:26px !important; padding-bottom:26px !important; }
+
+/* الحاوية */
+html body #hero-countdown.hero-cd{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  width:100%;
+}
+html body #hero-countdown.hide-hero-countdown{ display:none !important; }
+
+/* عنوان الشريط */
+.hero-cd-head{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px;
+}
+.hero-cd-head svg{ width:18px; height:18px; }
+
+/* الصف الأفقي من اليمين لليسار */
+.hero-cd-row{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:12px;
+  direction:rtl;
+  width:100%;
+}
+
+/* بطاقة العداد */
+html body #hero-slider .slide-content .hero-cd-card{
+  flex:0 1 210px;
+  min-width:180px;
+  background:#FFFFFF !important;
+  border:1.5px solid rgba(34, 72, 119,.18) !important;
+  border-radius:14px;
+  padding:12px 14px;
+  box-shadow:0 6px 18px rgba(34, 72, 119,.08) !important;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  text-align:center;
+  transition:transform .15s, box-shadow .15s, border-color .15s;
+}
+html body #hero-slider .slide-content .hero-cd-card:hover{
+  transform:translateY(-2px);
+  border-color:#247971 !important;
+  box-shadow:0 10px 24px rgba(34, 72, 119,.14) !important;
+}
+
+.hero-cd-title{ font-size:13px; line-height:1.5; }
+.hero-cd-dates{ font-size:11px; opacity:.85; line-height:1.6; }
+
+.hero-cd-badge{
+  margin-top:2px;
+  display:inline-flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:4px;
+}
+.hero-cd-unit{ font-size:12px; }
+
+/* رقم العداد: أخضر التفافي (تجاوز فرض اللون النيفي في الهيرو عبر تضمين #hero-slider) */
+html body #hero-slider .slide-content .hero-cd-num{
+  font-size:26px;
+  font-weight:700 !important;
+  color:#247971 !important;
+  line-height:1;
+}
+/* قريب جدًا / اليوم بالأحمر */
+html body #hero-slider .slide-content .hero-cd-card.is-near .hero-cd-num,
+html body #hero-slider .slide-content .hero-cd-card.is-today .hero-cd-num{
+  color:#E01B21 !important;
+}
+/* الأحداث المنتهية باهتة */
+html body #hero-slider .slide-content .hero-cd-card.is-past{ opacity:.6; }
+
+/* الجوال: بطاقات بعرض كامل */
+@media(max-width:600px){
+  html body #hero-slider .slide-content .hero-cd-card{ flex:1 1 100%; min-width:0; }
+}
+</style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){
   try{
@@ -8479,6 +8583,82 @@ html body .hero a[href="#etec-surveys-section"]{ display:none !important; }
   window.startNewsAutoRotate=startNewsAutoRotate;
   window.stopNewsAutoRotate=stopNewsAutoRotate;
   Object.defineProperty(window,'currentNewsIndex',{get:function(){return currentNewsIndex;},set:function(v){currentNewsIndex=v;}});
+})();
+
+/* ====== العد التنازلي في الهيرو — العام التدريبي 1448/1449 هـ ======
+   مضاف بناءً على طلب المستخدم: عرض تواريخ بداية العام التدريبي مع العد
+   التنازلي المتبقي لكل تاريخ، بشكل أفقي من اليمين لليسار، داخل الهيرو.
+   لتعديل/تحديث التواريخ لاحقًا: عدّل مصفوفة HERO_CD_EVENTS أدناه فقط. */
+(function(){
+  var HERO_CD_EVENTS = [
+    { title:'عودة القيادات الإشرافية',                  date:'2026-08-11', hijri:'1448-02-28' },
+    { title:'عودة أعضاء هيئة التدريب',                  date:'2026-08-16', hijri:'1448-03-03' },
+    { title:'بداية التدريب للعام التدريبي 1448/1449 هـ', date:'2026-08-23', hijri:'1448-03-10' }
+  ];
+  var HERO_CD_HEAD = 'العام التدريبي 1448/1449 هـ';
+  var GREG_MONTHS = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+  function latin(v){
+    return String(v)
+      .replace(/[\u0660-\u0669]/g, function(d){ return String(d.charCodeAt(0)-0x0660); })
+      .replace(/[\u06F0-\u06F9]/g, function(d){ return String(d.charCodeAt(0)-0x06F0); });
+  }
+  function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+
+  function render(){
+    var el = document.getElementById('hero-countdown');
+    if(!el) return;
+    var now   = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    var items = HERO_CD_EVENTS.map(function(ev){
+      var d = new Date(ev.date + 'T00:00:00');
+      var diff = Math.round((d - today)/(1000*60*60*24));
+      return { ev:ev, d:d, diff:diff };
+    }).sort(function(a,b){ return a.diff - b.diff; });
+
+    var cards = items.map(function(it){
+      var diff = it.diff, cls = '', badge = '';
+      if(diff < 0){
+        cls = 'is-past';
+        badge = '<div class="hero-cd-badge"><span class="hero-cd-unit">انتهى</span></div>';
+      } else if(diff === 0){
+        cls = 'is-today';
+        badge = '<div class="hero-cd-badge"><span class="hero-cd-unit">اليوم</span></div>';
+      } else {
+        if(diff <= 2) cls = 'is-near';
+        badge = '<div class="hero-cd-badge">'
+              +   '<span class="hero-cd-unit">بعد</span>'
+              +   '<span class="hero-cd-num">' + latin(diff) + '</span>'
+              +   '<span class="hero-cd-unit">يوم</span>'
+              + '</div>';
+      }
+      var gdate = latin(it.d.getDate() + ' ' + GREG_MONTHS[it.d.getMonth()] + ' ' + it.d.getFullYear());
+      var hdate = latin(it.ev.hijri) + ' هـ';
+      return ''
+        + '<div class="hero-cd-card ' + cls + '">'
+        +   '<div class="hero-cd-title">' + esc(it.ev.title) + '</div>'
+        +   '<div class="hero-cd-dates">' + gdate + '<br>' + hdate + '</div>'
+        +   badge
+        + '</div>';
+    }).join('');
+
+    var clock = '<svg viewBox="0 0 28 28" fill="none" aria-hidden="true">'
+              +   '<circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2"></circle>'
+              +   '<path d="M14 10v4l2.5 2.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>'
+              + '</svg>';
+
+    el.innerHTML =
+        '<div class="hero-cd-head">' + clock + '<span>' + esc(HERO_CD_HEAD) + '</span></div>'
+      + '<div class="hero-cd-row">' + cards + '</div>';
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+  setInterval(render, 60000);
 })();
 
 </script>

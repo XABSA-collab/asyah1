@@ -86,7 +86,7 @@ html body #hero-slider .slide-content * {
 #first-paint-loader .fp-spinner {
   width: 42px !important;
   height: 42px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border: 3px solid rgba(0, 92, 134, 0.18) !important;
   border-top-color: #005C86 !important;
   box-sizing: border-box !important;
@@ -126,13 +126,13 @@ nav{background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4
 .nav-btn:hover,.nav-btn.open{background:rgba(255,255,255,0.1);color:#fff;border-bottom-color:#fff}
 .arr{font-size:9px;transition:transform 0.2s}
 .nav-btn.open .arr{transform:rotate(180deg)}
-.dropdown{display:none;position:absolute;top:100%;right:0;background:#fff;border-top:3px solid var(--teal-light);border-radius:10px;padding:6px;min-width:230px;box-shadow:0 8px 28px rgba(0,0,0,0.13);z-index:300}
+.dropdown{display:none;position:absolute;top:100%;right:0;background:#fff;border-top:3px solid var(--teal-light);border-radius:0;padding:6px;min-width:230px;box-shadow:0 8px 28px rgba(0,0,0,0.13);z-index:300}
 .dropdown.show{display:block}
-.dd-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:10px;font-size:13px;font-weight:600;color:#1B3B62;text-decoration:none;transition:background 0.12s;font-family:Cairo,sans-serif}
+.dd-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:0;font-size:13px;font-weight:600;color:#1B3B62;text-decoration:none;transition:background 0.12s;font-family:Cairo,sans-serif}
 .dd-item:hover{background:var(--teal-pale);color:var(--teal-dark)}
-.dd-dot{width:6px;height:6px;border-radius:10px;background:var(--teal-light);flex-shrink:0}
+.dd-dot{width:6px;height:6px;border-radius:0;background:var(--teal-light);flex-shrink:0}
 .dd-divider{height:0.5px;background:#E8F5F5;margin:4px 0}
-.dd-new{font-size:10px;padding:2px 7px;border-radius:10px;background:#faeeda;color:#854f0b;margin-right:auto}
+.dd-new{font-size:10px;padding:2px 7px;border-radius:0;background:#faeeda;color:#854f0b;margin-right:auto}
 .hero{position:relative;height:300px;overflow:hidden;z-index:1}
 .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.7s ease;z-index:1}
 .slide.active{opacity:1;z-index:2}
@@ -140,45 +140,45 @@ nav{background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4
 .slide-content h1{font-size:40px;font-weight:600;color:#fff;margin-bottom:10px}
 .slide-content p{font-size:14px;color:#fff;max-width:680px;margin:0 auto;line-height:1.8}
 .hero-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
-.hero-dot{width:8px;height:8px;border-radius:10px;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;border:none}
-.hero-dot.active{background:#fff;width:24px;border-radius:10px}
+.hero-dot{width:8px;height:8px;border-radius:0;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;border:none}
+.hero-dot.active{background:#fff;width:24px;border-radius:0}
 .content{max-width:1200px;margin:0 auto;padding:1.5rem}
 .sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .sec-title{font-size:18px;font-weight:600;color:#005C86;display:flex;align-items:center;gap:10px}
 .icon{width:28px;height:28px;flex-shrink:0}
-.sec-more{font-size:13px;font-weight:600;color:#005C86;text-decoration:none;border:1.5px solid #005C86;padding:6px 16px;border-radius:10px;transition:background 0.15s}
+.sec-more{font-size:13px;font-weight:600;color:#005C86;text-decoration:none;border:1.5px solid #005C86;padding:6px 16px;border-radius:0;transition:background 0.15s}
 .sec-more:hover{background:var(--teal);color:#fff}
 .services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:2rem}
-.svc-card{background:#fff;border-radius:10px;padding:20px 16px;text-align:center;cursor:pointer;text-decoration:none;color:inherit;transition:transform 0.18s,box-shadow 0.18s;border:1.5px solid transparent;display:flex;flex-direction:column;align-items:center;gap:10px}
+.svc-card{background:#fff;border-radius:0;padding:20px 16px;text-align:center;cursor:pointer;text-decoration:none;color:inherit;transition:transform 0.18s,box-shadow 0.18s;border:1.5px solid transparent;display:flex;flex-direction:column;align-items:center;gap:10px}
 .svc-card{position:relative;overflow:hidden}.svc-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(25,103,103,0.2);border-color:#005C86;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;justify-content:center}.svc-card:hover .svc-icon{display:none}.svc-card:hover .svc-title{color:#fff;font-size:14px}.svc-card:hover .svc-desc{color:rgba(255,255,255,0.9);font-size:13px}
-.svc-icon{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.svc-icon{width:56px;height:56px;border-radius:0;display:flex;align-items:center;justify-content:center;font-size:24px}
 .svc-title{font-size:13px;font-weight:600;color:var(--text)}
 .svc-desc{font-size:11px;color:var(--muted)}
-.rayat-band{background:#fff;border:1.5px solid #B8D9E6;border-radius:10px;padding:20px 24px;margin-bottom:2rem;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)}
+.rayat-band{background:#fff;border:1.5px solid #B8D9E6;border-radius:0;padding:20px 24px;margin-bottom:2rem;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)}
 .rayat-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .rayat-head h2{font-size:16px;font-weight:600;color:#005C86}
 .rayat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.r-card{background:#FFFFFF;border:1px solid #B8D9E6;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#005C86;font-size:13px;font-weight:600;font-family:Cairo,sans-serif;transition:background 0.15s}
+.r-card{background:#FFFFFF;border:1px solid #B8D9E6;border-radius:0;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#005C86;font-size:13px;font-weight:600;font-family:Cairo,sans-serif;transition:background 0.15s}
 .r-card:hover{background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;border-color:#005C86}.r-card:hover .r-icon{background:rgba(255,255,255,0.2)}.r-card:hover svg{stroke:#fff}
-.r-card .r-icon{width:32px;height:32px;border-radius:10px;background:#E8F5F5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.r-card .r-icon{width:32px;height:32px;border-radius:0;background:#E8F5F5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .wide-links{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem}
-.w-link{background:#fff;border:1.5px solid #B8D9E6;border-radius:10px;padding:13px 18px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-size:13px;font-weight:600;font-family:Cairo,sans-serif;transition:border-color 0.15s}
+.w-link{background:#fff;border:1.5px solid #B8D9E6;border-radius:0;padding:13px 18px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-size:13px;font-weight:600;font-family:Cairo,sans-serif;transition:border-color 0.15s}
 .w-link:hover{border-color:var(--teal)}
-.w-link .new{font-size:11px;padding:2px 10px;border-radius:10px;background:#E01B21;color:#fff;margin-right:auto}
+.w-link .new{font-size:11px;padding:2px 10px;border-radius:0;background:#E01B21;color:#fff;margin-right:auto}
 .tl-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:2rem}
-.tl-card{background:#fff;border:1.5px solid #B8D9E6;border-radius:10px;padding:14px;text-align:center;border-top:4px solid var(--teal-light)}
+.tl-card{background:#fff;border:1.5px solid #B8D9E6;border-radius:0;padding:14px;text-align:center;border-top:4px solid var(--teal-light)}
 .tl-title{font-size:12px;font-weight:600;color:var(--teal-dark);margin-bottom:6px;line-height:1.5}
 .tl-dates{font-size:11px;color:var(--muted);line-height:1.8}
 .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:2rem}
-.news-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);border:1px solid #c8e8e8}
+.news-card{background:#fff;border-radius:0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);border:1px solid #c8e8e8}
 .news-img{height:200px;overflow:hidden}
 .news-img img{width:100%;height:100%;object-fit:cover}
 .news-body{padding:16px}
 .news-date{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:10px}
 .news-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.7;margin-bottom:12px}
 .news-more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--teal);text-decoration:none}
-.news-mid{background:linear-gradient(135deg,#005C86,#005C86);border-radius:10px;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center}
-.qb-btn{width:46px;height:46px;border-radius:10px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:18px;box-shadow:-3px 3px 12px rgba(0,0,0,0.15);transition:width 0.2s;text-decoration:none}
+.news-mid{background:linear-gradient(135deg,#005C86,#005C86);border-radius:0;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center}
+.qb-btn{width:46px;height:46px;border-radius:0;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:18px;box-shadow:-3px 3px 12px rgba(0,0,0,0.15);transition:width 0.2s;text-decoration:none}
 .qb-btn:hover{background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;width:54px}
 #search-input{transition:width 0.3s,padding 0.3s,opacity 0.3s}
 @media(max-width:800px){
@@ -229,7 +229,7 @@ body{
 .added-news{
   background:#fff;
   border:1px solid rgba(18,107,102,.14);
-  border-radius:10px;
+  border-radius:0;
   overflow:hidden;
   box-shadow:0 12px 34px rgba(18,107,102,.08);
 }
@@ -267,7 +267,7 @@ body{
 .org-card{
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%) !important;background-repeat:no-repeat !important;
   color:#fff !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:20px !important;
 }
 </style>
@@ -321,7 +321,7 @@ body {
 .top-info a[href*="tvtc.gov.sa"] {
   background: var(--brand) !important;
   color: #FFFFFF !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 
 /* شريط الشعار */
@@ -344,7 +344,7 @@ body {
   background: rgba(255,255,255,.16) !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(255,255,255,.28) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 #search-input::placeholder,
 #search-input::-webkit-input-placeholder {
@@ -364,7 +364,7 @@ nav {
 .nav-btn {
   color: var(--brand-text) !important;
   background: transparent !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 .nav-btn:hover,
 .nav-item:hover > .nav-btn,
@@ -628,7 +628,7 @@ nav { background:#FFFFFF !important; }
   width:auto !important;
   height:auto !important;
   padding:0 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 .svc-card:hover .svc-icon,
 .r-card:hover .r-icon{
@@ -677,7 +677,7 @@ nav { background:#FFFFFF !important; }
 .top-bar [onclick="toggleSearch()"]{
   width:34px !important;
   height:34px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   background:transparent !important;
   color:#FFFFFF !important;
 }
@@ -706,7 +706,7 @@ nav{
 .nav-btn{
   height:58px !important;
   color:#005C86 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border-bottom:3px solid transparent !important;
   background:transparent !important;
   padding:0 16px !important;
@@ -722,7 +722,7 @@ nav{
   top:calc(100% + 4px) !important;
   border:1px solid rgba(0, 92, 134,.15) !important;
   border-top:2px solid #005C86 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 14px 34px rgba(0, 92, 134,.14) !important;
 }
 
@@ -730,7 +730,7 @@ nav{
 .org-redesign-wrap{
   background:#FFFFFF;
   border:1.5px solid rgba(0, 92, 134,.16);
-  border-radius:10px;
+  border-radius:0;
   padding:18px;
   box-shadow:0 10px 28px rgba(0, 92, 134,.08);
 }
@@ -746,7 +746,7 @@ nav{
   background:#EAF5FA;
   color:#005C86;
   border:1px solid rgba(0, 92, 134,.12);
-  border-radius:10px;
+  border-radius:0;
   padding:8px 14px;
   font-size:12px;
 }
@@ -763,7 +763,7 @@ nav{
   background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 100%);
   border:1.5px solid rgba(0, 92, 134,.16);
   border-right:5px solid #005C86;
-  border-radius:10px;
+  border-radius:0;
   padding:18px;
   cursor:pointer;
   transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
@@ -809,7 +809,7 @@ nav{
   overflow:auto;
   background:#FFFFFF;
   border:1px solid rgba(0, 92, 134,.15);
-  border-radius:10px;
+  border-radius:0;
   box-shadow:0 24px 60px rgba(0, 92, 134,.18);
 }
 .org-modal-head{
@@ -831,7 +831,7 @@ nav{
 .org-modal-close{
   width:32px;
   height:32px;
-  border-radius:10px;
+  border-radius:0;
   border:none;
   background:rgba(255,255,255,.14);
   color:#FFFFFF;
@@ -846,7 +846,7 @@ nav{
 .org-group-title{
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;
   color:#FFFFFF;
-  border-radius:10px;
+  border-radius:0;
   padding:10px 14px;
   font-size:14px;
   margin-bottom:10px;
@@ -863,7 +863,7 @@ nav{
   background:#FFFFFF;
   border:1px solid rgba(0, 92, 134,.14);
   color:#005C86;
-  border-radius:10px;
+  border-radius:0;
   padding:12px 14px;
   line-height:1.8;
 }
@@ -942,7 +942,7 @@ body{
   background:var(--brand);
   color:#fff;
   padding:10px 14px;
-  border-radius:10px;
+  border-radius:0;
   z-index:9999;
   text-decoration:none;
 }
@@ -964,7 +964,7 @@ body{
 .top-info a{
   background:var(--brand) !important;
   color:#fff !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 
 /* Header modeled as clean institutional header */
@@ -1002,7 +1002,7 @@ body{
 .portal-action-btn{
   width:38px;
   height:38px;
-  border-radius:10px;
+  border-radius:0;
   border:1px solid var(--line);
   background:#fff;
   color:var(--brand-text);
@@ -1042,7 +1042,7 @@ body{
   background:var(--brand-soft) !important;
   border:1px solid var(--line) !important;
   color:var(--brand-text) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 #search-input::placeholder,
 #search-input::-webkit-input-placeholder{
@@ -1068,7 +1068,7 @@ nav{
 }
 .nav-btn{
   color:#fff !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border-bottom:3px solid transparent !important;
   background:transparent !important;
 }
@@ -1082,7 +1082,7 @@ nav{
 .dropdown{
   border:1px solid var(--line) !important;
   border-top:3px solid var(--brand) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 16px 40px rgba(0, 92, 134,.16) !important;
 }
 .dd-item{
@@ -1094,7 +1094,7 @@ nav{
 
 /* Hero/banner treatment */
 .hero{
-  border-radius:10px;
+  border-radius:0;
   box-shadow:0 16px 40px rgba(0, 92, 134,.12);
 }
 .slide,
@@ -1200,7 +1200,7 @@ button,
 .floating-accessibility button{
   width:38px;
   height:38px;
-  border-radius:10px;
+  border-radius:0;
   border:1px solid rgba(255,255,255,.22);
   background:var(--brand) !important;
   color:#fff !important;
@@ -1238,7 +1238,7 @@ body.site-high-contrast .nav-btn{
   background:var(--brand-dark);
   color:#fff;
   padding:12px 16px;
-  border-radius:10px;
+  border-radius:0;
   box-shadow:0 12px 30px rgba(0, 92, 134,.22);
   z-index:9999;
   opacity:0;
@@ -1520,7 +1520,7 @@ nav{
 .org-modal-card{
   background:#FFFFFF !important;
   color:var(--text) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1px solid var(--border) !important;
   box-shadow:0 24px 60px rgba(0, 92, 134,.18) !important;
 }
@@ -1792,14 +1792,14 @@ body.site-high-contrast .org-redesign-wrap{
 <h1 class="hero-main-title">البوابة الإلكترونية للكلية التقنية بالأسياح</h1>
 <p>جميع الخدمات والروابط الإدارية في مكان واحد</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px">
-<a class="hero-quicklink" href="#org-section" onclick="document.getElementById('org-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الهيكل التنظيمي</a>
-<a class="hero-quicklink" href="#phone-section" onclick="document.getElementById('phone-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">دليل التحويلات الهاتفية</a>
-<a class="hero-quicklink" href="#survey-section" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الاستبانة</a>
-<a class="hero-quicklink" href="#news-section" onclick="document.getElementById('news-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأخبار</a>
-<a class="hero-quicklink" href="#timeline-section" onclick="document.getElementById('timeline-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الخط الزمني</a>
-<a class="hero-quicklink" href="#countdown-section" onclick="document.getElementById('countdown-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأحداث القادمة</a>
-<a class="hero-quicklink" href="#calendar-section" onclick="document.getElementById('calendar-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">التقويم</a>
-<a class="hero-quicklink" href="#etec-surveys-section" onclick="document.getElementById('etec-surveys-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:10px;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">استطلاعات الهيئة</a>
+<a class="hero-quicklink" href="#org-section" onclick="document.getElementById('org-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الهيكل التنظيمي</a>
+<a class="hero-quicklink" href="#phone-section" onclick="document.getElementById('phone-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">دليل التحويلات الهاتفية</a>
+<a class="hero-quicklink" href="#survey-section" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الاستبانة</a>
+<a class="hero-quicklink" href="#news-section" onclick="document.getElementById('news-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأخبار</a>
+<a class="hero-quicklink" href="#timeline-section" onclick="document.getElementById('timeline-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الخط الزمني</a>
+<a class="hero-quicklink" href="#countdown-section" onclick="document.getElementById('countdown-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأحداث القادمة</a>
+<a class="hero-quicklink" href="#calendar-section" onclick="document.getElementById('calendar-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">التقويم</a>
+<a class="hero-quicklink" href="#etec-surveys-section" onclick="document.getElementById('etec-surveys-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">استطلاعات الهيئة</a>
 </div>
 <!-- ====== شريط العد التنازلي للعام التدريبي (أفقي RTL) — يُملأ عبر JS في FORCE-LIGHT-THEME-SCRIPT.
      للإخفاء: أضف class="hide-hero-countdown" على #hero-countdown (راجع طبقة final-hero-countdown-strip)،
@@ -1828,14 +1828,14 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- الاستبانة -->
 <div id="survey-section" style="position:relative;top:-70px"></div>
 <div style="margin-bottom:2rem">
-<div class="survey-card" style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(17,100,95,0.12)">
+<div class="survey-card" style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:0;overflow:hidden;box-shadow:0 4px 20px rgba(17,100,95,0.12)">
 <div class="survey-header" style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:18px 24px;display:flex;align-items:center;gap:12px">
 <svg fill="none" height="28" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect height="4" rx="1" width="8" x="8" y="2"></rect><line x1="9" x2="15" y1="12" y2="12"></line><line x1="9" x2="13" y1="16" y2="16"></line></svg>
-<div style="font-size:16px;font-weight:600;color:#fff;font-family: Cairo,sans-serif;display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:10px;background:#8DB600;display:inline-block;flex-shrink:0;animation:greenPulse 2s ease-in-out infinite"></span>استبانات قياس جودة الخدمات</div>
-<span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 12px;border-radius:10px;margin-right:auto;font-family: Cairo,sans-serif">جديد</span>
+<div style="font-size:16px;font-weight:600;color:#fff;font-family: Cairo,sans-serif;display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:50% !important;background:#8DB600;display:inline-block;flex-shrink:0;animation:greenPulse 2s ease-in-out infinite"></span>استبانات قياس جودة الخدمات</div>
+<span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 12px;border-radius:0;margin-right:auto;font-family: Cairo,sans-serif">جديد</span>
 </div>
 <div class="survey-details" style="padding:20px 24px;font-family:Cairo,sans-serif">
-<div style="overflow-x:auto;border-radius:10px;border:1px solid rgba(0, 92, 134,0.15);margin-bottom:16px">
+<div style="overflow-x:auto;border-radius:0;border:1px solid rgba(0, 92, 134,0.15);margin-bottom:16px">
 <table style="width:100%;border-collapse:collapse;font-size:13px;background:#fff">
 <thead>
 <tr style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff">
@@ -1848,7 +1848,7 @@ body.site-high-contrast .org-redesign-wrap{
 <tr style="border-bottom:1px solid rgba(0, 92, 134,0.10)">
 <td style="padding:12px 10px;text-align:center;color:#5D7480;font-weight:600">1</td>
 <td style="padding:12px 12px;color:#1B2F3A;font-weight:600">استبيان قياس جودة تجربة المتدرب عن خدمة التدريب التعاوني للكليات التقنية</td>
-<td style="padding:12px 12px;text-align:center"><a href="https://forms.office.com/r/jjFT1fhgpR" target="_blank" rel="noopener" style="display:inline-block;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:background 0.15s" onmouseover="this.style.background='#1B3B62'" onmouseout="this.style.background='#005C86'">فتح الاستبانة</a></td>
+<td style="padding:12px 12px;text-align:center"><a href="https://forms.office.com/r/jjFT1fhgpR" target="_blank" rel="noopener" style="display:inline-block;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:10px !important;text-decoration:none;white-space:nowrap;transition:background 0.15s" onmouseover="this.style.background='#1B3B62'" onmouseout="this.style.background='#005C86'">فتح الاستبانة</a></td>
 </tr>
 </tbody>
 </table>
@@ -1882,8 +1882,8 @@ body.site-high-contrast .org-redesign-wrap{
 </section>
 <!-- ====== /استطلاعات هيئة تقويم التعليم والتدريب ====== -->
 <!-- ربط مباشر مع المؤسسة + رايات -->
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:10px;width:fit-content">
-<span style="width:10px;height:10px;border-radius:10px;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:0;width:fit-content">
+<span style="width:10px;height:10px;border-radius:50% !important;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
 <span style="font-size:12px;font-weight:600;color:#1B2F3A;font-family: Cairo,sans-serif">الربط المباشر مع المؤسسة</span>
 </div>
 <div class="rayat-band" style="margin-bottom:2rem">
@@ -1929,7 +1929,7 @@ body.site-high-contrast .org-redesign-wrap{
 <svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005C86" height="28" opacity=".15" rx="7" width="28"></rect><path d="M7 14h14M14 7v14" stroke="#005C86" stroke-linecap="round" stroke-width="2.5"></path></svg>
         الخدمات الإلكترونية
       </div>
-<div id="svc-toggle" style="width:28px;height:28px;border-radius:10px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:300;transition:transform 0.3s;flex-shrink:0">−</div>
+<div id="svc-toggle" style="width:28px;height:28px;border-radius:0;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:300;transition:transform 0.3s;flex-shrink:0">−</div>
 </div>
 <div class="services-grid" id="services-grid" style="transition:opacity 0.3s">
 <a class="svc-card" href="https://drive.google.com/file/d/1qB29DS_JEaPunmVk55xYaSM2WQPu8ok6/view" target="_blank">
@@ -2010,14 +2010,14 @@ body.site-high-contrast .org-redesign-wrap{
         دليل تحويلات الموظفين
       </div>
 </div>
-<div style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)">
+<div style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:0;overflow:hidden;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)">
 <!-- شريط الحالة (بديل خانة البحث - البحث أصبح في أعلى الصفحة) -->
 <div style="padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(0, 92, 134,.18);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
 <div style="display:flex;align-items:center;gap:8px;color:#005C86;font-family:Cairo,sans-serif;font-size:13px;font-weight:600">
 <svg fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="#005C86" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 <span>استخدم مربع البحث في أعلى الصفحة للبحث بالاسم أو الوظيفة أو رقم التحويلة</span>
 </div>
-<span id="phone-count" style="font-size:12px;color:#005C86;font-family:Cairo,sans-serif;font-weight:600;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:10px;border:1px solid rgba(0, 92, 134,.18)"></span>
+<span id="phone-count" style="font-size:12px;color:#005C86;font-family:Cairo,sans-serif;font-weight:600;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:0;border:1px solid rgba(0, 92, 134,.18)"></span>
 </div>
 <!-- رأس الجدول -->
 <div style="display:grid;grid-template-columns:2fr 1fr 2fr;background:linear-gradient(135deg,#005C86,#005C86);padding:10px 20px">
@@ -2054,7 +2054,7 @@ body.site-high-contrast .org-redesign-wrap{
   display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;
 }
 .oc-badge{
-  background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;padding:5px 16px;border-radius:10px;
+  background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;padding:5px 16px;border-radius:0;
   font-size:12.5px;font-weight:600;
 }
 .oc-hint{
@@ -2072,7 +2072,7 @@ body.site-high-contrast .org-redesign-wrap{
   background:#fff;
   border:1px solid rgba(0, 92, 134,.14);
   border-right:4px solid #005C86;
-  border-radius:10px;
+  border-radius:0;
   padding:22px 20px 18px;
   cursor:pointer;
   display:flex;flex-direction:column;justify-content:space-between;
@@ -2088,7 +2088,7 @@ body.site-high-contrast .org-redesign-wrap{
 /* أيقونة البطاقة */
 .oc-card-icon{
   position:absolute;top:16px;left:16px;
-  width:36px;height:36px;border-radius:10px;
+  width:36px;height:36px;border-radius:0;
   background:rgba(0, 92, 134,.07);
   display:flex;align-items:center;justify-content:center;
   transition:background .22s ease;
@@ -2109,7 +2109,7 @@ body.site-high-contrast .org-redesign-wrap{
 }
 .oc-card-footer::before{
   content:"";display:inline-block;width:6px;height:6px;
-  border-radius:10px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;flex-shrink:0;
+  border-radius:0;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;flex-shrink:0;
 }
 .oc-card-arrow{
   margin-right:auto;opacity:.4;font-size:16px;transition:opacity .2s,transform .2s;
@@ -2134,7 +2134,7 @@ body.site-high-contrast .org-redesign-wrap{
   -webkit-backdrop-filter:blur(24px) saturate(170%);
   backdrop-filter:blur(24px) saturate(170%);
   border:1px solid rgba(255,255,255,.50);
-  border-radius:10px;
+  border-radius:0;
   box-shadow:none;
   overflow:hidden;
   animation:oc-in .32s cubic-bezier(.22,.68,0,1.1);
@@ -2151,7 +2151,7 @@ body.site-high-contrast .org-redesign-wrap{
 }
 .oc-modal-title{color:#fff;font-size:18px;font-weight:600;text-shadow:none}
 .oc-modal-close{
-  width:36px;height:36px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);
+  width:36px;height:36px;border-radius:0;border:1.5px solid rgba(255,255,255,.25);
   background:rgba(255,255,255,.10);color:#fff;font-size:20px;
   cursor:pointer;display:flex;align-items:center;justify-content:center;
   transition:background .15s,border-color .15s,transform .2s;line-height:1;
@@ -2167,7 +2167,7 @@ body.site-high-contrast .org-redesign-wrap{
 /* عناصر المحتوى داخل المودال */
 .oc-chip{
   background:linear-gradient(135deg,#005C86,#005C86);
-  color:#fff;border-radius:10px;padding:12px 18px;
+  color:#fff;border-radius:0;padding:12px 18px;
   font-size:15px;font-weight:600;margin-bottom:16px;
   box-shadow:none;
   display:flex;align-items:center;gap:10px;
@@ -2178,7 +2178,7 @@ body.site-high-contrast .org-redesign-wrap{
 .oc-group-head{
   color:#005C86;font-size:14px;font-weight:600;
   padding:10px 14px;margin-bottom:8px;
-  background:rgba(0, 92, 134,.06);border-radius:10px;
+  background:rgba(0, 92, 134,.06);border-radius:0;
   border-right:none !important;
   border-left:none !important;
   border-inline-start:none !important;
@@ -2191,14 +2191,14 @@ body.site-high-contrast .org-redesign-wrap{
 .oc-list-item{
   background:rgba(245, 250, 252,.80);
   border:1px solid rgba(0, 92, 134,.08);
-  border-radius:10px;padding:10px 16px;
+  border-radius:0;padding:10px 16px;
   color:#1B2F3A;font-size:13.5px;font-weight:600;
   display:flex;align-items:center;gap:10px;
   transition:background .15s,border-color .15s;
 }
 .oc-list-item:hover{background:rgba(234, 245, 250,.90);border-color:rgba(0, 92, 134,.18)}
 .oc-list-item::before{
-  content:"";width:5px;height:5px;border-radius:10px;
+  content:"";width:5px;height:5px;border-radius:0;
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;flex-shrink:0;
 }
 </style>
@@ -2470,15 +2470,15 @@ body.site-high-contrast .org-redesign-wrap{
         التقويم
       </div>
 </div>
-<div style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)">
+<div style="background:#fff;border:1.5px solid rgba(0, 92, 134,.18);border-radius:0;overflow:hidden;box-shadow:0 2px 12px rgba(0, 92, 134,0.08)">
 <!-- رأس التقويم -->
 <div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:16px 20px;display:flex;align-items:center;justify-content:space-between">
-<button onclick="calPrev()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">›</button>
+<button onclick="calPrev()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">›</button>
 <div style="text-align:center">
 <div id="cal-month-name" style="color:#fff;font-size:18px;font-weight:600;font-family: Cairo,sans-serif"></div>
 <div id="cal-hijri-month" style="color:#B8D9E6;font-size:12px;margin-top:2px;font-family: Cairo,sans-serif"></div>
 </div>
-<button onclick="calNext()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">‹</button>
+<button onclick="calNext()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">‹</button>
 </div>
 <!-- أيام الأسبوع -->
 <div style="display:grid;grid-template-columns:repeat(7,1fr);background:#EAF5FA">
@@ -2487,7 +2487,7 @@ body.site-high-contrast .org-redesign-wrap{
 <div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#005C86;font-family: Cairo,sans-serif">الثلاثاء</div>
 <div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#005C86;font-family: Cairo,sans-serif">الأربعاء</div>
 <div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#005C86;font-family: Cairo,sans-serif">الخميس</div>
-<div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#005C86;font-family: Cairo,sans-serif">الجمعة</div>
+<div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#E01B21;font-family: Cairo,sans-serif">الجمعة</div>
 <div style="text-align:center;padding:8px 0;font-size:12px;font-weight:600;color:#E01B21;font-family: Cairo,sans-serif">السبت</div>
 </div>
 <!-- أيام الشهر -->
@@ -2496,9 +2496,9 @@ body.site-high-contrast .org-redesign-wrap{
 <div style="padding:16px 20px;border-top:1px solid rgba(0, 92, 134,.12)">
 <div style="font-size:13px;font-weight:600;color:#005C86;margin-bottom:10px;font-family: Cairo,sans-serif">إضافة حدث</div>
 <div style="display:flex;gap:8px;flex-wrap:wrap">
-<input id="ev-date" lang="en-GB" style="border:1px solid rgba(0, 92, 134,.18);border-radius:10px;padding:7px 12px;font-size:13px;font-family: Cairo,sans-serif;color:#005C86;outline:none;flex:1;min-width:140px;direction:rtl" type="date"/>
-<input id="ev-text" placeholder="عنوان الحدث..." style="border:1px solid rgba(0, 92, 134,.18);border-radius:10px;padding:7px 12px;font-size:13px;font-family: Cairo,sans-serif;color:#005C86;outline:none;flex:2;min-width:180px;direction:rtl" type="text"/>
-<button onclick="addEvent()" style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;border:none;border-radius:10px;padding:7px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family: Cairo,sans-serif;white-space:nowrap">إضافة</button>
+<input id="ev-date" lang="en-GB" style="border:1px solid rgba(0, 92, 134,.18);border-radius:0;padding:7px 12px;font-size:13px;font-family: Cairo,sans-serif;color:#005C86;outline:none;flex:1;min-width:140px;direction:rtl" type="date"/>
+<input id="ev-text" placeholder="عنوان الحدث..." style="border:1px solid rgba(0, 92, 134,.18);border-radius:0;padding:7px 12px;font-size:13px;font-family: Cairo,sans-serif;color:#005C86;outline:none;flex:2;min-width:180px;direction:rtl" type="text"/>
+<button onclick="addEvent()" style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;border:none;border-radius:0;padding:7px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family: Cairo,sans-serif;white-space:nowrap">إضافة</button>
 </div>
 <div id="ev-list" style="margin-top:12px;display:flex;flex-direction:column;gap:6px"></div>
 </div>
@@ -2506,13 +2506,13 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 </div>
 <!-- أزرار جانبية -->
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseout="this.style.background='#005C86';this.style.transform='scale(1)'" onmouseover="this.style.background='#005C86';this.style.transform='scale(1.1)'" style="display:flex;align-items:center;justify-content:center;position:fixed;left:20px;bottom:30px;z-index:200;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border:none;color:#fff;width:44px;height:44px;border-radius:10px;cursor:pointer;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:background 0.15s,transform 0.15s">↑</button>
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseout="this.style.background='#005C86';this.style.transform='scale(1)'" onmouseover="this.style.background='#005C86';this.style.transform='scale(1.1)'" style="display:flex;align-items:center;justify-content:center;position:fixed;left:20px;bottom:30px;z-index:200;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border:none;color:#fff;width:44px;height:44px;border-radius:0;cursor:pointer;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:background 0.15s,transform 0.15s">↑</button>
 <!-- تم حذف أزرار الروابط الجانبية بناءً على طلب المستخدم -->
 
 <!-- ====== فوتر أسفل التقويم: مربع تصميم الموقع ====== -->
 <footer class="site-credit-footer" style="position:relative;text-align:center;padding:24px 16px;margin-top:24px;background:linear-gradient(160deg,#005C86 0%,#005C86 60%,#0a6f93 84%,#1FBBB4 115%);background-repeat:no-repeat">
-<div id="credit-card" style="position:absolute;bottom:70px;left:50%;transform:translateX(-50%) translateY(8px);background:#ffffff;color:#005C86;font-size:13px;font-weight:700;font-family:Cairo,sans-serif;padding:10px 20px;border-radius:10px;white-space:nowrap;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.25)">تصميم الموقع أ/عبدالله سعد الشبرمي</div>
-<div id="credit-btn" title="تصميم الموقع" onmouseenter="this.style.background='#ffffff';var c=document.getElementById('credit-card');c.style.opacity='1';c.style.transform='translateX(-50%) translateY(0)'" onmouseleave="this.style.background='rgba(255,255,255,.10)';var c=document.getElementById('credit-card');c.style.opacity='0';c.style.transform='translateX(-50%) translateY(8px)'" style="display:inline-flex;align-items:center;justify-content:center;min-width:160px;height:36px;padding:0 22px;border-radius:10px;background:rgba(255,255,255,.10);border:none;cursor:pointer;transition:background .2s"></div>
+<div id="credit-card" style="position:absolute;bottom:70px;left:50%;transform:translateX(-50%) translateY(8px);background:#ffffff;color:#005C86;font-size:13px;font-weight:700;font-family:Cairo,sans-serif;padding:10px 20px;border-radius:0;white-space:nowrap;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.25)">تصميم الموقع أ/عبدالله سعد الشبرمي</div>
+<div id="credit-btn" title="تصميم الموقع" onmouseenter="this.style.background='#005C86';var c=document.getElementById('credit-card');c.style.opacity='1';c.style.transform='translateX(-50%) translateY(0)'" onmouseleave="this.style.background='rgba(0,92,134,.20)';var c=document.getElementById('credit-card');c.style.opacity='0';c.style.transform='translateX(-50%) translateY(8px)'" style="display:inline-flex;align-items:center;justify-content:center;min-width:160px;height:36px;padding:0 22px;border-radius:0;background:#005C86;color:#fff;font-family:Cairo,sans-serif;font-size:13px;font-weight:700;border:none;cursor:pointer;opacity:0.10;transition:opacity .2s">تصميم الموقع</div>
 </footer>
 
 <script>var fnt='Cairo';
@@ -2654,12 +2654,12 @@ document.addEventListener('click',e=>{
       
       const badge = document.createElement('div');
       badge.textContent='منتهي';
-      badge.style.cssText='display:inline-block;background:#E01B21;color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;margin-top:6px;font-family:Cairo,sans-serif';
+      badge.style.cssText='display:inline-block;background:#E01B21;color:#fff;font-size:10px;padding:2px 8px;border-radius:0;margin-top:6px;font-family:Cairo,sans-serif';
       card.querySelector('.tl-dates').insertAdjacentElement('afterend', badge);
     } else if(todayNum >= parseInt(card.dataset.end.slice(0,8)) && todayNum <= endNum){
       const badge = document.createElement('div');
       badge.textContent='جارٍ الآن';
-      badge.style.cssText='display:inline-block;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;margin-top:6px;font-family:Cairo,sans-serif';
+      badge.style.cssText='display:inline-block;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:10px;padding:2px 8px;border-radius:0;margin-top:6px;font-family:Cairo,sans-serif';
       card.querySelector('.tl-dates').insertAdjacentElement('afterend', badge);
     }
   });
@@ -2727,23 +2727,23 @@ function renderCal(){
 
     const num = document.createElement('div');
     num.textContent = forceLatinDigits(d);
-    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:Cairo,sans-serif;'
-      + (isToday ? 'background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;' : isSaturday ? 'color:#E01B21;' : isFriday ? 'color:#005C86;' : 'color:#005C86;');
+    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:0;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:Cairo,sans-serif;'
+      + (isToday ? 'background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;' : isSaturday ? 'color:#E01B21;' : isFriday ? 'color:#E01B21;' : 'color:#005C86;');
     cell.appendChild(num);
 
     const hNum = document.createElement('div');
     hNum.textContent = forceLatinDigits(hijriDay);
     hNum.style.cssText = 'font-size:9px;text-align:center;font-family:Cairo,sans-serif;'
-      + (isToday ? 'color:#B8D9E6;' : isSaturday ? 'color:#E01B21;opacity:0.7;' : isFriday ? 'color:#005C86;opacity:0.7;' : 'color:#005C86;opacity:0.6;');
+      + (isToday ? 'color:#B8D9E6;' : isSaturday ? 'color:#E01B21;opacity:0.7;' : isFriday ? 'color:#E01B21;opacity:0.7;' : 'color:#005C86;opacity:0.6;');
     cell.appendChild(hNum);
 
     if(hasEvent){
       const dot = document.createElement('div');
-      dot.style.cssText='width:5px;height:5px;border-radius:10px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;margin:2px auto 0';
+      dot.style.cssText='width:5px;height:5px;border-radius:0;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;margin:2px auto 0';
       cell.appendChild(dot);
       // Show event title on hover
       const tip = document.createElement('div');
-      tip.style.cssText='display:none;position:absolute;bottom:100%;right:50%;transform:translateX(50%);background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:11px;padding:4px 8px;border-radius:10px;white-space:nowrap;z-index:20;font-family:Cairo,sans-serif';
+      tip.style.cssText='display:none;position:absolute;bottom:100%;right:50%;transform:translateX(50%);background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;font-size:11px;padding:4px 8px;border-radius:0;white-space:nowrap;z-index:20;font-family:Cairo,sans-serif';
       tip.textContent = calEvents[dateKey].join('، ');
       cell.appendChild(tip);
       cell.onmouseover=()=>{cell.style.background='#EAF5FA';tip.style.display='block';};
@@ -2782,7 +2782,7 @@ function renderEventList(){
   allEvents.forEach(([date, events])=>{
     events.forEach(ev=>{
       const row = document.createElement('div');
-      row.style.cssText='display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border-radius:10px;padding:8px 12px;font-size:12px;font-family:Cairo,sans-serif';
+      row.style.cssText='display:flex;align-items:center;justify-content:space-between;background:#FFFFFF;border-radius:0;padding:8px 12px;font-size:12px;font-family:Cairo,sans-serif';
       const d = new Date(date);
       const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
       row.innerHTML=`<span style="color:#005C86;font-weight:600">${ev}</span><span style="color:#005C86">${forceLatinDigits(d.getDate())} ${ARABIC_MONTHS_GREG[d.getMonth()]} ${forceLatinDigits(d.getFullYear())}</span><button onclick="delEvent('${date}','${ev}')" style="background:none;border:none;color:#E01B21;cursor:pointer;font-size:14px;padding:0 4px">×</button>`;
@@ -2999,21 +2999,21 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </script>
 <!-- مودال الرؤية والرسالة -->
 <div id="vision-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="background:#fff;border-radius:10px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between">
+<div style="background:#fff;border-radius:0;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: Cairo,sans-serif">الرؤية والرسالة</div>
-<button onclick="document.getElementById('vision-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+<button onclick="document.getElementById('vision-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="margin-bottom:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;font-weight:600;color:#005C86;margin:0">الرؤية</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">الرؤية</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0">الإسهام الفاعل في التنمية الاقتصادية والاجتماعية والبيئية بتوفير التدريب التقني والمهني لأبناء وبنات الوطن بالجودة والكفاية التي يتطلبها سوق العمل، وتحقيق ريادة عالمية تكفل الاستقلالية والاكتفاء الذاتي.</p>
 </div>
 <div style="border-top:1px solid rgba(0, 92, 134,.12);padding-top:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;font-weight:600;color:#005C86;margin:0">الرسالة</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">الرسالة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin-bottom:14px">تسعى المؤسسة العامة للتدريب التقني والمهني إلى:</p>
 <ol style="font-size:14px;color:#1B2F3A;line-height:2.2;padding-right:20px;margin:0">
@@ -3028,14 +3028,14 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </div>
 <!-- مودال سياسة الخصوصية -->
 <div id="privacy-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="background:#fff;border-radius:10px;max-width:760px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between">
+<div style="background:#fff;border-radius:0;max-width:760px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: Cairo,sans-serif">سياسة الخصوصية</div>
-<button onclick="document.getElementById('privacy-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+<button onclick="document.getElementById('privacy-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;font-weight:600;color:#005C86;margin:0">سياسة خصوصية البيانات الشخصية</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">سياسة خصوصية البيانات الشخصية</h3>
 </div>
 <p style="font-size:13px;color:#5D7480;line-height:1.9;margin:0 0 18px">في المؤسسة العامة للتدريب التقني والمهني<br>الإصدار 2.0 (23 رجب 1446هـ الموافق 23 يناير 2025م)</p>
 <div style="border-top:1px solid rgba(0, 92, 134,.12);padding-top:20px">
@@ -3043,7 +3043,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 14px">وتقدم المؤسسة العامة للتدريب التقني والمهني العديد من البرامج التدريبية في منشآتها التدريبية من كليات تقنية ومعاهد ثانوية، وكذلك معاهد الشراكات الاستراتيجية، والكليات التقنية العالمية، ومنشآت التدريب الأهلي، بالإضافة إلى البرامج المساندة المجتمعية.</p>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 14px">نحن في المؤسسة نحترم خصوصيتك ويهمنا أن تكون على دراية بكيفية استخدام المؤسسة لبياناتك الشخصية وحقوقك وفقاً لنظام حماية البيانات الشخصية في المملكة، لقد أعددنا هذه السياسة لمساعدتك على فهم طبيعة البيانات الشخصية التي نجمعها منك، والغرض من جمعها، وكيفية معالجتها، وتخزينها، وإتلافها، والجهات التي سيتم مشاركة بياناتك معها، وحقوقك، وكيفية ممارسة هذه الحقوق.</p>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 20px">إنَّ استخدامك لخدمات "المؤسسة"، يعني اطلاعك وموافقتك على ما ورد في سياسة الخصوصية وما يتم عليها من تعديلات مستمرة، ونحث المستفيد من خدمات المؤسسة على الاطلاع بشكل مستمر على سياسة الخصوصية لمعرفة أي تحديثات تتم عليها.</p>
-<a href="https://tvtc.gov.sa/ar/Pages/PrivacyPolicy.aspx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600">رؤية كامل المقالة</a>
+<a href="https://tvtc.gov.sa/ar/Pages/PrivacyPolicy.aspx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600">رؤية كامل المقالة</a>
 </div>
 </div>
 </div>
@@ -3051,19 +3051,19 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 
 <!-- مودال دعم فني للمؤسسة -->
 <div id="support-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="background:#fff;border-radius:10px;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between">
+<div style="background:#fff;border-radius:0;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: Cairo,sans-serif">دعم فني للمؤسسة</div>
-<button onclick="document.getElementById('support-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+<button onclick="document.getElementById('support-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;font-weight:600;color:#005C86;margin:0">وصف الخدمة</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">وصف الخدمة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 20px">خدمة تتيح من خلالها رفع تذاكر لمختلف المشاكل التقنية والغير تقنية ومتابعة الطلب والتواصل مع المختص ومن ثم قياس مدى رضا المستفيد عن الخدمة المقدمة.</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
-<a href="https://tvtc.gov.sa/ar/Eservices/Documents/Khadom-User%20Guide-Arabic%20V2.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;color:#005C86;text-decoration:none;border:1.5px solid #005C86;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600">دليل المستخدم</a>
-<a href="https://khadom.tvtc.gov.sa/assystnet" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600">الانتقال للخدمة</a>
+<a href="https://tvtc.gov.sa/ar/Eservices/Documents/Khadom-User%20Guide-Arabic%20V2.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;color:#005C86;text-decoration:none;border:1.5px solid #005C86;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600">دليل المستخدم</a>
+<a href="https://khadom.tvtc.gov.sa/assystnet" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600">الانتقال للخدمة</a>
 </div>
 </div>
 </div>
@@ -3165,18 +3165,18 @@ function closeOrg(){
 
 <!-- مودال مجلد المشاركة -->
 <div id="share-overlay" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center">
-<div style="background:#fff;border-radius:10px;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family: Cairo,sans-serif">
+<div style="background:#fff;border-radius:0;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family: Cairo,sans-serif">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
 <div style="font-size:16px;font-weight:600;color:#005C86">مجلد المشاركة</div>
-<button onclick="document.getElementById('share-overlay').style.display='none'" style="background:#EAF5FA;border:none;border-radius:10px;width:30px;height:30px;cursor:pointer;font-size:16px;color:#005C86">×</button>
+<button onclick="document.getElementById('share-overlay').style.display='none'" style="background:#EAF5FA;border:none;border-radius:0;width:30px;height:30px;cursor:pointer;font-size:16px;color:#005C86">×</button>
 </div>
-<div style="background:#FFFFFF;border:1px solid rgba(0, 92, 134,.18);border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#1B2F3A;line-height:2">
+<div style="background:#FFFFFF;border:1px solid rgba(0, 92, 134,.18);border-radius:0;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#1B2F3A;line-height:2">
       للوصول إلى ملفات المشاركة، تأكد أنك متصل بشبكة الكلية الداخلية.<br/>
       ثم انسخ الرابط التالي وافتحه في <strong>File Explorer</strong>:
     </div>
-<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+<div style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
 <code style="color:#fff;font-size:14px;font-family:monospace;direction:ltr">\\172.17.20.19</code>
-<button onclick="navigator.clipboard.writeText('\\\\172.17.20.19');this.textContent='✓ تم';setTimeout(()=&gt;{this.textContent='نسخ'},2000)" style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border:none;color:#fff;font-size:12px;padding:6px 14px;border-radius:10px;cursor:pointer;white-space:nowrap">نسخ</button>
+<button onclick="navigator.clipboard.writeText('\\\\172.17.20.19');this.textContent='✓ تم';setTimeout(()=&gt;{this.textContent='نسخ'},2000)" style="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border:none;color:#fff;font-size:12px;padding:6px 14px;border-radius:0;cursor:pointer;white-space:nowrap">نسخ</button>
 </div>
 </div>
 </div>
@@ -3410,7 +3410,7 @@ html,body,body *{
 .top-site-link{
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%) !important;background-repeat:no-repeat !important;
   color:#FFFFFF !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:7px 18px !important;
   text-decoration:none !important;
   font-size:13px !important;
@@ -3478,7 +3478,7 @@ html,body,body *{
   border:1px solid rgba(0, 92, 134,.18) !important;
   background:#FFFFFF !important;
   color:#005C86 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   outline:none !important;
   direction:rtl !important;
 }
@@ -3495,7 +3495,7 @@ html,body,body *{
   overflow:auto;
   background:#FFFFFF;
   border:1px solid rgba(0, 92, 134,.18);
-  border-radius:10px;
+  border-radius:0;
   box-shadow:0 16px 36px rgba(0, 92, 134,.16);
   z-index:500;
 }
@@ -3508,7 +3508,7 @@ html,body,body *{
 .portal-action-btn{
   width:38px !important;
   height:38px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1px solid rgba(0, 92, 134,.20) !important;
   background:#FFFFFF !important;
   color:#005C86 !important;
@@ -3731,7 +3731,7 @@ nav{
   background:transparent !important;
   border:none !important;
   border-bottom:3px solid transparent !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   visibility:visible !important;
   opacity:1 !important;
   white-space:nowrap !important;
@@ -3762,7 +3762,7 @@ nav{
   background:#FFFFFF !important;
   border:1px solid rgba(0, 92, 134,.18) !important;
   border-top:3px solid #005C86 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:8px !important;
   box-shadow:0 18px 42px rgba(0, 92, 134,.18) !important;
   z-index:9999 !important;
@@ -3780,7 +3780,7 @@ nav{
   align-items:center !important;
   gap:10px !important;
   padding:10px 13px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   color:#005C86 !important;
   background:transparent !important;
   text-decoration:none !important;
@@ -3803,7 +3803,7 @@ nav{
 .dd-dot{
   width:7px !important;
   height:7px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%) !important;background-repeat:no-repeat !important;
   flex:0 0 7px !important;
 }
@@ -3835,7 +3835,7 @@ nav::after,
   width:38px !important;
   height:38px !important;
   min-width:38px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1.5px solid rgba(0, 92, 134,.22) !important;
   background:#FFFFFF !important;
   color:#005C86 !important;
@@ -4135,7 +4135,7 @@ html, body{
   background:var(--c-brand) !important;
   color:var(--c-white) !important;
   padding:6px 14px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   font-weight:600 !important;
   font-size:12.5px !important;
   text-decoration:none !important;
@@ -4218,7 +4218,7 @@ html, body{
   background:rgba(255,255,255,.16) !important;
   color:var(--c-white) !important;
   border:1px solid rgba(255,255,255,.30) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:8px 38px 8px 14px !important;
   font-size:13px !important;
   outline:none !important;
@@ -4238,7 +4238,7 @@ html, body{
   background:rgba(255,255,255,.10) !important;
   color:var(--c-white) !important;
   border:1px solid rgba(255,255,255,.22) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   width:36px !important;
   height:36px !important;
   display:inline-flex !important;
@@ -4290,7 +4290,7 @@ nav{
   color:var(--c-white) !important;
   background:transparent !important;
   border:none !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   height:54px !important;
   padding:0 18px !important;
   font-size:14px !important;
@@ -4321,7 +4321,7 @@ nav{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
   border-top:3px solid var(--c-brand) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 12px 28px rgba(0, 92, 134,.16) !important;
   padding:6px !important;
   min-width:240px !important;
@@ -4333,7 +4333,7 @@ nav{
   font-size:13px !important;
   font-weight:600 !important;
   padding:10px 14px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   display:flex !important;
   align-items:center !important;
   gap:10px !important;
@@ -4347,7 +4347,7 @@ nav{
 .dd-dot{
   width:6px !important;
   height:6px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   background:var(--c-brand) !important;
   flex-shrink:0 !important;
 }
@@ -4380,7 +4380,7 @@ nav{
   border:1.5px solid var(--c-brand-text) !important;
   background:transparent !important;
   font-weight:600 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:6px 16px !important;
   text-decoration:none !important;
   font-size:13px !important;
@@ -4413,7 +4413,7 @@ svg{
 .rayat-band{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 6px 20px rgba(0, 92, 134,.07) !important;
   padding:20px 22px !important;
   margin-bottom:1.5rem !important;
@@ -4431,7 +4431,7 @@ svg{
 .r-card{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:14px 16px !important;
   display:flex !important;
   align-items:center !important;
@@ -4481,7 +4481,7 @@ svg{
 .svc-card{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:20px 16px !important;
   display:flex !important;
   flex-direction:column !important;
@@ -4552,7 +4552,7 @@ svg{
   color:var(--c-brand-text) !important;
   border:1px solid var(--c-border) !important;
   border-top:4px solid var(--c-brand) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:16px !important;
   box-shadow:0 4px 14px rgba(0, 92, 134,.06) !important;
   transition:transform .15s ease, box-shadow .15s ease !important;
@@ -4599,7 +4599,7 @@ svg{
 .news-card{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   overflow:hidden !important;
   box-shadow:0 6px 20px rgba(0, 92, 134,.07) !important;
   transition:transform .18s ease, box-shadow .18s ease !important;
@@ -4652,7 +4652,7 @@ svg{
 .news-mid{
   background:linear-gradient(135deg,var(--c-brand),#005C86) !important;
   color:var(--c-white) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:24px 20px !important;
   display:flex !important;
   flex-direction:column !important;
@@ -4679,7 +4679,7 @@ button.primary, a.primary{
   background:var(--c-brand) !important;
   color:var(--c-white) !important;
   border:1px solid var(--c-brand) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   font-weight:600 !important;
   cursor:pointer !important;
   transition:background .15s ease !important;
@@ -4703,7 +4703,7 @@ button.primary:hover{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
   border-top:4px solid var(--c-brand) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:14px !important;
   box-shadow:0 4px 12px rgba(0, 92, 134,.05) !important;
   transition:transform .15s ease, box-shadow .15s ease !important;
@@ -4739,7 +4739,7 @@ button.primary:hover{
   background:var(--c-brand) !important;
   color:var(--c-white) !important;
   padding:10px 16px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   z-index:9999 !important;
   text-decoration:none !important;
   font-weight:600 !important;
@@ -4781,7 +4781,7 @@ img{ max-width:100%; height:auto; }
 .added-news{
   background:var(--c-white) !important;
   border:1px solid var(--c-border) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 6px 20px rgba(0, 92, 134,.07) !important;
 }
 .added-news h3{
@@ -5005,7 +5005,7 @@ img{ max-width:100%; height:auto; }
   background:rgba(255,255,255,.13) !important;
   color:#FFFFFF !important;
   border:1.5px solid rgba(255,255,255,.35) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   font-size:13px !important;
   caret-color:#FFFFFF !important;
 }
@@ -5026,7 +5026,7 @@ img{ max-width:100%; height:auto; }
 .portal-action-btn{
   background:rgba(255,255,255,.10) !important;
   border:1.5px solid rgba(255,255,255,.28) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   color:#FFFFFF !important;
   width:36px !important;
   height:36px !important;
@@ -5105,7 +5105,7 @@ img{ max-width:100%; height:auto; }
 #search-results{
   background:#FFFFFF !important;
   border:1px solid rgba(0, 92, 134,.15) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 12px 32px rgba(0,0,0,.14) !important;
 }
 #search-results *{
@@ -5141,7 +5141,7 @@ img{ max-width:100%; height:auto; }
   -webkit-backdrop-filter:blur(24px) saturate(180%) !important;
   backdrop-filter:blur(24px) saturate(180%) !important;
   border:1px solid rgba(255,255,255,.45) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:
     0 32px 72px rgba(2, 46, 67,.22),
     0 8px 24px rgba(2, 46, 67,.10),
@@ -5193,7 +5193,7 @@ img{ max-width:100%; height:auto; }
 .org-modal-close{
   width:34px !important;
   height:34px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1.5px solid rgba(255,255,255,.25) !important;
   background:rgba(255,255,255,.12) !important;
   color:#FFFFFF !important;
@@ -5236,7 +5236,7 @@ img{ max-width:100%; height:auto; }
 .org-modal-body .org-item[style*="background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat"]{
   background:linear-gradient(135deg,#005C86,#005C86) !important;
   color:#FFFFFF !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   padding:10px 16px !important;
   border:none !important;
   box-shadow:0 4px 12px rgba(0, 92, 134,.18) !important;
@@ -5255,7 +5255,7 @@ img{ max-width:100%; height:auto; }
   backdrop-filter:blur(6px) !important;
   color:#005C86 !important;
   border:1px solid rgba(0, 92, 134,.10) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   transition:all .15s ease !important;
 }
 .org-list-item:hover{
@@ -5269,7 +5269,7 @@ img{ max-width:100%; height:auto; }
   -webkit-backdrop-filter:blur(18px) !important;
   backdrop-filter:blur(18px) !important;
   color:#1B2F3A !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1px solid rgba(255,255,255,.40) !important;
   box-shadow:0 24px 60px rgba(2, 46, 67,.20) !important;
 }
@@ -5360,7 +5360,7 @@ div.top-bar.rebuilt-top-bar .portal-action-btn svg path[d*="M12 4a8 8 0 0 1 0 16
 div.top-bar.rebuilt-top-bar .portal-action-btn{
   background: rgba(255,255,255,0.10) !important;
   border: 1.5px solid rgba(255,255,255,0.32) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   color: #FFFFFF !important;
 }
 div.top-bar.rebuilt-top-bar .portal-action-btn:hover,
@@ -5408,7 +5408,7 @@ div.org-modal .org-modal-card{
   -webkit-backdrop-filter: blur(22px) saturate(160%) !important;
   backdrop-filter: blur(22px) saturate(160%) !important;
   border: 1px solid rgba(255, 255, 255, 0.50) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow: 0 28px 70px rgba(2, 46, 67, 0.22), 0 0 0 1px rgba(255,255,255,0.18) inset !important;
   overflow: hidden !important;
 }
@@ -5578,7 +5578,7 @@ div.org-modal .org-modal-body{
   -webkit-backdrop-filter:none !important;
   backdrop-filter:none !important;
   border:1px solid rgba(0, 92, 134,.18) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:none !important;
 }
 .oc-modal-head{
@@ -6101,7 +6101,7 @@ nav .dd-item:focus-visible{
     content:"";
     position:absolute;
     inset:-12px;
-    border-radius:10px;
+    border-radius:0;
   }
   .sec-header{
     gap:10px;
@@ -6781,7 +6781,7 @@ html body .rayat-band {
   gap:14px; margin:-0.6rem 0 2rem;
 }
 .news-nav-btn{
-  width:38px; height:38px; border-radius:10px; border:1px solid #c8e8e8;
+  width:38px; height:38px; border-radius:0; border:1px solid #c8e8e8;
   background:#fff; color:#005C86; font-size:22px; line-height:1; cursor:pointer;
   display:flex; align-items:center; justify-content:center;
   transition:background .15s, color .15s, transform .15s, box-shadow .15s;
@@ -6790,10 +6790,10 @@ html body .rayat-band {
 .news-nav-btn:focus-visible{ outline:2px solid #005C86; outline-offset:2px; }
 .news-dots{ display:flex; gap:8px; align-items:center; }
 .news-dot{
-  width:9px; height:9px; border-radius:10px; border:none; padding:0; cursor:pointer;
+  width:9px; height:9px; border-radius:0; border:none; padding:0; cursor:pointer;
   background:#c8e8e8; transition:background .15s, width .15s, border-radius .15s;
 }
-.news-dot.is-active{ background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; width:22px; border-radius:10px; }
+.news-dot.is-active{ background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; width:22px; border-radius:0; }
 @media(max-width:760px){ .news-rotator-controls{ margin-top:.25rem; } }
 </style>
 <style id="FORCE-LIGHT-THEME-FINAL">
@@ -7004,7 +7004,7 @@ html body .survey-card.hide-survey-details{
   overflow:hidden !important;
 }
 html body .survey-card.hide-survey-details .survey-header{
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 
 /* ================================================================
@@ -7067,7 +7067,7 @@ html body .hero-employee-portal-btn{
   font-weight:600 !important;
   font-size:16px !important;
   line-height:1 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   text-decoration:none !important;
   box-shadow:0 6px 20px rgba(0, 92, 134,.28),
              0 2px 6px rgba(44,179,165,.22) !important;
@@ -7212,7 +7212,7 @@ html body #phone-search{
   border:1px solid rgba(0, 92, 134,.18) !important;
   background:#FFFFFF !important;
   color:#005C86 !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   outline:none !important;
   direction:rtl !important;
   text-align:right !important;
@@ -7304,7 +7304,7 @@ html body .header-phone-search .phone-search-results{
   overflow-x:hidden !important;
   background:#FFFFFF !important;
   border:1px solid rgba(0, 92, 134,.18) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 10px 26px rgba(0,0,0,.14), 0 2px 6px rgba(0,0,0,.06) !important;
   z-index:9999 !important;
   display:none !important;
@@ -7322,7 +7322,7 @@ html body .phone-search-results .ps-item{
   gap:10px !important;
   align-items:center !important;
   padding:10px 12px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border-bottom:1px solid #EAF5FA !important;
   background:#FFFFFF !important;
   cursor:default !important;
@@ -7371,7 +7371,7 @@ html body .phone-search-results .ps-ext{
   color:#005C86 !important;
   font-weight:600 !important;
   font-size:13px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   border:1px solid rgba(0, 92, 134,.18) !important;
   font-family:Cairo,sans-serif !important;
   letter-spacing:.5px !important;
@@ -7391,7 +7391,7 @@ html body .header-phone-search .phone-search-results::-webkit-scrollbar{
 }
 html body .header-phone-search .phone-search-results::-webkit-scrollbar-thumb{
   background:rgba(0, 92, 134,.25) !important;
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 html body .header-phone-search .phone-search-results::-webkit-scrollbar-track{
   background:transparent !important;
@@ -7675,7 +7675,7 @@ body{ color: #1B2F3A; }
   transform:translateX(-50%);
   width:14px;
   height:14px;
-  border-radius:10px;
+  border-radius:0;
   background:#fff;
   border:2.5px solid #005C86;
   box-sizing:border-box;
@@ -7702,7 +7702,7 @@ body{ color: #1B2F3A; }
 .vtimeline-card{
   background:#fff;
   border:1px solid #E5ECF2;
-  border-radius:10px;
+  border-radius:0;
   padding:14px 18px;
   min-width:0;
   transition:border-color 0.2s ease;
@@ -7750,7 +7750,7 @@ body{ color: #1B2F3A; }
   width:3px;
   height:3px;
   background:#C4D2DB;
-  border-radius:10px;
+  border-radius:0;
   flex-shrink:0;
 }
 .vtimeline-date-hijri{
@@ -7777,7 +7777,7 @@ body{ color: #1B2F3A; }
   color:#005C86;
   background:#EAF2F8;
   padding:4px 11px;
-  border-radius:10px;
+  border-radius:0;
   white-space:nowrap;
   font-variant-numeric:lining-nums;
 }
@@ -7785,7 +7785,7 @@ body{ color: #1B2F3A; }
   content:'';
   width:6px;
   height:6px;
-  border-radius:10px;
+  border-radius:0;
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;
   opacity:0.7;
 }
@@ -7891,7 +7891,7 @@ html body #news-modal-overlay .news-modal-card{
   position:relative !important;
   background:#fff !important;
   width:100% !important; max-width:520px !important; max-height:88vh !important;
-  border-radius:10px!important; overflow:hidden !important;
+  border-radius:0!important; overflow:hidden !important;
   display:flex !important; flex-direction:column !important;
   box-shadow:0 12px 40px rgba(20,33,55,0.18) !important;
   transform:translateY(14px) scale(.985) !important;
@@ -7913,7 +7913,7 @@ html body .news-modal-actions{ display:flex !important; gap:10px !important; pad
 html body .news-modal-go{
   flex:1 1 auto !important; min-width:150px !important;
   background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%) !important;background-repeat:no-repeat !important; color:#fff !important;
-  border:none !important; border-radius:10px!important; padding:12px 16px !important;
+  border:none !important; border-radius:0!important; padding:12px 16px !important;
   font-size:14px !important; cursor:pointer !important; text-align:center !important;
   text-decoration:none !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:8px !important;
   transition:transform .12s ease, background .15s ease !important;
@@ -7922,7 +7922,7 @@ html body .news-modal-go:hover{ background:#1b3a63 !important; transform:transla
 html body .news-modal-dismiss{
   flex:0 0 auto !important;
   background:#eef2f6 !important; color:#44546a !important;
-  border:none !important; border-radius:10px!important; padding:12px 18px !important;
+  border:none !important; border-radius:0!important; padding:12px 18px !important;
   font-size:14px !important; cursor:pointer !important;
   transition:background .15s ease !important;
 }
@@ -7930,7 +7930,7 @@ html body .news-modal-dismiss:hover{ background:#e2e8ef !important; }
 
 html body .news-modal-x{
   position:absolute !important; top:10px !important; left:10px !important;
-  width:34px !important; height:34px !important; border-radius:10px!important;
+  width:34px !important; height:34px !important; border-radius:0!important;
   background:rgba(255,255,255,0.92) !important; color:#1f3a5f !important;
   border:none !important; font-size:22px !important; line-height:1 !important; cursor:pointer !important;
   display:flex !important; align-items:center !important; justify-content:center !important;
@@ -7947,7 +7947,7 @@ html body .news-card:focus-visible{ outline:2px solid #005C86 !important; outlin
 
 @media (max-width:560px){
   html body #news-modal-overlay{ padding:0 !important; align-items:flex-end !important; }
-  html body #news-modal-overlay .news-modal-card{ max-width:100% !important; max-height:92vh !important; border-radius:10px!important; transform:translateY(26px) !important; }
+  html body #news-modal-overlay .news-modal-card{ max-width:100% !important; max-height:92vh !important; border-radius:0!important; transform:translateY(26px) !important; }
   html body #news-modal-overlay.is-open .news-modal-card{ transform:translateY(0) !important; }
 }
 
@@ -7982,24 +7982,24 @@ html body .svc-card:hover{
    جميع القواعد مقيّدة تحت #etec-surveys-section و #etec-float-btn فقط — لا تأثير على باقي الموقع.
    موضوعة داخل FORCE-LIGHT-THEME-FINAL التزامًا بقاعدة (آخر طبقة CSS). */
 html body #etec-surveys-section{ scroll-margin-top:90px; margin-bottom:2rem; font-family:Cairo,sans-serif; }
-html body #etec-surveys-section .etec-card{ background:#fff; border:1.5px solid rgba(0,92,134,.18); border-radius:10px; overflow:hidden; }
+html body #etec-surveys-section .etec-card{ background:#fff; border:1.5px solid rgba(0,92,134,.18); border-radius:0; overflow:hidden; }
 html body #etec-surveys-section .etec-head{ background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; padding:18px 24px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-html body #etec-surveys-section .etec-head-icon{ width:44px; height:44px; border-radius:10px; background:rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+html body #etec-surveys-section .etec-head-icon{ width:44px; height:44px; border-radius:0; background:rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 html body #etec-surveys-section .etec-head-text{ display:flex; flex-direction:column; gap:4px; min-width:0; flex:1 1 240px; }
 html body #etec-surveys-section .etec-head-text h2{ margin:0; color:#fff; font-size:17px; font-weight:600; line-height:1.4; }
 html body #etec-surveys-section .etec-head-text p{ margin:0; color:rgba(255,255,255,.88); font-size:12.5px; font-weight:600; line-height:1.6; }
-html body #etec-surveys-section .etec-badge{ background:rgba(255,255,255,.2); color:#fff; font-size:11px; font-weight:600; padding:5px 14px; border-radius:10px; white-space:nowrap; }
+html body #etec-surveys-section .etec-badge{ background:rgba(255,255,255,.2); color:#fff; font-size:11px; font-weight:600; padding:5px 14px; border-radius:0; white-space:nowrap; }
 html body #etec-surveys-section .etec-body{ padding:20px 24px; }
 html body #etec-surveys-section .etec-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-html body #etec-surveys-section .etec-survey-card{ display:flex; align-items:center; gap:12px; background:#F6FAFC; border:1px solid rgba(0,92,134,.14); border-radius:10px; padding:14px 16px; }
-html body #etec-surveys-section .etec-num{ width:30px; height:30px; border-radius:10px; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-size:14px; font-weight:600; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+html body #etec-surveys-section .etec-survey-card{ display:flex; align-items:center; gap:12px; background:#F6FAFC; border:1px solid rgba(0,92,134,.14); border-radius:0; padding:14px 16px; }
+html body #etec-surveys-section .etec-num{ width:30px; height:30px; border-radius:0; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-size:14px; font-weight:600; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 html body #etec-surveys-section .etec-survey-info{ flex:1; min-width:0; }
 html body #etec-surveys-section .etec-survey-name{ color:#005C86; font-size:14px; font-weight:600; margin-bottom:3px; }
 html body #etec-surveys-section .etec-survey-desc{ color:#5D7480; font-size:12px; font-weight:600; line-height:1.6; }
-html body #etec-surveys-section .etec-open-btn{ display:inline-block; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-size:12px; font-weight:600; padding:8px 16px; border-radius:10px; text-decoration:none; white-space:nowrap; flex-shrink:0; transition:background .15s; }
+html body #etec-surveys-section .etec-open-btn{ display:inline-block; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-size:12px; font-weight:600; padding:8px 16px; border-radius:0; text-decoration:none; white-space:nowrap; flex-shrink:0; transition:background .15s; }
 html body #etec-surveys-section .etec-open-btn:hover{ background:#1B3B62; }
 /* الزر العائم — أعلى اليسار في سطح المكتب */
-html body #etec-float-btn{ position:fixed; top:140px; left:0; z-index:300; display:flex; align-items:center; gap:8px; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-family:Cairo,sans-serif; font-size:13px; font-weight:600; padding:10px 16px 10px 14px; border-radius:10px; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,.18); transition:background .15s, transform .15s; }
+html body #etec-float-btn{ position:fixed; top:140px; left:0; z-index:300; display:flex; align-items:center; gap:8px; background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat; color:#fff; font-family:Cairo,sans-serif; font-size:13px; font-weight:600; padding:10px 16px 10px 14px; border-radius:0; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,.18); transition:background .15s, transform .15s; }
 html body #etec-float-btn:hover{ background:#1B3B62; transform:translateX(3px); }
 html body #etec-float-btn svg{ flex-shrink:0; }
 /* الجوال — ينتقل الزر العائم إلى أسفل الوسط، والبطاقات إلى عمود واحد */
@@ -8009,7 +8009,7 @@ html body #etec-float-btn svg{ flex-shrink:0; }
   html body #etec-surveys-section .etec-open-btn{ width:100%; text-align:center; }
   html body #etec-surveys-section .etec-head{ padding:16px; }
   html body #etec-surveys-section .etec-body{ padding:16px; }
-  html body #etec-float-btn{ top:auto; bottom:18px; left:50%; transform:translateX(-50%); border-radius:10px; padding:9px 18px; }
+  html body #etec-float-btn{ top:auto; bottom:18px; left:50%; transform:translateX(-50%); border-radius:0; padding:9px 18px; }
   html body #etec-float-btn:hover{ transform:translateX(-50%); }
 }
 /* ===================== etec-surveys-added-styles (END) ===================== */
@@ -8184,7 +8184,7 @@ html body #etec-float-btn{ display:none !important; }
    ==================================================================== */
 html body .awareness-band{ width:100%; }
 html body .awareness-band .aw-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-html body .awareness-band .aw-item{ margin:0; border-radius:10px; overflow:hidden; border:1.5px solid rgba(0,92,134,.18); box-shadow:0 4px 20px rgba(0,92,134,.12); background:#0a1f3c; transition:transform .18s, box-shadow .18s; }
+html body .awareness-band .aw-item{ margin:0; border-radius:0; overflow:hidden; border:1.5px solid rgba(0,92,134,.18); box-shadow:0 4px 20px rgba(0,92,134,.12); background:#0a1f3c; transition:transform .18s, box-shadow .18s; }
 html body .awareness-band .aw-item:hover{ transform:translateY(-3px); box-shadow:0 8px 26px rgba(0,92,134,.22); }
 html body .awareness-band .aw-item img{ display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
 @media (max-width:760px){ html body .awareness-band .aw-grid{ grid-template-columns:1fr; gap:14px; } }
@@ -8252,7 +8252,7 @@ html body #hero-slider .slide-content .hero-cd-card{
   min-width:180px;
   background:#FFFFFF !important;
   border:1.5px solid rgba(0, 92, 134,.18) !important;
-  border-radius:10px;
+  border-radius:0;
   padding:12px 14px;
   box-shadow:0 6px 18px rgba(0, 92, 134,.08) !important;
   display:flex;
@@ -8315,7 +8315,7 @@ html body .top-bar.rebuilt-top-bar .header-shell{
 }
 /* أدوات الهيدر فوق الأخضر: حدود/أيقونات بيضاء */
 html body .top-bar .portal-action-btn{
-  border-radius:10px!important;
+  border-radius:0!important;
   background:#ffffff !important;
   background-image:none !important;
   border:1px solid rgba(255,255,255,.55) !important;
@@ -8346,7 +8346,7 @@ html body .top-bar .dual-search-wrap{
 html body .top-bar .header-search input,
 html body .top-bar .header-phone-search input{
   background:#ffffff !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   color:#005C86 !important;
 }
 html body .top-bar .header-search input::placeholder,
@@ -8434,7 +8434,7 @@ html body nav .nav-inner button.nav-btn{
   gap:6px !important;
   white-space:nowrap !important;
   text-decoration:none !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   opacity:1 !important;
   visibility:visible !important;
   cursor:pointer !important;
@@ -8509,7 +8509,7 @@ html body .top-info .top-site-link{
   background:transparent !important;
   border:1px solid rgba(255,255,255,.6) !important;
   padding:3px 12px !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   text-decoration:none !important;
   white-space:nowrap;
 }
@@ -8579,7 +8579,7 @@ html body .svc-card,
 html body .r-card{
   background:#ffffff !important;
   border:1px solid #e5e7eb !important;
-  border-radius:10px!important;
+  border-radius:0!important;
   box-shadow:0 1px 4px rgba(0,92,134,.06) !important;
   transition:box-shadow .2s ease, transform .2s ease;
 }
@@ -8680,7 +8680,7 @@ html body.scrolled-past-hero nav .nav-inner .nav-btn[data-employee-portal="true"
 html body *,
 html body *::before,
 html body *::after{
-  border-radius:10px!important;
+  border-radius:0!important;
 }
 /* ====== الأشرطة/الأقسام الممتدة بعرض الصفحة تبقى حادة 0px (ليست بطاقات) ====== */
 html body nav,
@@ -8784,7 +8784,7 @@ html body .survey-details a,
 html body .etec-card,
 html body .etec-survey-card,
 html body .etec-open-btn{
-  border-radius:10px !important;
+  border-radius:0 !important;
 }
 html body .survey-details thead,
 html body .survey-details tbody,
@@ -8852,6 +8852,34 @@ html body #phone-search-results,
 html body #phone-search-results *{
   color:#005C86 !important;
   -webkit-text-fill-color:#005C86 !important;
+}
+</style>
+<style id="final-zero-radius-and-footer-fade">
+/* كل الزوايا 0px */
+html body *,
+html body *::before,
+html body *::after{
+  border-radius:0 !important;
+}
+/* خلفية الفوتر شفافية 2% */
+html body footer.site-credit-footer{
+  background:rgba(0,92,134,0.02) !important;
+}
+</style>
+<style id="final-side-buttons-radius-10">
+/* أزرار جانبية/مساعدة + أزرار الأسهم + إدارات رئيسية + أزرار محددة → حواف 10px */
+html body #top-btn,
+html body .news-nav-btn,
+html body .floating-accessibility button,
+html body .sec-more,
+html body .news-more,
+html body .oc-card-arrow,
+html body .icon-share-arrow,
+html body .oc-card,
+html body .top-site-link,
+html body .portal-action-btn.search-action,
+html body .phone-search-icon-search{
+  border-radius:10px !important;
 }
 </style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
@@ -9115,7 +9143,7 @@ html body #phone-search-results *{
       + '<div class="news-date">' + CAL_ICON + ' ' + esc(item.date) + '</div>'
       + '<p class="news-title">' + esc(item.title) + '</p>'
       + '<a class="news-more" href="' + esc(item.link || '#') + '" target="_blank" rel="noopener">'
-      + '<span style="width:22px;height:22px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>'
+      + '<span style="width:22px;height:22px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>'
       + ' اقرأ المزيد</a>'
       + '</div></div>';
   }
@@ -9193,7 +9221,7 @@ html body #phone-search-results *{
   var HERO_CD_EVENTS = [
     { title:'عودة القيادات الإشرافية',                  date:'2026-08-11', hijri:'1448-02-28' },
     { title:'عودة أعضاء هيئة التدريب',                  date:'2026-08-16', hijri:'1448-03-03' },
-    { title:'بداية التدريب للعام التدريبي 1448/1449 هـ', date:'2026-08-23', hijri:'1448-03-10' }
+    { title:'بداية التدريب', date:'2026-08-23', hijri:'1448-03-10' }
   ];
   var HERO_CD_HEAD = 'العام التدريبي 1448/1449 هـ';
   var GREG_MONTHS = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];

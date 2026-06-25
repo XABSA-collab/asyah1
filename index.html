@@ -3007,13 +3007,13 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="margin-bottom:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">الرؤية</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:3px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005C86;margin:0;font-family:Cairo,sans-serif">الرؤية</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0">الإسهام الفاعل في التنمية الاقتصادية والاجتماعية والبيئية بتوفير التدريب التقني والمهني لأبناء وبنات الوطن بالجودة والكفاية التي يتطلبها سوق العمل، وتحقيق ريادة عالمية تكفل الاستقلالية والاكتفاء الذاتي.</p>
 </div>
 <div style="border-top:1px solid rgba(0, 92, 134,.12);padding-top:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">الرسالة</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:3px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005C86;margin:0;font-family:Cairo,sans-serif">الرسالة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin-bottom:14px">تسعى المؤسسة العامة للتدريب التقني والمهني إلى:</p>
 <ol style="font-size:14px;color:#1B2F3A;line-height:2.2;padding-right:20px;margin:0">
@@ -3035,7 +3035,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">سياسة خصوصية البيانات الشخصية</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:3px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005C86;margin:0;font-family:Cairo,sans-serif">سياسة خصوصية البيانات الشخصية</h3>
 </div>
 <p style="font-size:13px;color:#5D7480;line-height:1.9;margin:0 0 18px">في المؤسسة العامة للتدريب التقني والمهني<br>الإصدار 2.0 (23 رجب 1446هـ الموافق 23 يناير 2025م)</p>
 <div style="border-top:1px solid rgba(0, 92, 134,.12);padding-top:20px">
@@ -3058,7 +3058,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:0;font-weight:600;color:#005C86;margin:0">وصف الخدمة</h3>
+<div style="width:4px;height:28px;background:linear-gradient(160deg,#005C86 0%,#005C86 55%,#0a6f93 80%,#1FBBB4 115%);background-repeat:no-repeat;border-radius:3px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005C86;margin:0;font-family:Cairo,sans-serif">وصف الخدمة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 20px">خدمة تتيح من خلالها رفع تذاكر لمختلف المشاكل التقنية والغير تقنية ومتابعة الطلب والتواصل مع المختص ومن ثم قياس مدى رضا المستفيد عن الخدمة المقدمة.</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
@@ -8879,6 +8879,20 @@ html body .oc-card,
 html body .top-site-link,
 html body .portal-action-btn.search-action,
 html body .phone-search-icon-search{
+  border-radius:10px !important;
+}
+/* مودالات الرؤية والرسالة + سياسة الخصوصية → شكل أفضل */
+html body #vision-modal > div,
+html body #privacy-modal > div{
+  border-radius:14px !important;
+}
+html body #vision-modal > div > div:first-child,
+html body #privacy-modal > div > div:first-child{
+  border-radius:14px 14px 0 0 !important;
+}
+html body #vision-modal button,
+html body #privacy-modal button,
+html body #privacy-modal a[href*="PrivacyPolicy"]{
   border-radius:10px !important;
 }
 </style>

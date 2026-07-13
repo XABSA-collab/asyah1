@@ -1835,16 +1835,9 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- ====== /EMPLOYEE PORTAL HERO BUTTON ====== -->
 <h1 class="hero-main-title">البوابة الإلكترونية للكلية التقنية بالأسياح</h1>
 <p>جميع الخدمات والروابط الإدارية في مكان واحد</p>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px">
-<a class="hero-quicklink" href="#org-section" onclick="document.getElementById('org-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الهيكل التنظيمي</a>
-<a class="hero-quicklink" href="#phone-section" onclick="document.getElementById('phone-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">دليل التحويلات الهاتفية</a>
-<a class="hero-quicklink" href="#survey-section" onclick="document.getElementById('survey-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الاستبانة</a>
-<a class="hero-quicklink" href="#news-section" onclick="document.getElementById('news-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأخبار</a>
-<a class="hero-quicklink" href="#timeline-section" onclick="document.getElementById('timeline-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الخط الزمني</a>
-<a class="hero-quicklink" href="#countdown-section" onclick="document.getElementById('countdown-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">الأحداث القادمة</a>
-<a class="hero-quicklink" href="#calendar-section" onclick="document.getElementById('calendar-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">التقويم</a>
-<a class="hero-quicklink" href="#etec-surveys-section" onclick="document.getElementById('etec-surveys-section').scrollIntoView({behavior:'smooth'});return false" style="font-size:12px;padding:6px 14px;border-radius:0;text-decoration:none;transition:background 0.15s;font-family:Cairo,sans-serif">استطلاعات الهيئة</a>
-</div>
+<!-- [REMOVED] حاوية الروابط السريعة (.hero-quicklink) — حُذفت بالكامل من HTML.
+     الأقسام التي كانت تشير إليها (الهيكل التنظيمي/التحويلات/الاستبانة/الأخبار/الخط الزمني/
+     الأحداث القادمة/التقويم/استطلاعات الهيئة) باقية كما هي في الصفحة. -->
 <!-- ====== شريط العد التنازلي للعام التدريبي (أفقي RTL) — يُملأ عبر JS في FORCE-LIGHT-THEME-SCRIPT.
      للإخفاء: أضف class="hide-hero-countdown" على #hero-countdown (راجع طبقة final-hero-countdown-strip)،
      أو علّق هذه الكتلة. لتعديل التواريخ: عدّل مصفوفة HERO_CD_EVENTS في السكربت. ====== -->
@@ -7105,31 +7098,18 @@ html body .hero-employee-portal-btn{
   align-items:center !important;
   gap:10px !important;
   padding:13px 30px !important;
-  background:#005C86 !important;
-  color:#ffffff !important;
+  /* [DISABLED colors/shadow/border — طبقة final-hero-buttons-solid-eaf5fa] */
   font-family:Cairo,sans-serif !important;
   font-weight:600 !important;
   font-size:16px !important;
   line-height:1 !important;
-  border-radius:0!important;
   text-decoration:none !important;
-  box-shadow:0 6px 20px rgba(0, 92, 134,.28),
-             0 2px 6px rgba(44,179,165,.22) !important;
-  transition:transform .25s ease, box-shadow .25s ease, background .35s ease !important;
+  transition:transform .25s ease, background .20s ease !important;
   position:relative;
   isolation:isolate;
-  border:1.5px solid rgba(255,255,255,.35) !important;
 }
 html body .hero-employee-portal-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 10px 28px rgba(0, 92, 134,.40),
-             0 4px 10px rgba(44,179,165,.30) !important;
-  background:#005C86 !important;
-  color:#ffffff !important;
-}
-html body .hero-employee-portal-btn:focus-visible{
-  outline:3px solid #ffffff;
-  outline-offset:3px;
 }
 html body .hero-employee-portal-btn svg{
   width:18px;
@@ -7138,7 +7118,7 @@ html body .hero-employee-portal-btn svg{
   flex:0 0 auto;
 }
 html body .hero-employee-portal-btn span{
-  color:#ffffff !important;
+  color:#005C86 !important;
   font-family:Cairo,sans-serif !important;
   font-weight:600 !important;
 }
@@ -8284,7 +8264,7 @@ html body #hero-countdown.hide-hero-countdown{ display:none !important; }
   gap:8px;
   font-size:14px;
 }
-.hero-cd-head svg{ width:18px; height:18px; }
+/* [REMOVED] .hero-cd-head svg — لم تعد هناك أيقونة. */
 
 /* الصف الأفقي من اليمين لليسار */
 .hero-cd-row{
@@ -8575,37 +8555,8 @@ html body .top-info svg{ color:#ffffff !important; stroke:#ffffff !important; }
 
 /* ====== قاعدة عامة: أي عنصر بخلفية بيضاء → نصه أخضر ====== */
 /* أزرار التنقل السريع داخل الهيرو: خلفية بيضاء → نص أخضر */
-html body .hero .slide-content .hero-quicklink,
-html body #hero-slider .slide-content .hero-quicklink{
-  background:#005C86 !important;background-repeat:no-repeat !important;
-  color:#ffffff !important;
-  border:1px solid #005C86 !important;
-}
-html body .hero .slide-content .hero-quicklink:hover,
-html body #hero-slider .slide-content .hero-quicklink:hover{
-  background:#1FBBB4 !important; color:#ffffff !important;
-}
-/* زر بوابة الموظفين في الهيرو: خلفية بيضاء + نص وأيقونة أخضر */
-html body .hero .slide-content .hero-employee-portal-btn,
-html body #hero-slider .slide-content .hero-employee-portal-btn,
-html body .hero .slide-content .hero-employee-portal-btn:hover,
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover{
-  background:#005C86 !important;background-repeat:no-repeat !important;
-  background-image:none !important;
-  border:1.5px solid #005C86 !important;
-}
-html body .hero .slide-content .hero-employee-portal-btn,
-html body .hero .slide-content .hero-employee-portal-btn *,
-html body #hero-slider .slide-content .hero-employee-portal-btn,
-html body #hero-slider .slide-content .hero-employee-portal-btn *{
-  color:#ffffff !important;
-}
-html body .hero .slide-content .hero-employee-portal-btn svg,
-html body .hero .slide-content .hero-employee-portal-btn svg *,
-html body #hero-slider .slide-content .hero-employee-portal-btn svg,
-html body #hero-slider .slide-content .hero-employee-portal-btn svg *{
-  fill:#ffffff !important; stroke:#ffffff !important;
-}
+/* [DISABLED — استُبدلت بطبقة final-hero-buttons-solid-eaf5fa]
+   كانت تفرض خلفية #005C86 ونصًا أبيض وحدودًا على أزرار الهيرو. */
 
 /* بطاقات العد التنازلي: كل النصوص والأيقونات أخضر */
 html body #hero-slider .slide-content .hero-cd-card,
@@ -8687,7 +8638,6 @@ html body .nav-item:hover > .nav-btn,
 html body .nav-btn.open,
 html body .nav-btn.active,
 html body .portal-action-btn:hover,
-html body .hero-employee-portal-btn:hover,
 html body .sec-more:hover,
 html body .r-card:hover .r-cta,
 html body button.primary:hover,
@@ -8699,8 +8649,7 @@ html body .nav-btn:hover,
 html body .nav-item:hover > .nav-btn,
 html body .nav-btn.open{ border-bottom-color:transparent !important; }
 html body .nav-btn:hover *,
-html body .portal-action-btn:hover *,
-html body .hero-employee-portal-btn:hover *{
+html body .portal-action-btn:hover *{
   color:#ffffff !important; stroke:#ffffff !important; fill:#ffffff !important;
 }
 
@@ -8788,44 +8737,8 @@ html body .site-header-stack nav .nav-inner .nav-btn{
   color:#ffffff !important; -webkit-text-fill-color:#ffffff !important;
 }
 /* الأزرار البارزة في الهيرو: تدرّج موحّد ثابت (متصل عبر المتجاورة)، بلا حدود */
-html body #hero-slider .slide-content .hero-employee-portal-btn,
-html body .hero .slide-content .hero-employee-portal-btn{
-  background:var(--brand-grad) !important;
-  background-image:none !important;
-  
-  
-  background-repeat:no-repeat !important;
-  border-color:#005C86 !important;
-}
-/* بوابة الموظفين عند التمرير: #1FBBB4 والنص والأيقونة أبيض */
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover,
-html body .hero .slide-content .hero-employee-portal-btn:hover{
-  background:#1FBBB4 !important;
-  background-image:none !important;
-  border-color:#1FBBB4 !important;
-}
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover,
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover *{
-  color:#ffffff !important; -webkit-text-fill-color:#ffffff !important;
-}
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover svg,
-html body #hero-slider .slide-content .hero-employee-portal-btn:hover svg *{
-  fill:#ffffff !important; stroke:#ffffff !important;
-}
-html body #hero-slider .slide-content .hero-quicklink,
-html body .hero .slide-content .hero-quicklink{
-  background:var(--brand-grad) !important;
-  background-image:none !important;
-  
-  
-  background-repeat:no-repeat !important;
-  border:none !important;
-}
-html body #hero-slider .slide-content .hero-employee-portal-btn,
-html body #hero-slider .slide-content .hero-employee-portal-btn *,
-html body #hero-slider .slide-content .hero-quicklink{
-  color:#ffffff !important; -webkit-text-fill-color:#ffffff !important;
-}
+/* [DISABLED — استُبدلت بطبقة final-hero-buttons-solid-eaf5fa]
+   كانت تفرض تدرّج الهوية + تركوازي عند المرور + نصًا أبيض على أزرار الهيرو. */
 /* ====== منطقة الاستبانات: الحاوية 10px والخلايا الداخلية 0 (قطعة واحدة) ====== */
 html body .survey-card,
 html body .survey-header,
@@ -9023,7 +8936,6 @@ html body #support-modal > div > div:first-child:not(.__rb):not(.__rb2):not(.__r
 }
 
 /* ---------- 4) أزرار وحقول مستقلة → 10px ---------- */
-html body .hero-quicklink:not(.__rb):not(.__rb2):not(.__rb3),
 html body .hero-employee-portal-btn:not(.__rb):not(.__rb2):not(.__rb3),
 html body .etec-open-btn:not(.__rb):not(.__rb2):not(.__rb3),
 html body .sec-more:not(.__rb):not(.__rb2):not(.__rb3),
@@ -9440,6 +9352,156 @@ html body .nav-item.nav-surveys-item .dropdown.show{
   }
 }
 </style>
+<!-- [REMOVED] طبقة final-hero-buttons-solid-eaf5fa — استُبدلت بطبقة
+     final-hero-employee-btn-white-teal (زر أبيض + هوفر #1FBBB4). -->
+<style id="final-hero-text-colors">
+/* ====================================================================
+   نصوص الهيرو فقط — العنوان Bold #005C86 · النص الوصفي #636466
+   القواعد المتعارضة السابقة تفرض #005C86 على h1 و p معًا:
+     #hero-slider .slide-content p        → (1,1,2)
+     .slide-content p / .hero p           → (0,1,2)
+   المحدّدات هنا: ID + child combinator + ‎:not()‎ ثلاثية → خصوصية أعلى.
+   ‎> p‎ يحصر التأثير في الفقرة المباشرة، فلا يمسّ بطاقات العدّ التنازلي
+   (داخل #hero-countdown) ولا أي فقرة خارج الهيرو.
+   ==================================================================== */
+html body #hero-slider .slide-content h1:not(.__rb):not(.__rb2):not(.__rb3),
+html body .hero .slide-content h1:not(.__rb):not(.__rb2):not(.__rb3){
+  color:#005C86 !important;
+  -webkit-text-fill-color:#005C86 !important;
+  font-family:Cairo,sans-serif !important;
+  font-weight:700 !important;
+  text-shadow:none !important;
+}
+
+html body #hero-slider .slide-content > p:not(.__rb):not(.__rb2):not(.__rb3),
+html body .hero .slide-content > p:not(.__rb):not(.__rb2):not(.__rb3){
+  color:#636466 !important;
+  -webkit-text-fill-color:#636466 !important;
+  text-shadow:none !important;
+  font-weight:600 !important; /* ليس Bold — كما هو الوزن العام للنصوص */
+}
+</style>
+<style id="final-hero-countdown-text-colors">
+/* ====================================================================
+   نصوص العد التنازلي داخل الهيرو فقط → #636466
+   يشمل: عنوان «العام التدريبي 1448/1449 هـ» · أسماء الأحداث ·
+   التواريخ الميلادية والهجرية · أرقام الأيام · «بعد» و«يوم» ·
+   حالات «اليوم» و«انتهى».
+   الخصوصية: المحدّدات القديمة تفرض اللون عبر
+     html body #hero-slider .slide-content .hero-cd-num   → (1,2,4)
+     …card.is-near .hero-cd-num / .is-today               → (1,3,4)
+   وهنا نستخدم ID مزدوج (#hero-slider + #hero-countdown) → (2,x,x) فيعلو عليها.
+   ==================================================================== */
+html body #hero-slider #hero-countdown,
+html body #hero-slider #hero-countdown *,
+html body .hero #hero-countdown,
+html body .hero #hero-countdown *,
+html body #hero-slider .hero-cd-head,
+html body #hero-slider .hero-cd-head *,
+html body #hero-slider .hero-cd-card,
+html body #hero-slider .hero-cd-card *,
+html body .hero .hero-cd-head,
+html body .hero .hero-cd-head *,
+html body .hero .hero-cd-card,
+html body .hero .hero-cd-card *{
+  color:#636466 !important;
+  -webkit-text-fill-color:#636466 !important;
+  text-shadow:none !important;
+}
+
+/* [REMOVED] استثناء أيقونة الساعة — الأيقونة حُذفت من المصدر. */
+/* ملاحظة: خلفية البطاقات (#FFFFFF)، حدودها (#005C86)، أحجام/أوزان الخطوط،
+   ترتيب البطاقات وأبعادها، وشفافية .is-past — كلها بلا تغيير. */
+</style>
+<style id="final-hero-employee-btn-white-teal">
+/* ====================================================================
+   1) زر «بوابة الموظفين» — استثناء من قاعدة أزرار الهيرو (#EAF5FA):
+      أساسي: خلفية #FFFFFF · نص وأيقونة #005C86 · بلا حدود/ظل · حواف 10px
+      هوفر/ضغط: خلفية #1FBBB4 · نص وأيقونة #FFFFFF · بلا تدرّج/حدود/ظل
+      (طبقة final-hero-buttons-solid-eaf5fa حُذفت لأنها كانت تخدم هذا الزر فقط،
+       فلا يوجد تعارض خصوصية.)
+      ملاحظة الأيقونة: مسار SVG مُصمَت (filled) لذلك يُضبط fill + stroke معًا.
+   ==================================================================== */
+html body #hero-slider .hero-employee-portal-btn,
+html body .hero .hero-employee-portal-btn{
+  background:#FFFFFF !important;
+  background-image:none !important;
+  background-color:#FFFFFF !important;
+  color:#005C86 !important;
+  -webkit-text-fill-color:#005C86 !important;
+  border:0 !important;
+  border-color:transparent !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  filter:none !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn *,
+html body .hero .hero-employee-portal-btn *{
+  color:#005C86 !important;
+  -webkit-text-fill-color:#005C86 !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn svg,
+html body #hero-slider .hero-employee-portal-btn svg *,
+html body .hero .hero-employee-portal-btn svg,
+html body .hero .hero-employee-portal-btn svg *{
+  color:#005C86 !important;
+  stroke:#005C86 !important;
+  fill:#005C86 !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn:hover,
+html body .hero .hero-employee-portal-btn:hover,
+html body #hero-slider .hero-employee-portal-btn:active,
+html body .hero .hero-employee-portal-btn:active{
+  background:#1FBBB4 !important;
+  background-image:none !important;
+  background-color:#1FBBB4 !important;
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+  border:0 !important;
+  box-shadow:none !important;
+  filter:none !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn:hover *,
+html body .hero .hero-employee-portal-btn:hover *,
+html body #hero-slider .hero-employee-portal-btn:active *,
+html body .hero .hero-employee-portal-btn:active *{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn:hover svg,
+html body #hero-slider .hero-employee-portal-btn:hover svg *,
+html body .hero .hero-employee-portal-btn:hover svg,
+html body .hero .hero-employee-portal-btn:hover svg *,
+html body #hero-slider .hero-employee-portal-btn:active svg,
+html body #hero-slider .hero-employee-portal-btn:active svg *,
+html body .hero .hero-employee-portal-btn:active svg,
+html body .hero .hero-employee-portal-btn:active svg *{
+  color:#FFFFFF !important;
+  stroke:#FFFFFF !important;
+  fill:#FFFFFF !important;
+}
+
+html body #hero-slider .hero-employee-portal-btn:focus-visible,
+html body .hero .hero-employee-portal-btn:focus-visible{
+  outline:2px solid #005C86 !important;
+  outline-offset:2px !important;
+}
+
+/* ====================================================================
+   2) عنوان العد التنازلي بعد حذف أيقونة الدائرة (SVG) من مصدر JS:
+      نص فقط، في المنتصف، بلا فجوة متبقية.
+   ==================================================================== */
+html body .hero-cd-head{
+  justify-content:center !important;
+  gap:0 !important;
+}
+</style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){
   try{
@@ -9829,13 +9891,9 @@ html body .nav-item.nav-surveys-item .dropdown.show{
         + '</div>';
     }).join('');
 
-    var clock = '<svg viewBox="0 0 28 28" fill="none" aria-hidden="true">'
-              +   '<circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2"></circle>'
-              +   '<path d="M14 10v4l2.5 2.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>'
-              + '</svg>';
-
+    /* [REMOVED] متغير clock وأيقونة الدائرة (SVG) — حُذفا نهائيًا من المصدر. */
     el.innerHTML =
-        '<div class="hero-cd-head">' + clock + '<span>' + esc(HERO_CD_HEAD) + '</span></div>'
+        '<div class="hero-cd-head"><span>' + esc(HERO_CD_HEAD) + '</span></div>'
       + '<div class="hero-cd-row">' + cards + '</div>';
   }
 

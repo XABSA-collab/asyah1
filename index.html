@@ -1788,7 +1788,7 @@ body.site-high-contrast .org-redesign-wrap{
 <a class="nav-btn hide-nav-item" data-employee-portal="true" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank">بوابة الموظفين</a>
 <a class="nav-btn hide-nav-item" href="https://mail.tvtc.gov.sa/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.tvtc.gov.sa%2fowa%2f" target="_blank">البريد الإلكتروني</a>
 <div class="nav-item">
-<button class="nav-btn" onclick="toggleDD(this,'dd1')">رايات <span class="arr">▾</span></button>
+<button type="button" class="nav-btn" aria-haspopup="true" aria-expanded="false" aria-controls="dd1" onclick="toggleDD(this,'dd1')">رايات <span class="arr">▾</span></button>
 <div class="dropdown" id="dd1">
 <a class="dd-item" href="https://rytstuss-oc.tvtc.gov.sa/BannerGeneralSsb" target="_blank"><span class="dd-dot"></span>الخدمات الذاتية للمدربين</a>
 <a class="dd-item" href="https://rytreg-oc.tvtc.gov.sa/StudentRegistrationSsb/ssb/registration" target="_blank"><span class="dd-dot"></span>التسجيل الذاتي للمتدربين</a>
@@ -1801,15 +1801,15 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 </div>
 <div class="nav-item">
-<button class="nav-btn" onclick="toggleDD(this,'dd2')">الدعم الفني <span class="arr">▾</span></button>
+<button type="button" class="nav-btn" aria-haspopup="true" aria-expanded="false" aria-controls="dd2" onclick="toggleDD(this,'dd2')">الدعم الفني <span class="arr">▾</span></button>
 <div class="dropdown" id="dd2">
 <a class="dd-item" href="#" onclick="event.preventDefault();document.getElementById('support-modal').style.display='flex'"><span class="dd-dot"></span>دعم فني للمؤسسة</a>
 <a class="dd-item" href="https://forms.gle/5Tynx2vwqEoEkJgr7" target="_blank"><span class="dd-dot"></span>دعم فني للكلية</a>
 <a class="dd-item" href="https://forms.office.com/pages/responsepage.aspx?id=t2SN3tp5mEGAwnuENDSDT5WtVBM9jQtNqXjXUfwJg6VUM1JOTTRFVlg0WlpZRk81TEdTQzYyT1RRUC4u&amp;route=shorturl" target="_blank"><span class="dd-dot"></span>دعم فني التدرب الإلكتروني</a>
 </div>
 </div>
-<div class="nav-item hide-nav-surveys">
-<button class="nav-btn" onclick="toggleDD(this,'dd3')">الاستبانات <span class="arr">▾</span></button>
+<div class="nav-item hide-nav-surveys nav-surveys-item" hidden aria-hidden="true"><!-- مخفي من شريط التنقل فقط — المحتوى محفوظ بالكامل -->
+<button type="button" class="nav-btn" aria-haspopup="true" aria-expanded="false" aria-controls="dd3" onclick="toggleDD(this,'dd3')" tabindex="-1">الاستبانات <span class="arr">▾</span></button>
 <div class="dropdown" id="dd3">
 <a class="dd-item" href="https://forms.office.com/r/jjFT1fhgpR" target="_blank" rel="noopener"><span class="dd-dot"></span>استبيان قياس جودة تجربة المتدرب عن خدمة التدريب التعاوني للكليات التقنية</a>
 </div>
@@ -1970,12 +1970,11 @@ body.site-high-contrast .org-redesign-wrap{
 </div>
 <!-- الخدمات الإلكترونية -->
 <div style="margin-bottom:2rem">
-<div class="sec-header" onclick="toggleServices()" style="cursor:pointer">
+<div class="sec-header" style="cursor:default">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005C86" height="28" opacity=".15" rx="7" width="28"></rect><path d="M7 14h14M14 7v14" stroke="#005C86" stroke-linecap="round" stroke-width="2.5"></path></svg>
+<svg class="icon" fill="none" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect x="4.5" y="4.5" width="8" height="8" rx="1.5" fill="none" stroke="#005C86" stroke-width="2"></rect><rect x="15.5" y="4.5" width="8" height="8" rx="1.5" fill="none" stroke="#005C86" stroke-width="2"></rect><rect x="4.5" y="15.5" width="8" height="8" rx="1.5" fill="none" stroke="#005C86" stroke-width="2"></rect><rect x="15.5" y="15.5" width="8" height="8" rx="1.5" fill="none" stroke="#005C86" stroke-width="2"></rect></svg>
         الخدمات الإلكترونية
       </div>
-<div id="svc-toggle" style="width:28px;height:28px;border-radius:0;background:#005C86;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:300;transition:transform 0.3s;flex-shrink:0">−</div>
 </div>
 <div class="services-grid" id="services-grid" style="transition:opacity 0.3s">
 <a class="svc-card" href="https://drive.google.com/file/d/1qB29DS_JEaPunmVk55xYaSM2WQPu8ok6/view" target="_blank">
@@ -2263,7 +2262,7 @@ body.site-high-contrast .org-redesign-wrap{
 <div class="oc-modal" id="oc-modal">
 <div class="oc-modal-head">
 <div class="oc-modal-title" id="oc-modal-title"></div>
-<button class="oc-modal-close" id="oc-modal-close" type="button" aria-label="إغلاق">&times;</button>
+<button class="oc-modal-close unified-round-close" id="oc-modal-close" type="button" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
 </div>
 <div class="oc-modal-body" id="oc-modal-body"></div>
 </div>
@@ -2453,7 +2452,7 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- ===== News modal (floating card) — added 2026-05-29 ===== -->
 <div id="news-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="news-modal-title" aria-hidden="true">
 <div class="news-modal-card">
-<button type="button" class="news-modal-x" aria-label="إغلاق">&times;</button>
+<button type="button" class="news-modal-x unified-round-close" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
 <div class="news-modal-figure" id="news-modal-figure"><img alt="" id="news-modal-img"/></div>
 <div class="news-modal-body">
 <div class="news-modal-date" id="news-modal-date"></div>
@@ -2647,9 +2646,11 @@ function doSearch(q){
 }
 function toggleDD(btn,id){
   document.querySelectorAll('.dropdown').forEach(d=>{if(d.id!==id)d.classList.remove('show')});
-  document.querySelectorAll('.nav-btn').forEach(b=>{if(b!==btn)b.classList.remove('open')});
-  document.getElementById(id).classList.toggle('show');
-  btn.classList.toggle('open');
+  document.querySelectorAll('.nav-btn').forEach(b=>{if(b!==btn){b.classList.remove('open');if(b.hasAttribute('aria-expanded'))b.setAttribute('aria-expanded','false');}});
+  var dd=document.getElementById(id);
+  var open=dd.classList.toggle('show');
+  btn.classList.toggle('open',open);
+  btn.setAttribute('aria-expanded',open?'true':'false');
 }
 let currentSlide=0;
 const slides=document.querySelectorAll('.slide');
@@ -2665,15 +2666,7 @@ function goSlide(n){
 function nextSlide(){if(slides.length<=1)return;goSlide((currentSlide+1)%slides.length);}
 function prevSlide(){if(slides.length<=1)return;goSlide((currentSlide-1+slides.length)%slides.length);}
 if(slides.length>1){setInterval(()=>nextSlide(),5000);}
-function toggleServices(){
-  const grid=document.getElementById('services-grid');
-  const btn=document.getElementById('svc-toggle');
-  const hidden=grid.style.display==='none';
-  grid.style.display=hidden?'grid':'none';
-  grid.style.opacity=hidden?'1':'0';
-  btn.textContent=hidden?'−':'+';
-  btn.style.transform=hidden?'rotate(0deg)':'rotate(45deg)';
-}
+/* toggleServices() removed — services grid is always visible (زر الطي #svc-toggle حُذف) */
 document.addEventListener('click',e=>{
   if(!e.target.closest('.nav-item')){
     document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('show'));
@@ -3052,7 +3045,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="background:#fff;border-radius:0;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
 <div style="background:#005C86;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: Cairo,sans-serif">الرؤية والرسالة</div>
-<button onclick="document.getElementById('vision-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('vision-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
 </div>
 <div style="padding:24px;font-family: Cairo,sans-serif;direction:rtl">
 <div style="margin-bottom:24px">
@@ -3081,7 +3074,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="display:flex;flex-direction:column;background:#fff;border-radius:0;width:min(760px,100%);max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);box-shadow:0 20px 60px rgba(0,0,0,0.3)">
 <div style="background:#005C86;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:2;flex-shrink:0">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: Cairo,sans-serif">سياسة الخصوصية</div>
-<button onclick="document.getElementById('privacy-modal').style.display='none'" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">×</button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('privacy-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
 </div>
 <div style="padding:24px 24px 28px;font-family: Cairo,sans-serif;direction:rtl;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
@@ -9130,6 +9123,323 @@ html body #hero-slider .slide.active::before{
   }
 }
 </style>
+<style id="final-oc-modal-close-and-nav-surveys-hide">
+/* ====================================================================
+   1) زر إغلاق (X) داخل نوافذ بطاقات الهيكل التنظيمي — .oc-modal-close
+   دائرة 38px بلا إطار ولا ظل، بلا دوران، وX مرسومة بـ ::before/::after
+   ‎:not(.__rb):not(.__rb2):not(.__rb3)‎ أصناف وهمية لرفع الخصوصية فوق
+   قاعدة "html body *{border-radius:0 !important}".
+   ==================================================================== */
+html body .oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3){
+  position:relative !important;
+  display:grid !important;
+  place-items:center !important;
+  width:38px !important;
+  height:38px !important;
+  min-width:38px !important;
+  min-height:38px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  background:rgba(22,158,166,.12) !important;
+  box-shadow:none !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+  transform:none !important;
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  cursor:pointer !important;
+  overflow:visible !important;
+  transition:background .15s ease, transform .10s ease !important;
+}
+/* رسم علامة X — خطان متساويان يتقاطعان في مركز الدائرة تمامًا */
+html body .oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::before,
+html body .oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::after{
+  content:"" !important;
+  position:absolute !important;
+  top:50% !important;
+  left:50% !important;
+  width:15px !important;
+  height:2px !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:#FFFFFF !important;
+  border:0 !important;
+  border-radius:1px !important;
+  transform-origin:center !important;
+  pointer-events:none !important;
+  display:block !important;
+  opacity:1 !important;
+}
+html body .oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::before{
+  transform:translate(-50%,-50%) rotate(45deg) !important;
+}
+html body .oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::after{
+  transform:translate(-50%,-50%) rotate(-45deg) !important;
+}
+/* تمرير المؤشر — تغيير الخلفية فقط، بلا دوران */
+html body .oc-modal-close:hover:not(.__rb):not(.__rb2):not(.__rb3){
+  background:rgba(22,158,166,.30) !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+/* الضغط */
+html body .oc-modal-close:active:not(.__rb):not(.__rb2):not(.__rb3){
+  transform:scale(.94) !important;
+}
+/* التنقل بلوحة المفاتيح */
+html body .oc-modal-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3){
+  outline:2px solid rgba(255,255,255,.90) !important;
+  outline-offset:2px !important;
+}
+
+/* ====================================================================
+   2) إخفاء عنصر «الاستبانات» من شريط التنقل (الأب كاملًا)
+   خصوصية أعلى من: html body nav .nav-item{ display:flex !important }
+   المحتوى داخل الصفحة (بطاقات/روابط الاستبانات) لم يُمسّ.
+   للإظهار: احذف الكلاس nav-surveys-item والسمتين hidden / aria-hidden.
+   ==================================================================== */
+html body nav .nav-inner .nav-item.nav-surveys-item,
+html body nav .nav-item.nav-surveys-item,
+html body .nav-surveys-item{
+  display:none !important;
+  visibility:hidden !important;
+  width:0 !important;
+  min-width:0 !important;
+  max-width:0 !important;
+  height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  flex:0 0 0 !important;
+  pointer-events:none !important;
+}
+html body .nav-surveys-item *{
+  display:none !important;
+  pointer-events:none !important;
+}
+</style>
+<style id="final-phone-count-empty-and-services-header">
+/* ====================================================================
+   1) شارة عدد نتائج دليل التحويلات — تظهر فقط عند وجود نص
+   ==================================================================== */
+html body #phone-count:empty{
+  display:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  width:0 !important;
+  height:0 !important;
+  overflow:hidden !important;
+}
+html body #phone-count:not(:empty){
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* ====================================================================
+   2) قسم الخدمات الإلكترونية — بلا زر طي (حُذف #svc-toggle)
+   الرأس غير قابل للنقر، والبطاقات ظاهرة دائمًا.
+   ==================================================================== */
+html body #services-grid,
+html body .services-grid{
+  display:grid !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+html body #services-grid > .svc-card{
+  display:flex !important;
+}
+</style>
+<style id="final-unified-round-close-buttons">
+/* ====================================================================
+   أزرار الإغلاق الموحّدة (دائرية 38px) — الهيكل التنظيمي · الرؤية والرسالة ·
+   سياسة الخصوصية · نافذة الأخبار.
+   #169EA6 = rgba(22,158,166) — الأساس .12 والمرور .30
+   ملاحظة الخصوصية: القاعدة "html body #vision-modal button:not(...)x3" تحمل ID،
+   لذلك أُضيفت محدّدات مسبوقة بالـID لتتغلّب عليها.
+   ==================================================================== */
+
+/* إلغاء علامة X المرسومة سابقًا بـ ::before/::after على .oc-modal-close
+   (استُبدلت بأيقونة SVG داخل الزر) */
+html body button.oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::before,
+html body button.oc-modal-close:not(.__rb):not(.__rb2):not(.__rb3)::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  width:0 !important;
+  height:0 !important;
+}
+
+html body #vision-modal button.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3),
+html body #privacy-modal button.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3),
+html body #news-modal-overlay button.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3),
+html body #oc-overlay button.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3),
+html body button.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3){
+  width:38px !important;
+  height:38px !important;
+  min-width:38px !important;
+  min-height:38px !important;
+  max-width:38px !important;
+  max-height:38px !important;
+  padding:0 !important;
+  margin:0 !important;
+  display:grid !important;
+  place-items:center !important;
+  flex:0 0 38px !important;
+  border:0 !important;
+  border-radius:50% !important;
+  background:rgba(22,158,166,.12) !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  cursor:pointer !important;
+  transform:none !important;
+  transition:background .15s ease,transform .15s ease !important;
+}
+
+html body #vision-modal button.unified-round-close:hover:not(.__rb):not(.__rb2):not(.__rb3),
+html body #privacy-modal button.unified-round-close:hover:not(.__rb):not(.__rb2):not(.__rb3),
+html body #news-modal-overlay button.unified-round-close:hover:not(.__rb):not(.__rb2):not(.__rb3),
+html body #oc-overlay button.unified-round-close:hover:not(.__rb):not(.__rb2):not(.__rb3),
+html body button.unified-round-close:hover:not(.__rb):not(.__rb2):not(.__rb3){
+  background:rgba(22,158,166,.30) !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+
+html body #vision-modal button.unified-round-close:active:not(.__rb):not(.__rb2):not(.__rb3),
+html body #privacy-modal button.unified-round-close:active:not(.__rb):not(.__rb2):not(.__rb3),
+html body #news-modal-overlay button.unified-round-close:active:not(.__rb):not(.__rb2):not(.__rb3),
+html body #oc-overlay button.unified-round-close:active:not(.__rb):not(.__rb2):not(.__rb3),
+html body button.unified-round-close:active:not(.__rb):not(.__rb2):not(.__rb3){
+  transform:scale(.94) !important;
+}
+
+html body #vision-modal button.unified-round-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3),
+html body #privacy-modal button.unified-round-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3),
+html body #news-modal-overlay button.unified-round-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3),
+html body #oc-overlay button.unified-round-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3),
+html body button.unified-round-close:focus-visible:not(.__rb):not(.__rb2):not(.__rb3){
+  outline:2px solid rgba(255,255,255,.90) !important;
+  outline-offset:2px !important;
+}
+
+/* أيقونة X (SVG) — متمركزة تمامًا، لا تدور ولا تتحرك */
+html body button.unified-round-close svg{
+  display:block !important;
+  width:16px !important;
+  height:16px !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:visible !important;
+  pointer-events:none !important;
+  fill:none !important;
+  stroke:#FFFFFF !important;
+  stroke-width:2.2 !important;
+  stroke-linecap:round !important;
+  stroke-linejoin:round !important;
+  transform:none !important;
+  opacity:1 !important;
+}
+html body button.unified-round-close svg path{
+  fill:none !important;
+  stroke:#FFFFFF !important;
+  stroke-width:2.2 !important;
+  stroke-linecap:round !important;
+  stroke-linejoin:round !important;
+}
+
+/* زر إغلاق نافذة الأخبار: يبقى في زاوية البطاقة كما هو */
+html body button.news-modal-x.unified-round-close:not(.__rb):not(.__rb2):not(.__rb3){
+  position:absolute !important;
+  top:10px !important;
+  left:10px !important;
+  z-index:2 !important;
+}
+</style>
+<style id="final-dropdown-motion-only">
+/* ====================================================================
+   أنميشن القوائم المنسدلة فقط — لا تثبيت للهيدر ولا حالة تمرير.
+   الهيدر/التنقل/الهيرو تبقى في تدفّق الصفحة الطبيعي وتختفي للأعلى عند النزول.
+   ==================================================================== */
+
+/* الحالة المغلقة */
+html body .nav-item .dropdown{
+  display:block !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+  transform:translateY(-8px) !important;
+  transform-origin:top center !important;
+  transition:
+    opacity .22s ease,
+    transform .22s ease,
+    visibility 0s linear .22s !important;
+}
+
+/* الحالة المفتوحة — hover (كمبيوتر) · focus-within (لوحة المفاتيح) · .show (نقر/جوال) */
+html body .nav-item:hover > .dropdown,
+html body .nav-item:focus-within > .dropdown,
+html body .nav-item .dropdown.show{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  transform:translateY(0) !important;
+  transition:
+    opacity .22s ease,
+    transform .22s ease,
+    visibility 0s !important;
+}
+
+/* الموضع: أسفل العنصر تمامًا، بلا حركة أفقية */
+html body .nav-item{ position:relative !important; }
+html body .nav-item .dropdown{
+  position:absolute !important;
+  top:100% !important;
+  right:0 !important;
+  left:auto !important;
+}
+
+/* شكل القائمة */
+html body .dropdown{
+  background:#FFFFFF !important;
+  border:1px solid rgba(0,92,134,.14) !important;
+  box-shadow:0 12px 28px rgba(0,92,134,.12) !important;
+  overflow:hidden !important;
+}
+
+/* «الاستبانات» تبقى مخفية ولا تُفتح قائمتها بالمرور/التركيز */
+html body .nav-item.nav-surveys-item:hover > .dropdown,
+html body .nav-item.nav-surveys-item:focus-within > .dropdown,
+html body .nav-item.nav-surveys-item .dropdown,
+html body .nav-item.nav-surveys-item .dropdown.show{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+/* تقليل الحركة */
+@media (prefers-reduced-motion:reduce){
+  html body .nav-item .dropdown{
+    transition:none !important;
+  }
+}
+</style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){
   try{
@@ -9535,6 +9845,37 @@ html body #hero-slider .slide.active::before{
     render();
   }
   setInterval(render, 60000);
+})();
+
+/* ============================================================
+   إغلاق القوائم المنسدلة بـ Escape / بالنقر خارج شريط التنقل
+   (لا نسخة جديدة من منطق القوائم — toggleDD الحالية هي المرجع)
+   ============================================================ */
+(function(){
+  // Escape يغلق أي قائمة منسدلة مفتوحة
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape' && e.key !== 'Esc') return;
+    let closed = false;
+    document.querySelectorAll('.dropdown.show').forEach(function(d){
+      d.classList.remove('show'); closed = true;
+    });
+    document.querySelectorAll('.nav-btn.open, .nav-btn[aria-expanded="true"]').forEach(function(b){
+      b.classList.remove('open');
+      if(b.hasAttribute('aria-expanded')) b.setAttribute('aria-expanded','false');
+    });
+    if(closed && document.activeElement && document.activeElement.closest &&
+       document.activeElement.closest('.nav-item')){
+      document.activeElement.blur();
+    }
+  });
+
+  // مزامنة aria-expanded عند الإغلاق بالنقر خارج شريط التنقل
+  document.addEventListener('click', function(e){
+    if(e.target.closest && e.target.closest('.nav-item')) return;
+    document.querySelectorAll('.nav-btn[aria-expanded="true"]').forEach(function(b){
+      b.setAttribute('aria-expanded','false');
+    });
+  });
 })();
 
 </script>

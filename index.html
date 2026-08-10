@@ -2470,16 +2470,16 @@ body.site-high-contrast .org-redesign-wrap{
 <!-- صف 1: 4 بطاقات -->
 <div class="tl-grid" style="margin-bottom:10px">
 <div class="tl-card" data-start="14480221" data-end="14480309"><div class="tl-title">التسجيل أونلاين للمتدربين المستمرين</div><div class="tl-dates">من 1448/02/21<br/>حتى 1448/03/09</div></div>
-<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">فترة تقديم المتدربين لإعادة القيد</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
-<div class="tl-card" data-start="14480228" data-end="14480401"><div class="tl-title">فترة تقديم المتدربين لطلبات معادلة المقررات</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/04/01</div></div>
-<div class="tl-card" data-start="14480310" data-end="14480316"><div class="tl-title">فترة تقديم المتدربين طلب حذف وإضافة مقرر</div><div class="tl-dates">من 1448/03/10<br/>حتى 1448/03/16</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">إعادة القيد</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480401"><div class="tl-title">طلبات معادلة المقررات</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/04/01</div></div>
+<div class="tl-card" data-start="14480310" data-end="14480316"><div class="tl-title">طلب حذف وإضافة مقرر</div><div class="tl-dates">من 1448/03/10<br/>حتى 1448/03/16</div></div>
 </div>
 <!-- صف 2: 4 بطاقات -->
 <div class="tl-grid" style="margin-bottom:10px">
-<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">فترة تقديم المتدربين لطلب تغيير التخصص</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
-<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">فترة تقديم المتدربين للتحويل من الفترة الصباحية إلى الفترة المسائية</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
-<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">فترة تقديم المتدربين لطلب النقل والزيارة</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
-<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">فترة تقديم المتدربين للتأجيل</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">طلب تغيير التخصص</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">التحويل من الفترة الصباحية إلى الفترة المسائية</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">طلب النقل والزيارة</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
+<div class="tl-card" data-start="14480228" data-end="14480309"><div class="tl-title">تأجيل الفصل التدريبي</div><div class="tl-dates">من 1448/02/28<br/>حتى 1448/03/09</div></div>
 </div>
 </div>
 <!-- عداد الأحداث القادمة -->
@@ -2778,7 +2778,7 @@ function renderCal(){
 
     const num = document.createElement('div');
     num.textContent = forceLatinDigits(d);
-    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:'+(isToday?'10px':'0')+';display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:DIN Next LT Arabic,sans-serif;'
+    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:'+(isToday?'15px':'0')+' !important;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:DIN Next LT Arabic,sans-serif;'
       + (isToday ? 'background:#1E6F93;background-repeat:no-repeat;color:#fff;' : isSaturday ? 'color:#E01B21;' : isFriday ? 'color:#E01B21;' : 'color:#1E6F93;');
     cell.appendChild(num);
 
@@ -7844,7 +7844,9 @@ body{ color: #1B2F3A; }
    TL-CARD SQUARE — قسم "الخط الزمني — الفصل التدريبي الثاني"
    أُضيف: 2026-05-27 (v1: مربعة + بلا ظل)
    عُدّل: 2026-05-27 (v2: بلا حدود + تصغير الحجم)
-   الغرض: بطاقات مربعة نظيفة بلا حدود ولا ظلال، أصغر حجمًا.
+   عُدّل: 2026-08-10 (v3: أُلغي التربيع + الحد الأقصى للعرض —
+     البطاقة تمتلئ عرض عمود الشبكة الطبيعي، بنفس عرض .svc-card)
+   الغرض: بطاقات نظيفة، عرضها مطابق لبطاقات الخدمات الإلكترونية.
    المحتوى (العنوان والتواريخ والشارات المضافة من JS) غير ممسوس.
    ملاحظة الـ specificity: عدة قواعد سابقة تفرض border + box-shadow
      على .tl-card بـ !important (خصوصًا border-top:4px الشريط
@@ -7853,7 +7855,6 @@ body{ color: #1B2F3A; }
    ============================================================ */
 
 html body .tl-card{
-  aspect-ratio: 1 / 1 !important;     /* الشكل المربع */
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;  /* توسيط المحتوى رأسيًا */
@@ -7861,9 +7862,6 @@ html body .tl-card{
   box-shadow: none !important;         /* لا ظل */
   border: 0 !important;                /* لا حد جانبي */
   border-top: 0 !important;            /* إلغاء الشريط العلوي التركواز السميك */
-  max-width: 155px !important;         /* تصغير: البطاقة تتوسّط داخل عمود الشبكة */
-  margin-left: auto !important;
-  margin-right: auto !important;
   padding: 12px !important;            /* حشو أقل من الـ 14px الأصلي */
 }
 
@@ -9648,6 +9646,23 @@ html body .hero-cd-row .hero-cd-unit{
   html body .hero-cd-row .hero-cd-dates{ font-size:11px !important; }
   html body #hero-slider .slide-content .hero-cd-row .hero-cd-num{ font-size:26px !important; }
   html body .hero-cd-row .hero-cd-unit{ font-size:12px !important; }
+}
+</style>
+<style id="final-tl-card-border-like-svc">
+/* ============================================================
+   بطاقات الخط الزمني بحدود مثل بطاقات الخدمات الإلكترونية
+   السبب: قاعدة سابقة (FORCE-LIGHT-THEME-FINAL) كانت تفرض
+     border:0 !important على .tl-card فألغت الحد والظل.
+   الحل: إعادة نفس حد وظل .svc-card (نفس التخصيص html body .tl-card
+     ليتجاوز القاعدة القديمة بترتيب الظهور).
+   الاسترجاع: حذف هذه الكتلة بالكامل.
+   ============================================================ */
+html body .tl-card{
+  border: 1px solid var(--c-border) !important;
+  box-shadow: 0 4px 14px rgba(30, 111, 147,.05) !important;
+}
+html body .tl-card:hover{
+  border-color: var(--c-brand) !important;
 }
 </style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">

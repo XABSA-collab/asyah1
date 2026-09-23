@@ -4070,9 +4070,8 @@ nav::after,
     });
 
     document.querySelectorAll('.nav-btn').forEach(function(btn){
-      important(btn,'color','#FFFFFF');
+      /* [DISABLED] كان يفرض لونًا أبيض inline يمنع لون #005B85 وهوفر #1499A3 — راجع طبقة final-header-nav-white-invert */
       btn.querySelectorAll('*').forEach(function(x){
-        important(x,'color','#FFFFFF');
         important(x,'opacity','1');
       });
     });
@@ -9816,6 +9815,134 @@ html body .hide-nssd-badge{ display:none !important; }
 /* إخفاء صورة الزخرفة الخلفية في شريط الأدوات (تظهر كبقعة غامقة خلف أيقونات البحث/الأدوات).
    الكود محفوظ بالكامل؛ للإظهار احذف class="hide-header-bg-decoration" من .top-bar.rebuilt-top-bar. */
 html body .top-bar.rebuilt-top-bar.hide-header-bg-decoration::before{ display:none !important; }
+</style>
+<style id="final-header-nav-white-invert">
+/* ====================================================================
+   قلب ألوان شريط التاريخ والوقت + شريط التنقل فقط:
+   خلفية بيضاء #FFFFFF، نصوص وأيقونات #005B85.
+   هوفر التنقل: يتغير لون النص/الأيقونة فقط إلى #1499A3 وتبقى الخلفية بيضاء.
+   الحدود والظلال والأنميشن والمسافات بلا تغيير.
+   للاسترجاع: احذف هذه الكتلة كاملة.
+   ==================================================================== */
+
+/* ---------- 1) شريط التاريخ والوقت ---------- */
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv){
+  background:#FFFFFF !important;
+  background-image:none !important;
+}
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv),
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) *,
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) #em,
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-email,
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-email *,
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-phone-text{
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+}
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-sep{
+  color:rgba(0,91,133,.6) !important;
+  -webkit-text-fill-color:rgba(0,91,133,.6) !important;
+}
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) svg,
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .icon-email{
+  color:#005B85 !important;
+  stroke:#005B85 !important;
+}
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) svg *{
+  stroke:currentColor !important;
+}
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-site-link{
+  border-color:rgba(0,91,133,.6) !important;
+}
+/* رابط الإيميل: كان يلتقط خلفية زرقاء عامة (قاعدة قديمة .top-info a{background:...}) — يُزال هنا فقط */
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-email{
+  background:transparent !important;
+  background-image:none !important;
+}
+/* هوفر رابط الموقع: خلفية تركوازية → نص أبيض للتباين */
+html body .site-header-stack .top-info.rebuilt-top-info:not(.__inv) .top-site-link:hover{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+}
+
+/* ---------- 2) شريط التنقل ---------- */
+html body .site-header-stack nav:not(.__inv),
+html body .site-header-stack nav:not(.__inv) .nav-inner{
+  background:#FFFFFF !important;
+  background-image:none !important;
+}
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn,
+html body .site-header-stack nav:not(.__inv) .nav-inner a.nav-btn,
+html body .site-header-stack nav:not(.__inv) .nav-inner button.nav-btn{
+  background:transparent !important;
+  background-image:none !important;
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+  transition:background .15s ease, border-color .15s ease, color .15s ease !important;
+}
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn *,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn .arr{
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+}
+/* هوفر/مفتوح: لون النص والأيقونة فقط، الخلفية تبقى بيضاء */
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn:hover,
+html body .site-header-stack nav:not(.__inv) .nav-inner a.nav-btn:hover,
+html body .site-header-stack nav:not(.__inv) .nav-inner button.nav-btn:hover,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-item:hover > .nav-btn,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn.open,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn.active{
+  background:#FFFFFF !important;
+  background-image:none !important;
+  color:#1499A3 !important;
+  -webkit-text-fill-color:#1499A3 !important;
+}
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn:hover *,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn:hover .arr,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-item:hover > .nav-btn *,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn.open *,
+html body .site-header-stack nav:not(.__inv) .nav-inner .nav-btn.active *{
+  color:#1499A3 !important;
+  -webkit-text-fill-color:#1499A3 !important;
+  stroke:#1499A3 !important;
+}
+/* حلقة التركيز: كانت بيضاء للخلفية الداكنة → #005B85 للخلفية البيضاء */
+html body .site-header-stack nav:not(.__inv) .nav-btn:focus-visible,
+html body .site-header-stack nav:not(.__inv) .dd-item:focus-visible{
+  outline-color:#005B85 !important;
+  box-shadow:0 0 0 4px rgba(0,91,133,.15) !important;
+}
+
+/* ---------- 3) القوائم المنسدلة التابعة للتنقل ---------- */
+html body .site-header-stack nav:not(.__inv) .dropdown{
+  background:#FFFFFF !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item *{
+  background-color:transparent !important;
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item{
+  background:transparent !important;
+  transition:color .12s ease !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item .dd-dot{
+  background:#005B85 !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover{
+  background:#FFFFFF !important;
+  background-image:none !important;
+  color:#1499A3 !important;
+  -webkit-text-fill-color:#1499A3 !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover *{
+  color:#1499A3 !important;
+  -webkit-text-fill-color:#1499A3 !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover .dd-dot{
+  background:#1499A3 !important;
+}
 </style>
 <script id="FORCE-LIGHT-THEME-SCRIPT">
 (function(){

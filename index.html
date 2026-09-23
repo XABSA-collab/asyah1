@@ -9972,6 +9972,24 @@ html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action
 html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn svg *{
   stroke:currentColor !important;
 }
+/* إصلاح اختفاء الأيقونة بعد الضغط/التركيز: قواعد قديمة (:hover/:focus-visible svg *)
+   كانت تفرض color:#FFFFFF على عناصر الـ SVG الداخلية، و stroke:currentColor (المضبوط
+   inline عبر JS) يأخذ ذلك الأبيض → أيقونة بيضاء على خلفية بيضاء. هنا ترث لون الزر دائمًا. */
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn svg,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn svg *,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:hover svg *,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:focus svg *,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:focus-visible svg *,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:active svg *{
+  color:inherit !important;
+  -webkit-text-fill-color:currentColor !important;
+}
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:focus,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:focus-visible,
+html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn:active{
+  background:#FFFFFF !important;
+  background-image:none !important;
+}
 html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .portal-action-btn svg [fill]:not([fill="none"]){
   fill:currentColor !important;
 }
@@ -9997,6 +10015,15 @@ html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .header-phone-
 html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .header-phone-search svg,
 html body .site-header-stack .top-bar.rebuilt-top-bar:not(.__inv) .header-phone-search svg *{
   stroke:#005B85 !important;
+}
+</style>
+<style id="final-dropdown-no-dots">
+/* إزالة نقاط • من عناصر القوائم المنسدلة لشريط التنقل فقط.
+   النقاط عناصر <span class="dd-dot"> (ليست list markers)، فتُخفى هنا؛
+   ويزول فراغها تلقائيًا لأن gap في flex لا يُحسب لعنصر مخفي.
+   للاسترجاع: احذف هذه الكتلة. */
+html body nav .dropdown .dd-item .dd-dot{
+  display:none !important;
 }
 </style>
 <style id="final-no-shadows">

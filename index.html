@@ -3800,12 +3800,10 @@ nav::after,
 
       item.addEventListener('mouseenter', function(){
         dd.classList.add('show');
-        important(dd,'display','block');
       });
 
       item.addEventListener('mouseleave', function(){
         dd.classList.remove('show');
-        important(dd,'display','none');
       });
     });
   }
@@ -8029,10 +8027,13 @@ html body nav .nav-item .dropdown{
   visibility:hidden !important;
   transform:translateY(10px) !important;
   pointer-events:none !important;
-  transition:opacity .25s ease, transform .25s ease, visibility .25s ease !important;
+  margin-top:0 !important;
+  transition:opacity .22s ease-out, transform .22s ease-out, visibility 0s linear .22s !important;
 }
 html body nav .nav-item:hover > .dropdown,
+html body nav .nav-item:focus-within > .dropdown,
 html body nav .nav-item .dropdown.show{
+  transition:opacity .22s ease-out, transform .22s ease-out, visibility 0s !important;
   opacity:1 !important;
   visibility:visible !important;
   transform:translateY(0) !important;
@@ -8809,11 +8810,11 @@ html body .nav-item .dropdown{
   opacity:0 !important;
   visibility:hidden !important;
   pointer-events:none !important;
-  transform:translateY(-8px) !important;
+  transform:translateY(10px) !important;
   transform-origin:top center !important;
   transition:
-    opacity .22s ease,
-    transform .22s ease,
+    opacity .22s ease-out,
+    transform .22s ease-out,
     visibility 0s linear .22s !important;
 }
 
@@ -8826,8 +8827,8 @@ html body .nav-item .dropdown.show{
   pointer-events:auto !important;
   transform:translateY(0) !important;
   transition:
-    opacity .22s ease,
-    transform .22s ease,
+    opacity .22s ease-out,
+    transform .22s ease-out,
     visibility 0s !important;
 }
 
@@ -8861,9 +8862,26 @@ html body .nav-item.nav-surveys-item .dropdown.show{
 
 /* تقليل الحركة */
 @media (prefers-reduced-motion:reduce){
-  html body .nav-item .dropdown{
+  html body .nav-item .dropdown,
+  html body nav .nav-item .dropdown,
+  html body nav .nav-item:hover > .dropdown,
+  html body nav .nav-item:focus-within > .dropdown,
+  html body nav .nav-item .dropdown.show{
     transition:none !important;
   }
+}
+/* جسر شفاف أسفل عنصر التنقل أثناء المرور: يغطي مسافة الصعود (10px) حتى لا تُغلق القائمة
+   عند انتقال المؤشر إليها قبل اكتمال الحركة. لا يُرى ولا يغيّر التخطيط. */
+html body nav .nav-item:not(.nav-surveys-item):hover::after{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  top:100% !important;
+  right:0 !important;
+  left:0 !important;
+  height:12px !important;
+  background:transparent !important;
+  z-index:399 !important;
 }
 </style>
 <!-- [REMOVED] طبقة final-hero-buttons-solid-eaf5fa — استُبدلت بطبقة
@@ -9327,24 +9345,35 @@ html body .site-header-stack nav:not(.__inv) .dropdown .dd-item *{
   -webkit-text-fill-color:#005B85 !important;
 }
 html body .site-header-stack nav:not(.__inv) .dropdown .dd-item{
-  background:transparent !important;
-  transition:color .12s ease !important;
+  background:#FFFFFF !important;
+  transition:background-color .2s ease, color .2s ease, -webkit-text-fill-color .2s ease !important;
 }
 html body .site-header-stack nav:not(.__inv) .dropdown .dd-item .dd-dot{
   background:#005B85 !important;
 }
-html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover{
-  background:#FFFFFF !important;
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:focus-visible{
+  background:var(--brand) !important;
   background-image:none !important;
-  color:#1499A3 !important;
-  -webkit-text-fill-color:#1499A3 !important;
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
 }
-html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover *{
-  color:#1499A3 !important;
-  -webkit-text-fill-color:#1499A3 !important;
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover *,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:focus-visible *{
+  background-color:transparent !important;
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
 }
-html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover .dd-dot{
-  background:#1499A3 !important;
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover svg,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:focus-visible svg,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover svg *,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:focus-visible svg *{
+  color:#FFFFFF !important;
+  stroke:currentColor !important;
+}
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:hover .dd-dot,
+html body .site-header-stack nav:not(.__inv) .dropdown .dd-item:focus-visible .dd-dot{
+  background:#FFFFFF !important;
 }
 </style>
 <style id="final-topbar-white-invert">
@@ -9959,7 +9988,7 @@ html body .national-gallery .conveyor-item img{
       b.classList.remove('open');
       if(b.hasAttribute('aria-expanded')) b.setAttribute('aria-expanded','false');
     });
-    if(closed && document.activeElement && document.activeElement.closest &&
+    if(document.activeElement && document.activeElement.closest &&
        document.activeElement.closest('.nav-item')){
       document.activeElement.blur();
     }

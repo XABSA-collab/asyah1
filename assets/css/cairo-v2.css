@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "CairoOldV2";
+    src: url("../fonts/cairo/ArbFONTS-Cairo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CairoOldV2";
+    src: url("../fonts/cairo/ArbFONTS-Cairo-SemiBold-1.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CairoOldV2";
+    src: url("../fonts/cairo/ArbFONTS-Cairo-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+option,
+button,
+label,
+a,
+p,
+span,
+li,
+td,
+th {
+    font-family: "CairoOldV2", Arial, sans-serif;
+}
+
+nav,
+.navbar,
+.navbar a,
+.menu,
+.menu a,
+button,
+.btn {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    font-weight: 700;
+}

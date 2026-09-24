@@ -1677,6 +1677,20 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 </style>
 
 <link rel="stylesheet" href="assets/css/cairo-v2.css">
+
+<style id="fontawesome-icons">
+/* Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0) Copyright 2026 Fonticons, Inc.
+   Glyphs are inlined from assets/icons/fontawesome; --fa-ink carries each icon's original stroke color. */
+html body svg path.fa-glyph:not(#_fa1):not(#_fa2):not(#_fa3){
+  fill:var(--fa-ink,currentColor) !important;
+  stroke:none !important;
+  stroke-width:0 !important;
+}
+html body .r-card:hover svg path.fa-glyph:not(#_fa1):not(#_fa2):not(#_fa3),
+html body .svc-card:hover .svc-icon svg path.fa-glyph:not(#_fa1):not(#_fa2):not(#_fa3){
+  fill:#FFFFFF !important;
+}
+</style>
 </head>
 <body><div id="first-paint-loader" aria-hidden="true" role="presentation"><div class="fp-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 <script>
@@ -1725,7 +1739,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div class="top-contact">
 <a class="top-email" href="https://outlook.office.com/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
 <span id="em"></span>
-<svg class="site-icon icon-email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 7.5L12 13.5L20 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg class="site-icon icon-email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" data-fa="envelope-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z"/></svg>
 </a>
 <span class="top-sep">|</span>
 <span class="top-phone-text">0163972804</span>
@@ -1753,21 +1767,18 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div class="header-search">
 <input id="search-input" onblur="closeSearch()" oninput="doSearch(this.value)" placeholder="ابحث في الموقع" type="text"/>
 <button class="portal-action-btn search-action" onclick="toggleSearch()" title="بحث" type="button">
-<svg aria-hidden="true" fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="11" cy="11" r="7"/>
-<path d="M20 20l-4-4"/>
-</svg>
+<svg aria-hidden="true" fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-fa="magnifying-glass-solid" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
 </button>
 <div id="search-results"></div>
 </div>
 <!-- البحث في دليل التحويلات الهاتفية -->
 <div class="header-phone-search">
 <span class="phone-search-icon" aria-hidden="true">
-<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-fa="phone-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
 </span>
 <input id="phone-search" oninput="filterPhones(this.value)" placeholder="ابحث في دليل التحويلات الهاتفية..." type="text" autocomplete="off"/>
 <span class="phone-search-icon-search" aria-hidden="true">
-<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" fill="none"/><path d="M20 20l-4-4"/></svg>
+<svg fill="none" height="16" width="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-fa="magnifying-glass-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
 </span>
 <div id="phone-search-results" class="phone-search-results" role="listbox" aria-label="نتائج بحث التحويلات"></div>
 </div>
@@ -1777,31 +1788,16 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <button class="portal-action-btn" onclick="siteTools.changeFont(-1)" title="تصغير النص" type="button"><span class="font-symbol">ع-</span></button>
 <button class="portal-action-btn" onclick="siteTools.resetFont()" title="استعادة حجم النص" type="button"><span class="font-symbol">Aa</span></button>
 <button class="portal-action-btn" onclick="siteTools.toggleGray()" title="اللون الرمادي" type="button">
-<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18">
-<circle cx="12" cy="12" fill="none" r="8" stroke="currentColor" stroke-width="2"></circle>
-<path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"></path>
-</svg>
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18" data-fa="circle-half-stroke-solid" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z"/></svg>
 </button>
 <button class="portal-action-btn" onclick="siteTools.toggleContrast()" title="تباين عالٍ" type="button">
-<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18">
-<circle cx="12" cy="12" fill="none" r="8" stroke="currentColor" stroke-width="2"></circle>
-<path d="M12 4v16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-</svg>
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18" data-fa="circle-half-stroke-solid" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z"/></svg>
 </button>
 <button class="portal-action-btn" onclick="window.print()" title="طباعة" type="button">
-<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18">
-<path d="M7 8V4h10v4" fill="none" stroke="currentColor" stroke-width="2"></path>
-<path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="2"></path>
-<path d="M7 14h10v6H7z" fill="none" stroke="currentColor" stroke-width="2"></path>
-</svg>
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18" data-fa="print-solid" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M64 64C64 28.7 92.7 0 128 0L341.5 0c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3l0 37.5-384 0 0-80zM0 256c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 96c0 17.7-14.3 32-32 32l-32 0 0 64c0 35.3-28.7 64-64 64l-256 0c-35.3 0-64-28.7-64-64l0-64-32 0c-17.7 0-32-14.3-32-32l0-96zM128 416l0 32 256 0 0-96-256 0 0 64zM456 272a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/></svg>
 </button>
 <button class="portal-action-btn" onclick="siteTools.sharePage()" title="مشاركة" type="button">
-<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18">
-<circle cx="18" cy="5" fill="none" r="3" stroke="currentColor" stroke-width="2"></circle>
-<circle cx="6" cy="12" fill="none" r="3" stroke="currentColor" stroke-width="2"></circle>
-<circle cx="18" cy="19" fill="none" r="3" stroke="currentColor" stroke-width="2"></circle>
-<path d="M8.7 10.7l6.6-4.4M8.7 13.3l6.6 4.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-</svg>
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18" data-fa="share-nodes-solid" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M384 192c53 0 96-43 96-96s-43-96-96-96-96 43-96 96c0 5.4 .5 10.8 1.3 16L159.6 184.1c-16.9-15-39.2-24.1-63.6-24.1-53 0-96 43-96 96s43 96 96 96c24.4 0 46.6-9.1 63.6-24.1L289.3 400c-.9 5.2-1.3 10.5-1.3 16 0 53 43 96 96 96s96-43 96-96-43-96-96-96c-24.4 0-46.6 9.1-63.6 24.1L190.7 272c.9-5.2 1.3-10.5 1.3-16s-.5-10.8-1.3-16l129.7-72.1c16.9 15 39.2 24.1 63.6 24.1z"/></svg>
 </button>
 </div>
 </div>
@@ -1854,7 +1850,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <!-- ====== EMPLOYEE PORTAL HERO BUTTON — visible at top, hidden on scroll ====== -->
 <div class="hero-employee-portal-wrap">
 <a class="hero-employee-portal-btn" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank" rel="noopener" aria-label="بوابة الموظفين">
-<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12a4.9 4.9 0 1 0 0-9.8 4.9 4.9 0 0 0 0 9.8zm0 2.2c-3.3 0-9.8 1.6-9.8 4.9v2.7h19.6v-2.7c0-3.3-6.5-4.9-9.8-4.9z"/></svg>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="user-regular" style="--fa-ink:currentColor"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg>
 <span>بوابة الموظفين</span>
 </a>
 </div>
@@ -1896,7 +1892,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div class="hide-quality-surveys" style="margin-bottom:2rem">
 <div class="survey-card" style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:0;overflow:hidden;box-shadow:0 4px 20px rgba(17,100,95,0.12)">
 <div class="survey-header" style="background:#005B85;background-repeat:no-repeat;padding:18px 24px;display:flex;align-items:center;gap:12px">
-<svg fill="none" height="28" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect height="4" rx="1" width="8" x="8" y="2"></rect><line x1="9" x2="15" y1="12" y2="12"></line><line x1="9" x2="13" y1="16" y2="16"></line></svg>
+<svg fill="none" height="28" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28" data-fa="clipboard-list-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M311.4 32l8.6 0c35.3 0 64 28.7 64 64l0 352c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l8.6 0C83.6 12.9 104.3 0 128 0L256 0c23.7 0 44.4 12.9 55.4 32zM248 112c13.3 0 24-10.7 24-24s-10.7-24-24-24L136 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l112 0zM128 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm32 0c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0c-13.3 0-24 10.7-24 24zm0 128c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0c-13.3 0-24 10.7-24 24zM96 416a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
 <div style="font-size:16px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:50% !important;background:#8DB600;display:inline-block;flex-shrink:0;animation:greenPulse 2s ease-in-out infinite"></span>استبانات قياس جودة الخدمات</div>
 <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 12px;border-radius:0;margin-right:auto;font-family: CairoOld, Arial, sans-serif">جديد</span>
 </div>
@@ -1923,12 +1919,12 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 </div>
 </div>
 <!-- ====== زر عائم: استطلاعات الهيئة ====== -->
-<a id="etec-float-btn" href="#etec-surveys-section" onclick="var t=document.getElementById('etec-surveys-section');if(t){t.scrollIntoView({behavior:'smooth'});}return false;" aria-label="الانتقال إلى استطلاعات هيئة تقويم التعليم والتدريب"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg><span>استطلاعات الهيئة</span></a>
+<a id="etec-float-btn" href="#etec-surveys-section" onclick="var t=document.getElementById('etec-surveys-section');if(t){t.scrollIntoView({behavior:'smooth'});}return false;" aria-label="الانتقال إلى استطلاعات هيئة تقويم التعليم والتدريب"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" data-fa="square-check-regular" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zm230.7 89.9c7.8-10.7 22.8-13.1 33.5-5.3 10.7 7.8 13.1 22.8 5.3 33.5L211.4 366.1c-4.1 5.7-10.5 9.3-17.5 9.8-7 .5-13.9-2-18.8-6.9l-55.9-55.9c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l36 36 105.6-145.2z"/></svg><span>استطلاعات الهيئة</span></a>
 <!-- ====== استطلاعات هيئة تقويم التعليم والتدريب (قسم مستقل) ====== -->
 <section id="etec-surveys-section" class="etec-surveys" aria-labelledby="etec-surveys-title">
 <div class="etec-card">
 <div class="etec-head">
-<div class="etec-head-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+<div class="etec-head-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-fa="square-check-regular" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zm230.7 89.9c7.8-10.7 22.8-13.1 33.5-5.3 10.7 7.8 13.1 22.8 5.3 33.5L211.4 366.1c-4.1 5.7-10.5 9.3-17.5 9.8-7 .5-13.9-2-18.8-6.9l-55.9-55.9c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l36 36 105.6-145.2z"/></svg></div>
 <div class="etec-head-text">
 <h2 id="etec-surveys-title">استطلاعات هيئة تقويم التعليم والتدريب</h2>
 <p>روابط الاستطلاعات الوطنية المعتمدة، يرجى مشاركة كل رابط مع الفئة المستهدفة فقط.</p>
@@ -1977,29 +1973,22 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 </div>
 <div class="rayat-grid">
 <a class="r-card" href="https://rytfac-oc.tvtc.gov.sa/FacultySelfService/ssb/GradeEntry" target="_blank">
-<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div>رصد الدرجات
+<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18" data-fa="chart-simple-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M192 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM432 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z"/></svg></div>رصد الدرجات
       </a>
 <a class="r-card" href="https://rytfac-oc.tvtc.gov.sa/FacultySelfService/ssb/facultyAttendanceTracking" target="_blank">
-<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>رابط الحضور والغياب
+<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18" data-fa="square-check-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zm230.7 89.9c7.8-10.7 22.8-13.1 33.5-5.3 10.7 7.8 13.1 22.8 5.3 33.5L211.4 366.1c-4.1 5.7-10.5 9.3-17.5 9.8-7 .5-13.9-2-18.8-6.9l-55.9-55.9c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l36 36 105.6-145.2z"/></svg></div>رابط الحضور والغياب
       </a>
 <a class="r-card" href="https://rytnav-oc.tvtc.gov.sa/applicationNavigator" target="_blank">
-<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>رابط النظام
+<div class="r-icon"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18" data-fa="link-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4) scale(0.0312)" d="M419.5 96c-16.6 0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2 86.4 0 156.5 70 156.5 156.5 0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1c-29.3 29.3-69.1 45.8-110.6 45.8-86.4 0-156.5-70-156.5-156.5 0-1.5 0-3 .1-4.5 .5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9 0 1.8 0 2.6 0 51.1 41.4 92.5 92.5 92.5 24.5 0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4 0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5 0-48 9.7-65.4 27.1L91.1 258.2c-17.3 17.3-27.1 40.9-27.1 65.4 0 51.1 41.4 92.5 92.5 92.5 16.5 0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2-86.4 0-156.5-70-156.5-156.5 0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6 0 156.5 70.6 156.5 156.9 0 1.3 0 2.6 0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8 0-1.5 0-2.3 0-33.7-18-63.3-44.8-79.6z"/></svg></div>رابط النظام
       </a>
 <a class="r-card" href="https://serv.tvtc.gov.sa/Staff/Login/Login.aspx" target="_blank">
-<div class="r-icon"><svg class="site-icon icon-employee-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-  <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-</svg></div>بوابة الموظفين
+<div class="r-icon"><svg class="site-icon icon-employee-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" data-fa="user-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg></div>بوابة الموظفين
       </a>
 <a class="r-card" href="https://tvtc.gov.sa/ar/Departments/tvtcdepartments/Rayat/Pages/E-Services.aspx" target="_blank">
 <div class="r-icon"><svg class="site-icon icon-rounded-diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5" transform="rotate(45 12 12)" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>رايات — الخدمات
       </a>
 <a class="r-card" href="https://eis-oc.tvtc.gov.sa/cas/login?service=https://rytargos-oc.tvtc.gov.sa/Argos/Awv/" target="_blank">
-<div class="r-icon"><svg class="site-icon icon-report-file" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-  <path d="M7 3h7l5 5v13H7V3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M9.5 13h5M9.5 16h5M9.5 19h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-</svg></div>
+<div class="r-icon"><svg class="site-icon icon-report-file" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" data-fa="file-lines-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M64 48l112 0 0 88c0 39.8 32.2 72 72 72l88 0 0 240c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16zM224 67.9l92.1 92.1-68.1 0c-13.3 0-24-10.7-24-24l0-68.1zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-261.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></svg></div>
 التقارير
       </a>
 </div>
@@ -2008,49 +1997,41 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header" style="cursor:default">
 <div class="sec-title">
-<svg class="icon" fill="none" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect x="4.5" y="4.5" width="8" height="8" rx="1.5" fill="none" stroke="#005B85" stroke-width="2"></rect><rect x="15.5" y="4.5" width="8" height="8" rx="1.5" fill="none" stroke="#005B85" stroke-width="2"></rect><rect x="4.5" y="15.5" width="8" height="8" rx="1.5" fill="none" stroke="#005B85" stroke-width="2"></rect><rect x="15.5" y="15.5" width="8" height="8" rx="1.5" fill="none" stroke="#005B85" stroke-width="2"></rect></svg>
+<svg class="icon" fill="none" viewBox="0 0 28 28" aria-hidden="true" focusable="false" data-fa="table-cells-large-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.8125 3.5) scale(0.041)" d="M384 96l-128 0 0 128 128 0 0-128zm64 128l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 128zM64 288l0 128 128 0 0-128-128 0zm128-64l0-128-128 0 0 128 128 0zm64 64l0 128 128 0 0-128-128 0z"/></svg>
         الخدمات الإلكترونية
       </div>
 </div>
 <div class="services-grid" id="services-grid" style="transition:opacity 0.3s">
 <a class="svc-card" href="https://drive.google.com/file/d/1qB29DS_JEaPunmVk55xYaSM2WQPu8ok6/view" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-open-book" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 6c-2-1.5-4.5-2-7-2v14c2.5 0 5 .5 7 2V6zM12 6c2-1.5 4.5-2 7-2v14c-2.5 0-5 .5-7 2V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-open-book" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="book-open-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M256 141.3l0 309.3 .5-.2C311.1 427.7 369.7 416 428.8 416l19.2 0 0-320-19.2 0c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7zM230.9 61.5L256 72 281.1 61.5C327.9 42 378.1 32 428.8 32L464 32c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-35.2 0c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480L48 480c-26.5 0-48-21.5-48-48L0 80C0 53.5 21.5 32 48 32l35.2 0c50.7 0 100.9 10 147.7 29.5z"/></svg></div>
 <div class="svc-title">دليل المتدرب</div><div class="svc-desc">كل ما يحتاجه المتدرب في مكان واحد</div>
 </a>
 <a class="svc-card" href="https://drive.google.com/drive/folders/1FDnI_SUlU3aqGy5y0Hn1AOX8xj39MWCs?usp=sharing" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="folder-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M64 400l384 0c8.8 0 16-7.2 16-16l0-240c0-8.8-7.2-16-16-16l-149.3 0c-17.3 0-34.2-5.6-48-16L212.3 83.2c-2.8-2.1-6.1-3.2-9.6-3.2L64 80c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16zm384 48L64 448c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l138.7 0c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4L448 80c35.3 0 64 28.7 64 64l0 240c0 35.3-28.7 64-64 64z"/></svg></div>
 <div class="svc-title">الخطط التدريبية</div><div class="svc-desc">خطط الفصل التدريبي الحالي</div>
 </a>
 <a class="svc-card" href="https://lms.elearning.edu.sa" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-laptop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><rect x="5" y="5" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 19h18l-2-4H5l-2 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-laptop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="laptop-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4.8) scale(0.0281)" d="M128 32C92.7 32 64 60.7 64 96l0 240 64 0 0-240 384 0 0 240 64 0 0-240c0-35.3-28.7-64-64-64L128 32zM19.2 384C8.6 384 0 392.6 0 403.2 0 445.6 34.4 480 76.8 480l486.4 0c42.4 0 76.8-34.4 76.8-76.8 0-10.6-8.6-19.2-19.2-19.2L19.2 384z"/></svg></div>
 <div class="svc-title">التدريب الإلكتروني</div><div class="svc-desc">الوصول لمقررات التدرّب عن بعد</div>
 </a>
 <a class="svc-card" href="https://ethaq.tvtc.gov.sa/ethaqplus/index.php/login" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 18h11a4 4 0 0 0 .5-8A6.5 6.5 0 0 0 6 11.5A3.5 3.5 0 0 0 7 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="cloud-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4) scale(0.0312)" d="M0 336c0 79.5 64.5 144 144 144l304 0c70.7 0 128-57.3 128-128 0-51.6-30.5-96.1-74.5-116.3 6.7-13.1 10.5-28 10.5-43.7 0-53-43-96-96-96-17.7 0-34.2 4.8-48.4 13.1-24.1-45.8-72.2-77.1-127.6-77.1-79.5 0-144 64.5-144 144 0 8 .7 15.9 1.9 23.5-56.9 19.2-97.9 73.1-97.9 136.5z"/></svg></div>
 <div class="svc-title">إيثاق</div><div class="svc-desc">منصة البيانات والتحقق المؤسسي</div>
 </a>
 <div class="svc-card" onclick="document.getElementById('share-overlay').style.display='flex'" style="cursor:pointer">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-share-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-  <path d="M15 5l6 6-6 6v-4h-3a8 8 0 0 0-7 4c.5-5 3.5-8 7-8h3V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-share-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="share-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M307.8 18.4c-12 5-19.8 16.6-19.8 29.6l0 80-112 0c-97.2 0-176 78.8-176 176 0 113.3 81.5 163.9 100.2 174.1 2.5 1.4 5.3 1.9 8.1 1.9 10.9 0 19.7-8.9 19.7-19.7 0-7.5-4.3-14.4-9.8-19.5-9.4-8.8-22.2-26.4-22.2-56.7 0-53 43-96 96-96l96 0 0 80c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-9.2-9.2-22.9-11.9-34.9-6.9z"/></svg></div>
 <div class="svc-title">مجلد المشاركة</div><div class="svc-desc">ملفات وموارد الكلية المشتركة</div>
 </div>
 <a class="svc-card" href="https://t.me/+h_cMFk4etnM3ZGI0" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M21 4L3 11l7 2.5M21 4l-4 16-7-6.5M21 4L10 13.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="paper-plane-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4) scale(0.0312)" d="M290.5 287.7L491.4 86.9 359 456.3 290.5 287.7zM457.4 53L256.6 253.8 88 185.3 457.4 53zM38.1 216.8l205.8 83.6 83.6 205.8c5.3 13.1 18.1 21.7 32.3 21.7 14.7 0 27.8-9.2 32.8-23.1L570.6 8c3.5-9.8 1-20.6-6.3-28s-18.2-9.8-28-6.3L39.4 151.7c-13.9 5-23.1 18.1-23.1 32.8 0 14.2 8.6 27 21.7 32.3z"/></svg></div>
 <div class="svc-title">Telegram المتدربين</div><div class="svc-desc">تواصل مع إدارة شؤون المتدربين</div>
 </a>
 <a class="svc-card" href="https://forms.office.com/r/aacpqZTfQ8" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-wrench" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-  <path d="M14.7 5.3a5.1 5.1 0 0 1 5.7-.9l-3.2 3.2 2.2 2.2 3.2-3.2a5.1 5.1 0 0 1-6.5 6.5L8.2 21a2.2 2.2 0 0 1-3.1-3.1l7.9-7.9a5.1 5.1 0 0 1 1.7-4.7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M6.2 19.8h.01" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-</svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-wrench" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="wrench-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4) scale(0.0312)" d="M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z"/></svg></div>
 <div class="svc-title">الخدمات والصيانة</div><div class="svc-desc">أرسل طلب صيانة أو خدمة فورًا</div>
 </a>
 <a class="svc-card" href="https://sportal.tvtc.gov.sa/my.logout.php3?errorcode=19" target="_blank">
-<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-employee-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-  <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-</svg></div>
+<div class="svc-icon" style="background:#EAF5FA"><svg class="site-icon icon-employee-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-fa="user-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg></div>
 <div class="svc-title">بوابة الموظفين</div><div class="svc-desc">بدون ربط مع المؤسسة</div>
 </a>
 </div>
@@ -2059,7 +2040,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#005B85" stroke-linecap="round" stroke-width="2"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#005B85" stroke-linecap="round" stroke-width="2"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="link-solid" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(3.5 4.6667) scale(0.0365)" d="M419.5 96c-16.6 0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2 86.4 0 156.5 70 156.5 156.5 0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1c-29.3 29.3-69.1 45.8-110.6 45.8-86.4 0-156.5-70-156.5-156.5 0-1.5 0-3 .1-4.5 .5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9 0 1.8 0 2.6 0 51.1 41.4 92.5 92.5 92.5 24.5 0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4 0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5 0-48 9.7-65.4 27.1L91.1 258.2c-17.3 17.3-27.1 40.9-27.1 65.4 0 51.1 41.4 92.5 92.5 92.5 16.5 0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2-86.4 0-156.5-70-156.5-156.5 0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6 0 156.5 70.6 156.5 156.9 0 1.3 0 2.6 0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8 0-1.5 0-2.3 0-33.7-18-63.3-44.8-79.6z"/></svg>
         روابط مفيدة
       </div>
 </div>
@@ -2087,7 +2068,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#005B85" stroke-linecap="round" stroke-width="1.8"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="phone-solid" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(3.5 3.5) scale(0.041)" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
         دليل تحويلات الموظفين
       </div>
 </div>
@@ -2095,7 +2076,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <!-- شريط الحالة (بديل خانة البحث - البحث أصبح في أعلى الصفحة) -->
 <div style="padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(30, 83, 116,.18);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
 <div style="display:flex;align-items:center;gap:8px;color:#005B85;font-family:CairoOld, Arial, sans-serif;font-size:13px;font-weight:600">
-<svg fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.56 2 2 0 0 1 3.59 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<svg fill="none" height="18" width="18" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-fa="phone-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
 <span>استخدم مربع البحث في أعلى الصفحة للبحث بالاسم أو الوظيفة أو رقم التحويلة</span>
 </div>
 <span id="phone-count" style="font-size:12px;color:#005B85;font-family:CairoOld, Arial, sans-serif;font-weight:600;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:0;border:1px solid rgba(30, 83, 116,.18)"></span>
@@ -2115,7 +2096,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg aria-hidden="true" fill="none" height="24" width="24" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><rect x="2" y="16" width="6" height="4" rx="1"/><rect x="9" y="16" width="6" height="4" rx="1"/><rect x="16" y="16" width="6" height="4" rx="1"/><path d="M12 6v4M5 15v1M12 10v6M19 15v1M5 15h14"/></svg>
+<svg aria-hidden="true" fill="none" height="24" width="24" viewBox="0 0 24 24" stroke="#005B85" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" data-fa="sitemap-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M192 64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-8 0 0 64 120 0c39.8 0 72 32.2 72 72l0 56 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-56c0-13.3-10.7-24-24-24l-120 0 0 80 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-80-120 0c-13.3 0-24 10.7-24 24l0 56 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-56c0-39.8 32.2-72 72-72l120 0 0-64-8 0c-17.7 0-32-14.3-32-32l0-64z"/></svg>
 الهيكل التنظيمي
 </div>
 </div>
@@ -2298,7 +2279,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div class="oc-modal" id="oc-modal">
 <div class="oc-modal-head">
 <div class="oc-modal-title" id="oc-modal-title"></div>
-<button class="oc-modal-close unified-round-close" id="oc-modal-close" type="button" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button class="oc-modal-close unified-round-close" id="oc-modal-close" type="button" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 </div>
 <div class="oc-modal-body" id="oc-modal-body"></div>
 </div>
@@ -2314,7 +2295,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org1',
       title: 'مجلس الكلية التقنية',
       sub: 'القمة الإدارية للكلية',
-      icon: '<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="layer-group-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 149.8C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8L232.5 5.2zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 277.8C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8l34.1-15.8zM13.9 362.2l34.1-15.8 164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 405.8C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8z"/></svg>',
       content: [
         { type:'chip', text:'مجلس الكلية التقنية' },
         { type:'list', items:['أمانة مجلس الكلية'] }
@@ -2324,7 +2305,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org2',
       title: 'العمادة',
       sub: 'الإدارة التنفيذية العليا',
-      icon: '<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="user-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg>',
       content: [
         { type:'chip', text:'العمادة' },
         { type:'list', items:['السكرتارية','مركز خدمة المجتمع والتدريب المستمر','قسم التنسيق الوظيفي','وحدة الرقابة','وحدة الاتصال المؤسسي','وحدة تقنية المعلومات'] }
@@ -2334,7 +2315,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org3',
       title: 'إدارة الخدمات المساندة',
       sub: 'إدارة تشغيلية وخدمية',
-      icon: '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="wrench-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4) scale(0.0312)" d="M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z"/></svg>',
       content: [
         { type:'group', title:'قسم الخدمات العامة', items:['وحدة الأمن','وحدة الصيانة والمرافق','وحدة الصحة والسلامة المهنية','العيادة الطبية'] },
         { type:'group', title:'قسم الشؤون الإدارية', items:['وحدة الاتصالات الإدارية','شؤون الموظفين'] },
@@ -2345,7 +2326,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org4',
       title: 'وكالة الجودة',
       sub: 'الجودة والتطوير',
-      icon: '<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="circle-check-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zm0-464a208 208 0 1 0 0 416 208 208 0 1 0 0-416zm70.7 121.9c7.8-10.7 22.8-13.1 33.5-5.3 10.7 7.8 13.1 22.8 5.3 33.5L243.4 366.1c-4.1 5.7-10.5 9.3-17.5 9.8-7 .5-13.9-2-18.8-6.9l-55.9-55.9c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l36 36 105.6-145.2z"/></svg>',
       content: [
         { type:'chip', text:'وكالة الجودة' },
         { type:'list', items:['الجودة والتطوير'] }
@@ -2355,7 +2336,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org5',
       title: 'وكالة شؤون المتدربين',
       sub: 'الخدمات والقبول والأنشطة',
-      icon: '<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="users-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 4.8) scale(0.0281)" d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208zM96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144zM0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4-32.9 36.8-52.9 85.4-52.9 138.6l0 16c0 11.4 2.4 22.2 6.7 32L32 480c-17.7 0-32-14.3-32-32l0-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32l0-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128l0 32c0 17.7-14.3 32-32 32l-86.7 0zM472 160a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zM160 432c0-88.4 71.6-160 160-160s160 71.6 160 160l0 16c0 17.7-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32l0-16z"/></svg>',
       content: [
         { type:'chip', text:'وكالة شؤون المتدربين' },
         { type:'list', items:['قسم القبول والتسجيل','وحدة الخدمات الإرشادية','وحدة الأنشطة','وحدة التدريب التعاوني'] }
@@ -2365,7 +2346,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       id: 'org6',
       title: 'وكالة شؤون المدربين',
       sub: 'البيئة التدريبية والأقسام',
-      icon: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+      icon: '<svg viewBox="0 0 24 24" data-fa="book-open-solid" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M256 141.3l0 309.3 .5-.2C311.1 427.7 369.7 416 428.8 416l19.2 0 0-320-19.2 0c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7zM230.9 61.5L256 72 281.1 61.5C327.9 42 378.1 32 428.8 32L464 32c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-35.2 0c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480L48 480c-26.5 0-48-21.5-48-48L0 80C0 53.5 21.5 32 48 32l35.2 0c50.7 0 100.9 10 147.7 29.5z"/></svg>',
       content: [
         { type:'chip', text:'وكالة شؤون المدربين' },
         { type:'list', items:['الأقسام التدريبية','قسم التدريب الإلكتروني ومصادر التدريب'] }
@@ -2415,7 +2396,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
     d.content.forEach(function(c){
       if(c.type === 'chip'){
         html += '<div class="oc-chip">' +
-          '<svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="4" rx="1"/><rect x="2" y="16" width="6" height="4" rx="1"/><rect x="9" y="16" width="6" height="4" rx="1"/><rect x="16" y="16" width="6" height="4" rx="1"/><path d="M12 6v4M5 15v1M12 10v6M19 15v1M5 15h14"/></svg>' +
+          '<svg viewBox="0 0 24 24" data-fa="sitemap-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M192 64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-8 0 0 64 120 0c39.8 0 72 32.2 72 72l0 56 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-56c0-13.3-10.7-24-24-24l-120 0 0 80 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-80-120 0c-13.3 0-24 10.7-24 24l0 56 8 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l8 0 0-56c0-39.8 32.2-72 72-72l120 0 0-64-8 0c-17.7 0-32-14.3-32-32l0-64z"/></svg>' +
           c.text + '</div>';
       }
       if(c.type === 'list'){
@@ -2427,7 +2408,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
       }
       if(c.type === 'group'){
         html += '<div class="oc-group">' +
-          '<div class="oc-group-head"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>' + c.title + '</div>' +
+          '<div class="oc-group-head"><svg viewBox="0 0 24 24" data-fa="folder-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(3 3) scale(0.0352)" d="M64 400l384 0c8.8 0 16-7.2 16-16l0-240c0-8.8-7.2-16-16-16l-149.3 0c-17.3 0-34.2-5.6-48-16L212.3 83.2c-2.8-2.1-6.1-3.2-9.6-3.2L64 80c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16zm384 48L64 448c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l138.7 0c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4L448 80c35.3 0 64 28.7 64 64l0 240c0 35.3-28.7 64-64 64z"/></svg>' + c.title + '</div>' +
           '<div class="oc-list">';
         c.items.forEach(function(item){
           html += '<div class="oc-list-item">' + item + '</div>';
@@ -2473,7 +2454,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path d="M7 8h14M7 13h10M7 18h7" stroke="#005B85" stroke-linecap="round" stroke-width="2"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="align-left-solid" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(4.8125 3.5) scale(0.041)" d="M288 64c0 17.7-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l224 0c17.7 0 32 14.3 32 32zm0 256c0 17.7-14.3 32-32 32L32 352c-17.7 0-32-14.3-32-32s14.3-32 32-32l224 0c17.7 0 32 14.3 32 32zM0 192c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 224c-17.7 0-32-14.3-32-32zM448 448c0 17.7-14.3 32-32 32L32 480c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
         الأخبار
       </div>
 <a class="sec-more" href="https://x.com/tvtc_g_alasyah" target="_blank">← جميع الأخبار</a>
@@ -2488,7 +2469,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <!-- ===== News modal (floating card) — added 2026-05-29 ===== -->
 <div id="news-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="news-modal-title" aria-hidden="true">
 <div class="news-modal-card">
-<button type="button" class="news-modal-x unified-round-close" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button type="button" class="news-modal-x unified-round-close" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 <div class="news-modal-figure" id="news-modal-figure"><img alt="" id="news-modal-img"/></div>
 <div class="news-modal-body">
 <div class="news-modal-date" id="news-modal-date"></div>
@@ -2506,7 +2487,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div class="" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path d="M14 7v7l4 4" stroke="#005B85" stroke-linecap="round" stroke-width="2.5"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="clock-regular" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(3.5 3.5) scale(0.041)" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
         الخط الزمني — الفصل التدريبي الأول 1448/1449 هـ
       </div>
 </div>
@@ -2530,7 +2511,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><circle cx="14" cy="14" r="8" stroke="#005B85" stroke-width="2"></circle><path d="M14 10v4l2.5 2.5" stroke="#005B85" stroke-linecap="round" stroke-width="2"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="clock-regular" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(3.5 3.5) scale(0.041)" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
         الأحداث القادمة
       </div>
 </div>
@@ -2541,7 +2522,7 @@ body.site-high-contrast .org-redesign-wrap{box-shadow:none !important;border-col
 <div style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
-<svg class="icon" fill="none" viewbox="0 0 28 28"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path d="M6 10h16M9 6v2M19 6v2M8 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="#005B85" stroke-linecap="round" stroke-width="1.8"></path></svg>
+<svg class="icon" fill="none" viewbox="0 0 28 28" data-fa="calendar-regular" style="--fa-ink:#005B85"><rect fill="#005B85" height="28" opacity=".15" rx="7" width="28"></rect><path class="fa-glyph" transform="translate(4.8125 3.5) scale(0.041)" d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z"/></svg>
         التقويم
       </div>
 </div>
@@ -3098,7 +3079,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="background:#fff;border-radius:0;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
 <div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">الرؤية والرسالة</div>
-<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('vision-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('vision-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 </div>
 <div style="padding:24px;font-family: CairoOld, Arial, sans-serif;direction:rtl">
 <div style="margin-bottom:24px">
@@ -3127,7 +3108,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="display:flex;flex-direction:column;background:#fff;border-radius:0;width:min(760px,100%);max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);box-shadow:0 20px 60px rgba(0,0,0,0.3)">
 <div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:2;flex-shrink:0">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">سياسة الخصوصية</div>
-<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('privacy-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('privacy-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 </div>
 <div style="padding:24px 24px 28px;font-family: CairoOld, Arial, sans-serif;direction:rtl;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
@@ -3150,7 +3131,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <div style="background:#fff;border-radius:0;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
 <div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">دعم فني للمؤسسة</div>
-<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('support-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('support-modal').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 </div>
 <div style="padding:24px;font-family: CairoOld, Arial, sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
@@ -3264,7 +3245,7 @@ function closeOrg(){
 <div style="background:#fff;border-radius:0;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family: CairoOld, Arial, sans-serif">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
 <div style="font-size:16px;font-weight:600;color:#005B85">مجلد المشاركة</div>
-<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('share-overlay').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6L18 18M18 6L6 18"></path></svg></button>
+<button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('share-overlay').style.display='none'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-fa="xmark-solid" style="--fa-ink:#FFFFFF"><path class="fa-glyph" transform="translate(5.25 3) scale(0.0352)" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
 </div>
 <div style="background:#FFFFFF;border:1px solid rgba(30, 83, 116,.18);border-radius:0;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#1B2F3A;line-height:2">
       للوصول إلى ملفات المشاركة، تأكد أنك متصل بشبكة الكلية الداخلية.<br/>
@@ -3752,6 +3733,7 @@ body{
         important(card,'color','#FFFFFF');
         important(card,'border-color','#1E5374');
         card.querySelectorAll('*').forEach(function(c){
+          if(c.classList && c.classList.contains('fa-glyph')) return;
           important(c,'color','#FFFFFF');
           important(c,'stroke','#FFFFFF');
           important(c,'fill','none');
@@ -3762,6 +3744,7 @@ body{
         important(card,'color','#005B85');
         important(card,'border-color','rgba(30, 83, 116,.20)');
         card.querySelectorAll('*').forEach(function(c){
+          if(c.classList && c.classList.contains('fa-glyph')) return;
           important(c,'color','#005B85');
           important(c,'stroke','#005B85');
           important(c,'fill','none');
@@ -4081,6 +4064,7 @@ nav::after,
       });
 
       btn.querySelectorAll('svg *').forEach(function(el){
+        if(el.classList && el.classList.contains('fa-glyph')) return;
         important(el,'stroke','currentColor');
         if(btn.title === 'اللون الرمادي' && el.tagName.toLowerCase() === 'path'){
           important(el,'fill','currentColor');
@@ -10344,9 +10328,7 @@ html body .national-gallery .conveyor-item img{
   var ROTATE_MS = 5000;
 
   var CAL_ICON = '<span aria-hidden="true" class="date-icon">'
-    + '<svg height="17" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg">'
-    + '<path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.2A2.8 2.8 0 0 1 22 6.8v11.4a2.8 2.8 0 0 1-2.8 2.8H4.8A2.8 2.8 0 0 1 2 18.2V6.8A2.8 2.8 0 0 1 4.8 4H6V3a1 1 0 0 1 1-1Zm13 8H4v8.2c0 .44.36.8.8.8h14.4c.44 0 .8-.36.8-.8V10ZM4.8 6a.8.8 0 0 0-.8.8V8h16V6.8a.8.8 0 0 0-.8-.8H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 0 1-2 0V6H4.8Z" fill="currentColor"></path>'
-    + '</svg></span>';
+    + '<svg height="17" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg" data-fa="calendar-regular" style="--fa-ink:#005B85"><path class="fa-glyph" transform="translate(4.125 3) scale(0.0352)" d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z"/></svg></span>';
 
   function esc(s){ return String(s==null?'':s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }

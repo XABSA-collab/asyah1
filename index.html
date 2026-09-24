@@ -1499,6 +1499,28 @@ html body *:not(#_z1):not(#_z2):not(#_z3)::placeholder,
   border-radius:0 !important;
 }
 </style>
+<style id="final-toolbar-radius">
+/* استثناء وحيد من «الحواف 0px»: حقلا البحث بحواف 10px، وأزرار أدوات الشريط العلوي دوائر كاملة 38×38 (بارتفاع حقلي البحث). */
+html body .header-tools #search-input:not(#_t1):not(#_t2):not(#_t3):not(#_t4),
+html body .header-tools #phone-search:not(#_t1):not(#_t2):not(#_t3):not(#_t4){
+  border-radius:10px !important;
+}
+html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t4){
+  border-radius:50% !important;
+  width:38px !important;
+  min-width:38px !important;
+  max-width:38px !important;
+  height:38px !important;
+  min-height:38px !important;
+  max-height:38px !important;
+  flex:0 0 38px !important;
+  box-sizing:border-box !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+}
+</style>
 </head>
 <body><div id="first-paint-loader" aria-hidden="true" role="presentation"><div class="fp-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 <script>

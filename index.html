@@ -1485,22 +1485,76 @@ html body .svc-card:hover .svc-icon svg[data-icon][data-ink]{
 }
 </style>
 
-<style id="final-zero-radius">
-/* جميع الحواف 0px في الموقع بلا استثناء (يشمل العناصر المولّدة بـ JavaScript والعناصر الوهمية). */
-html:not(#_z1):not(#_z2):not(#_z3),
-html body:not(#_z1):not(#_z2):not(#_z3),
+<style id="final-radius-system">
+/* نظام الحواف: كل العناصر بحواف 10px (مثل حقل «ابحث في الموقع»)،
+   ما عدا العناصر الدائرية بطبيعتها فتبقى دوائر كاملة. */
 html body *:not(#_z1):not(#_z2):not(#_z3),
 html body *:not(#_z1):not(#_z2):not(#_z3)::before,
 html body *:not(#_z1):not(#_z2):not(#_z3)::after,
-html body *:not(#_z1):not(#_z2):not(#_z3)::placeholder,
-::-webkit-scrollbar,
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track{
+  border-radius:10px !important;
+}
+/* عناصر دائرية: نقاط المؤشرات، أزرار الإغلاق والتنقل، زر العودة للأعلى، نقاط الخط الزمني */
+html body .dd-dot:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .unified-round-close:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .news-nav-btn:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .news-dot:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .cal-nav-btn:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .vtimeline-dot:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body #top-btn:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body #credit-btn:not(#_c1):not(#_c2):not(#_c3):not(#_c4),
+html body .oc-card-footer:not(#_c1):not(#_c2):not(#_c3):not(#_c4)::before,
+html body .oc-list-item:not(#_c1):not(#_c2):not(#_c3):not(#_c4)::before,
+html body .vtimeline-badge:not(#_c1):not(#_c2):not(#_c3):not(#_c4)::before{
+  border-radius:50% !important;
+}
+/* شرائط الصفحة بعرض الشاشة وخلفيات النوافذ: بلا حواف (تقسيم للصفحة وليست عناصر) */
+html body .site-header-stack:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .top-info:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .top-bar:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body nav:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .nav-inner:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .site-shell:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #hero-slider:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #hero-slider .slide:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .conveyor-track:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #main-content:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body footer.site-credit-footer:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #news-modal-overlay:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body .oc-overlay:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #vision-modal:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #privacy-modal:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #support-modal:not(#_b1):not(#_b2):not(#_b3):not(#_b4),
+html body #share-overlay:not(#_b1):not(#_b2):not(#_b3):not(#_b4){
   border-radius:0 !important;
 }
 </style>
+<style id="final-dropdown-sharp">
+/* القوائم المنسدلة (التنقل، نتائج البحث، نتائج دليل التحويلات) وخلفيات Hover داخلها: زوايا حادة */
+html body .dropdown:not(#_d1):not(#_d2):not(#_d3):not(#_d4),
+html body .dropdown:not(#_d1):not(#_d2):not(#_d3):not(#_d4) *,
+html body .dd-item:not(#_d1):not(#_d2):not(#_d3):not(#_d4),
+html body .dd-item:not(#_d1):not(#_d2):not(#_d3):not(#_d4):hover,
+html body .dd-item:not(#_d1):not(#_d2):not(#_d3):not(#_d4):focus-visible,
+html body #search-results:not(#_d1):not(#_d2):not(#_d3):not(#_d4),
+html body #search-results:not(#_d1):not(#_d2):not(#_d3):not(#_d4) *,
+html body .phone-search-results:not(#_d1):not(#_d2):not(#_d3):not(#_d4),
+html body .phone-search-results:not(#_d1):not(#_d2):not(#_d3):not(#_d4) *,
+html body .ps-item:not(#_d1):not(#_d2):not(#_d3):not(#_d4):hover,
+html body .ps-item:not(#_d1):not(#_d2):not(#_d3):not(#_d4):focus{
+  border-radius:0 !important;
+}
+</style>
+<style id="final-phone-section-header">
+/* دليل تحويلات الموظفين: بلا خط أسفل عنوان القسم */
+html body #phone-section + div > .sec-header:not(#_p1):not(#_p2):not(#_p3){
+  border-bottom:0 !important;
+  box-shadow:none !important;
+}
+</style>
 <style id="final-toolbar-radius">
-/* استثناء وحيد من «الحواف 0px»: حقلا البحث بحواف 10px، وأزرار أدوات الشريط العلوي دوائر كاملة 38×38 (بارتفاع حقلي البحث). */
+/* شريط الأدوات العلوي: حقلا البحث بحواف 10px، وأزرار الأدوات دوائر كاملة 38×38 (بارتفاع حقلي البحث). */
 html body .header-tools #search-input:not(#_t1):not(#_t2):not(#_t3):not(#_t4),
 html body .header-tools #phone-search:not(#_t1):not(#_t2):not(#_t3):not(#_t4){
   border-radius:10px !important;
@@ -1720,14 +1774,14 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 <!-- استبانات قياس جودة الخدمات — مخفية مؤقتًا لحين رفع استبانة جديدة.
      للإظهار: احذف class="hide-quality-surveys" فقط. الكود محفوظ بالكامل. -->
 <div class="hide-quality-surveys" style="margin-bottom:2rem">
-<div class="survey-card" style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:0;overflow:hidden;box-shadow:0 4px 20px rgba(17,100,95,0.12)">
+<div class="survey-card" style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(17,100,95,0.12)">
 <div class="survey-header" style="background:#005B85;background-repeat:no-repeat;padding:18px 24px;display:flex;align-items:center;gap:12px">
 <svg height="28" width="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-clipboard-list" data-ink style="--icon-ink:#FFFFFF"><path style="fill:none!important;stroke:currentColor!important" d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><path style="fill:none!important;stroke:currentColor!important" d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2"/><path style="fill:none!important;stroke:currentColor!important" d="M9 12l.01 0"/><path style="fill:none!important;stroke:currentColor!important" d="M13 12l2 0"/><path style="fill:none!important;stroke:currentColor!important" d="M9 16l.01 0"/><path style="fill:none!important;stroke:currentColor!important" d="M13 16l2 0"/></svg>
-<div style="font-size:16px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:0 !important;background:#8DB600;display:inline-block;flex-shrink:0;animation:greenPulse 2s ease-in-out infinite"></span>استبانات قياس جودة الخدمات</div>
-<span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 12px;border-radius:0;margin-right:auto;font-family: CairoOld, Arial, sans-serif">جديد</span>
+<div style="font-size:16px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:50% !important;background:#8DB600;display:inline-block;flex-shrink:0;animation:greenPulse 2s ease-in-out infinite"></span>استبانات قياس جودة الخدمات</div>
+<span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 12px;border-radius:10px;margin-right:auto;font-family: CairoOld, Arial, sans-serif">جديد</span>
 </div>
 <div class="survey-details" style="padding:20px 24px;font-family:CairoOld, Arial, sans-serif">
-<div style="overflow-x:auto;border-radius:0;border:1px solid rgba(30, 83, 116,0.15);margin-bottom:16px">
+<div style="overflow-x:auto;border-radius:10px;border:1px solid rgba(30, 83, 116,0.15);margin-bottom:16px">
 <table style="width:100%;border-collapse:collapse;font-size:13px;background:#fff">
 <thead>
 <tr style="background:#005B85;background-repeat:no-repeat;color:#fff">
@@ -1740,7 +1794,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 <tr style="border-bottom:1px solid rgba(30, 83, 116,0.10)">
 <td style="padding:12px 10px;text-align:center;color:#5D7480;font-weight:600">1</td>
 <td style="padding:12px 12px;color:#1B2F3A;font-weight:600">استبيان قياس جودة تجربة المتدرب عن خدمة التدريب التعاوني للكليات التقنية</td>
-<td style="padding:12px 12px;text-align:center"><a href="https://forms.office.com/r/jjFT1fhgpR" target="_blank" rel="noopener" style="display:inline-block;background:#005B85;background-repeat:no-repeat;color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:0 !important;text-decoration:none;white-space:nowrap;transition:background 0.15s" onmouseover="this.style.background='#1B3B62'" onmouseout="this.style.background='#005B85'">فتح الاستبانة</a></td>
+<td style="padding:12px 12px;text-align:center"><a href="https://forms.office.com/r/jjFT1fhgpR" target="_blank" rel="noopener" style="display:inline-block;background:#005B85;background-repeat:no-repeat;color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:10px !important;text-decoration:none;white-space:nowrap;transition:background 0.15s" onmouseover="this.style.background='#1B3B62'" onmouseout="this.style.background='#005B85'">فتح الاستبانة</a></td>
 </tr>
 </tbody>
 </table>
@@ -1790,8 +1844,8 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </section>
 </div>
 <!-- ربط مباشر مع المؤسسة + رايات -->
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:0;width:fit-content">
-<span style="width:10px;height:10px;border-radius:0 !important;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:10px;width:fit-content">
+<span style="width:10px;height:10px;border-radius:50% !important;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
 <span style="font-size:12px;font-weight:600;color:#1B2F3A;font-family: CairoOld, Arial, sans-serif">الربط المباشر مع المؤسسة</span>
 </div>
 <div class="rayat-band" style="margin-bottom:2rem">
@@ -1900,17 +1954,17 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
         دليل تحويلات الموظفين
       </div>
 </div>
-<div style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:0;overflow:hidden;box-shadow:0 2px 12px rgba(30, 83, 116,0.08)">
+<div style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(30, 83, 116,0.08)">
 <!-- شريط الحالة (بديل خانة البحث - البحث أصبح في أعلى الصفحة) -->
 <div style="padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(30, 83, 116,.18);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
 <div style="display:flex;align-items:center;gap:8px;color:#005B85;font-family:CairoOld, Arial, sans-serif;font-size:13px;font-weight:600">
 <svg height="18" width="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-phone" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg>
 <span>استخدم مربع البحث في أعلى الصفحة للبحث بالاسم أو الوظيفة أو رقم التحويلة</span>
 </div>
-<span id="phone-count" style="font-size:12px;color:#005B85;font-family:CairoOld, Arial, sans-serif;font-weight:600;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:0;border:1px solid rgba(30, 83, 116,.18)"></span>
+<span id="phone-count" style="font-size:12px;color:#005B85;font-family:CairoOld, Arial, sans-serif;font-weight:600;white-space:nowrap;background:#fff;padding:4px 12px;border-radius:10px;border:1px solid rgba(30, 83, 116,.18)"></span>
 </div>
 <!-- رأس الجدول -->
-<div style="display:grid;grid-template-columns:2fr 1fr 2fr;background:#005B85;padding:10px 20px">
+<div style="display:grid;grid-template-columns:2fr 1fr 2fr;background:#005B85;padding:10px 20px;border-radius:0 !important">
 <div style="font-size:13px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;text-align:right">الاسم</div>
 <div style="font-size:13px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;text-align:center">التحويلة</div>
 <div style="font-size:13px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif;text-align:right">الإدارة</div>
@@ -2352,15 +2406,15 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
         التقويم
       </div>
 </div>
-<div class="calendar-card" style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:0;overflow:hidden;box-shadow:0 2px 12px rgba(30, 83, 116,0.08)">
+<div class="calendar-card" style="background:#fff;border:1.5px solid rgba(30, 83, 116,.18);border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(30, 83, 116,0.08)">
 <!-- رأس التقويم -->
 <div style="background:#005B85;background-repeat:no-repeat;padding:16px 20px;display:flex;align-items:center;justify-content:space-between">
-<button onclick="calNext()" class="cal-nav-btn" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">‹</button>
+<button onclick="calNext()" class="cal-nav-btn" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">‹</button>
 <div style="text-align:center">
 <div id="cal-month-name" style="color:#fff;font-size:18px;font-weight:600;font-family: CairoOld, Arial, sans-serif"></div>
 <div id="cal-hijri-month" style="color:#B8D9E6;font-size:12px;margin-top:2px;font-family: CairoOld, Arial, sans-serif"></div>
 </div>
-<button onclick="calPrev()" class="cal-nav-btn" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:0;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">›</button>
+<button onclick="calPrev()" class="cal-nav-btn" style="background:rgba(255,255,255,0.1);border:none;color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">›</button>
 </div>
 <!-- أيام الأسبوع -->
 <div style="display:grid;grid-template-columns:repeat(7,1fr);background:#EAF5FA">
@@ -2378,9 +2432,9 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 <div style="padding:16px 20px;border-top:1px solid rgba(30, 83, 116,.12)">
 <div style="font-size:13px;font-weight:600;color:#005B85;margin-bottom:10px;font-family: CairoOld, Arial, sans-serif">إضافة حدث</div>
 <div style="display:flex;gap:8px;flex-wrap:wrap">
-<input id="ev-date" lang="en-GB" style="border:1px solid rgba(30, 83, 116,.18);border-radius:0;padding:7px 12px;font-size:13px;font-family: CairoOld, Arial, sans-serif;color:#005B85;outline:none;flex:1;min-width:140px;direction:rtl" type="date"/>
-<input id="ev-text" placeholder="عنوان الحدث..." style="border:1px solid rgba(30, 83, 116,.18);border-radius:0;padding:7px 12px;font-size:13px;font-family: CairoOld, Arial, sans-serif;color:#005B85;outline:none;flex:2;min-width:180px;direction:rtl" type="text"/>
-<button class="calendar-add-btn" onclick="addEvent()" style="background:#005B85;background-repeat:no-repeat;color:#fff;border:none;border-radius:0;padding:7px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family: CairoOld, Arial, sans-serif;white-space:nowrap">إضافة</button>
+<input id="ev-date" lang="en-GB" style="border:1px solid rgba(30, 83, 116,.18);border-radius:10px;padding:7px 12px;font-size:13px;font-family: CairoOld, Arial, sans-serif;color:#005B85;outline:none;flex:1;min-width:140px;direction:rtl" type="date"/>
+<input id="ev-text" placeholder="عنوان الحدث..." style="border:1px solid rgba(30, 83, 116,.18);border-radius:10px;padding:7px 12px;font-size:13px;font-family: CairoOld, Arial, sans-serif;color:#005B85;outline:none;flex:2;min-width:180px;direction:rtl" type="text"/>
+<button class="calendar-add-btn" onclick="addEvent()" style="background:#005B85;background-repeat:no-repeat;color:#fff;border:none;border-radius:10px;padding:7px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family: CairoOld, Arial, sans-serif;white-space:nowrap">إضافة</button>
 </div>
 <div id="ev-list" style="margin-top:12px;display:flex;flex-direction:column;gap:6px"></div>
 </div>
@@ -2388,13 +2442,13 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 </div>
 <!-- أزرار جانبية -->
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseout="this.style.background='#005B85';this.style.transform='scale(1)'" onmouseover="this.style.background='#005B85';this.style.transform='scale(1.1)'" style="display:flex;align-items:center;justify-content:center;position:fixed;left:20px;bottom:30px;z-index:200;background:#005B85;background-repeat:no-repeat;border:none;color:#fff;width:44px;height:44px;border-radius:0;cursor:pointer;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:background 0.15s,transform 0.15s">↑</button>
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseout="this.style.background='#005B85';this.style.transform='scale(1)'" onmouseover="this.style.background='#005B85';this.style.transform='scale(1.1)'" style="display:flex;align-items:center;justify-content:center;position:fixed;left:20px;bottom:30px;z-index:200;background:#005B85;background-repeat:no-repeat;border:none;color:#fff;width:44px;height:44px;border-radius:10px;cursor:pointer;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:background 0.15s,transform 0.15s">↑</button>
 <!-- تم حذف أزرار الروابط الجانبية بناءً على طلب المستخدم -->
 
 <!-- ====== فوتر أسفل التقويم: مربع تصميم الموقع ====== -->
 <footer class="site-credit-footer" style="position:relative;text-align:center;padding:24px 16px;margin-top:24px;background:#005B85;background-repeat:no-repeat">
-<div id="credit-card" style="position:absolute;bottom:70px;left:50%;transform:translateX(-50%) translateY(8px);background:#ffffff;color:#005B85;font-size:13px;font-weight:700;padding:10px 20px;border-radius:0;white-space:nowrap;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.25)">تصميم الموقع أ/عبدالله سعد الشبرمي</div>
-<div id="credit-btn" title="تصميم الموقع" onmouseenter="this.style.background='#005B85';var c=document.getElementById('credit-card');c.style.opacity='1';c.style.transform='translateX(-50%) translateY(0)'" onmouseleave="this.style.background='rgba(0, 43, 44, .20)';var c=document.getElementById('credit-card');c.style.opacity='0';c.style.transform='translateX(-50%) translateY(8px)'" style="display:inline-flex;align-items:center;justify-content:center;min-width:53px;height:12px;padding:0 7px;border-radius:0;background:#005B85;color:#fff;font-size:4.5px;line-height:12px;font-weight:700;border:none;cursor:pointer;opacity:0.10;transition:opacity .2s"><span class="credit-btn-label">تصميم الموقع</span></div>
+<div id="credit-card" style="position:absolute;bottom:70px;left:50%;transform:translateX(-50%) translateY(8px);background:#ffffff;color:#005B85;font-size:13px;font-weight:700;padding:10px 20px;border-radius:10px;white-space:nowrap;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.25)">تصميم الموقع أ/عبدالله سعد الشبرمي</div>
+<div id="credit-btn" title="تصميم الموقع" onmouseenter="this.style.background='#005B85';var c=document.getElementById('credit-card');c.style.opacity='1';c.style.transform='translateX(-50%) translateY(0)'" onmouseleave="this.style.background='rgba(0, 43, 44, .20)';var c=document.getElementById('credit-card');c.style.opacity='0';c.style.transform='translateX(-50%) translateY(8px)'" style="display:inline-flex;align-items:center;justify-content:center;min-width:53px;height:12px;padding:0 7px;border-radius:10px;background:#005B85;color:#fff;font-size:4.5px;line-height:12px;font-weight:700;border:none;cursor:pointer;opacity:0.10;transition:opacity .2s"><span class="credit-btn-label">تصميم الموقع</span></div>
 </footer>
 
 <script>var fnt='Cairo';
@@ -2626,7 +2680,7 @@ function renderCal(){
 
     const num = document.createElement('div');
     num.textContent = forceLatinDigits(d);
-    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:0 !important;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:CairoOld, Arial, sans-serif;'
+    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:'+(isToday?'50%':'10px')+' !important;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:CairoOld, Arial, sans-serif;'
       + (isToday ? 'background:#005B85;background-repeat:no-repeat;color:#fff;' : isSaturday ? 'color:#E01B21;' : isFriday ? 'color:#E01B21;' : 'color:#005B85;');
     cell.appendChild(num);
 
@@ -2643,7 +2697,7 @@ function renderCal(){
       cell.appendChild(dot);
       // Show event title on hover
       const tip = document.createElement('div');
-      tip.style.cssText='display:none;position:absolute;bottom:100%;right:50%;transform:translateX(50%);background:#005B85;background-repeat:no-repeat;color:#fff;font-size:11px;padding:4px 8px;border-radius:0;white-space:nowrap;z-index:20;font-family:CairoOld, Arial, sans-serif';
+      tip.style.cssText='display:none;position:absolute;bottom:100%;right:50%;transform:translateX(50%);background:#005B85;background-repeat:no-repeat;color:#fff;font-size:11px;padding:4px 8px;border-radius:10px;white-space:nowrap;z-index:20;font-family:CairoOld, Arial, sans-serif';
       tip.textContent = calEvents[dateKey].join('، ');
       cell.appendChild(tip);
       cell.onmouseover=()=>{cell.style.background='#EAF5FA';tip.style.display='block';};
@@ -2900,21 +2954,21 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </script>
 <!-- مودال الرؤية والرسالة -->
 <div id="vision-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="background:#fff;border-radius:0;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
+<div style="background:#fff;border-radius:10px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">الرؤية والرسالة</div>
 <button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('vision-modal').style.display='none'"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-x" data-ink style="--icon-ink:#FFFFFF"><path style="fill:none!important;stroke:currentColor!important" d="M18 6l-12 12"/><path style="fill:none!important;stroke:currentColor!important" d="M6 6l12 12"/></svg></button>
 </div>
 <div style="padding:24px;font-family: CairoOld, Arial, sans-serif;direction:rtl">
 <div style="margin-bottom:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:0;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">الرؤية</h3>
+<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:10px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">الرؤية</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0">الإسهام الفاعل في التنمية الاقتصادية والاجتماعية والبيئية بتوفير التدريب التقني والمهني لأبناء وبنات الوطن بالجودة والكفاية التي يتطلبها سوق العمل، وتحقيق ريادة عالمية تكفل الاستقلالية والاكتفاء الذاتي.</p>
 </div>
 <div style="border-top:1px solid rgba(30, 83, 116,.12);padding-top:24px">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:0;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">الرسالة</h3>
+<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:10px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">الرسالة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin-bottom:14px">تسعى المؤسسة العامة للتدريب التقني والمهني إلى:</p>
 <ol style="font-size:14px;color:#1B2F3A;line-height:2.2;padding-right:20px;margin:0">
@@ -2929,14 +2983,14 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 </div>
 <!-- مودال سياسة الخصوصية -->
 <div id="privacy-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="display:flex;flex-direction:column;background:#fff;border-radius:0;width:min(760px,100%);max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:2;flex-shrink:0">
+<div style="display:flex;flex-direction:column;background:#fff;border-radius:10px;width:min(760px,100%);max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:2;flex-shrink:0">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">سياسة الخصوصية</div>
 <button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('privacy-modal').style.display='none'"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-x" data-ink style="--icon-ink:#FFFFFF"><path style="fill:none!important;stroke:currentColor!important" d="M18 6l-12 12"/><path style="fill:none!important;stroke:currentColor!important" d="M6 6l12 12"/></svg></button>
 </div>
 <div style="padding:24px 24px 28px;font-family: CairoOld, Arial, sans-serif;direction:rtl;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:0;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">سياسة خصوصية البيانات الشخصية</h3>
+<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:10px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">سياسة خصوصية البيانات الشخصية</h3>
 </div>
 <p style="font-size:13px;color:#5D7480;line-height:1.9;margin:0 0 18px">في المؤسسة العامة للتدريب التقني والمهني<br>الإصدار 2.0 (23 رجب 1446هـ الموافق 23 يناير 2025م)</p>
 <div style="border-top:1px solid rgba(30, 83, 116,.12);padding-top:20px">
@@ -2944,7 +2998,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 14px">وتقدم المؤسسة العامة للتدريب التقني والمهني العديد من البرامج التدريبية في منشآتها التدريبية من كليات تقنية ومعاهد ثانوية، وكذلك معاهد الشراكات الاستراتيجية، والكليات التقنية العالمية، ومنشآت التدريب الأهلي، بالإضافة إلى البرامج المساندة المجتمعية.</p>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 14px">نحن في المؤسسة نحترم خصوصيتك ويهمنا أن تكون على دراية بكيفية استخدام المؤسسة لبياناتك الشخصية وحقوقك وفقاً لنظام حماية البيانات الشخصية في المملكة، لقد أعددنا هذه السياسة لمساعدتك على فهم طبيعة البيانات الشخصية التي نجمعها منك، والغرض من جمعها، وكيفية معالجتها، وتخزينها، وإتلافها، والجهات التي سيتم مشاركة بياناتك معها، وحقوقك، وكيفية ممارسة هذه الحقوق.</p>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 20px">إنَّ استخدامك لخدمات "المؤسسة"، يعني اطلاعك وموافقتك على ما ورد في سياسة الخصوصية وما يتم عليها من تعديلات مستمرة، ونحث المستفيد من خدمات المؤسسة على الاطلاع بشكل مستمر على سياسة الخصوصية لمعرفة أي تحديثات تتم عليها.</p>
-<a href="https://tvtc.gov.sa/ar/Pages/PrivacyPolicy.aspx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#005B85;background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600;margin-top:6px">رؤية كامل المقالة</a>
+<a href="https://tvtc.gov.sa/ar/Pages/PrivacyPolicy.aspx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#005B85;background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;margin-top:6px">رؤية كامل المقالة</a>
 </div>
 </div>
 </div>
@@ -2952,19 +3006,19 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 
 <!-- مودال دعم فني للمؤسسة -->
 <div id="support-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<div style="background:#fff;border-radius:0;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:0;display:flex;align-items:center;justify-content:space-between">
+<div style="background:#fff;border-radius:10px;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+<div style="background:#005B85;background-repeat:no-repeat;padding:20px 24px;border-radius:10px;display:flex;align-items:center;justify-content:space-between">
 <div style="font-size:17px;font-weight:600;color:#fff;font-family: CairoOld, Arial, sans-serif">دعم فني للمؤسسة</div>
 <button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('support-modal').style.display='none'"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-x" data-ink style="--icon-ink:#FFFFFF"><path style="fill:none!important;stroke:currentColor!important" d="M18 6l-12 12"/><path style="fill:none!important;stroke:currentColor!important" d="M6 6l12 12"/></svg></button>
 </div>
 <div style="padding:24px;font-family: CairoOld, Arial, sans-serif;direction:rtl">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:0;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">وصف الخدمة</h3>
+<div style="width:4px;height:28px;background:#005B85;background-repeat:no-repeat;border-radius:10px;flex-shrink:0"></div><h3 style="font-size:18px;font-weight:700;color:#005B85;margin:0;font-family:CairoOld, Arial, sans-serif">وصف الخدمة</h3>
 </div>
 <p style="font-size:14px;color:#1B2F3A;line-height:2;margin:0 0 20px">خدمة تتيح من خلالها رفع تذاكر لمختلف المشاكل التقنية والغير تقنية ومتابعة الطلب والتواصل مع المختص ومن ثم قياس مدى رضا المستفيد عن الخدمة المقدمة.</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
-<a href="https://tvtc.gov.sa/ar/Eservices/Documents/Khadom-User%20Guide-Arabic%20V2.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;color:#005B85;text-decoration:none;border:1.5px solid #1E5374;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600">دليل المستخدم</a>
-<a href="https://khadom.tvtc.gov.sa/assystnet" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#005B85;background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:0;padding:10px 18px;font-size:13px;font-weight:600">الانتقال للخدمة</a>
+<a href="https://tvtc.gov.sa/ar/Eservices/Documents/Khadom-User%20Guide-Arabic%20V2.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;color:#005B85;text-decoration:none;border:1.5px solid #1E5374;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600">دليل المستخدم</a>
+<a href="https://khadom.tvtc.gov.sa/assystnet" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;background:#005B85;background-repeat:no-repeat;color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600">الانتقال للخدمة</a>
 </div>
 </div>
 </div>
@@ -2973,7 +3027,7 @@ new MutationObserver(normalizePageNumbers).observe(document.body,{childList:true
 <script>
 
 (function(){
-  const C='#005B85',L='#005B85',TC='#005B85',S='#B8D9E6',RH=32,RX=0;
+  const C='#005B85',L='#005B85',TC='#005B85',S='#B8D9E6',RH=32,RX=10;
   const nodes=[
     {id:'council',label:'مجلس الكلية التقنية',x:370,y:20,w:200,lvl:0},
     {id:'sec',label:'أمانة مجلس الكلية',x:600,y:20,w:150,lvl:0},
@@ -3066,18 +3120,18 @@ function closeOrg(){
 
 <!-- مودال مجلد المشاركة -->
 <div id="share-overlay" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center">
-<div style="background:#fff;border-radius:0;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family: CairoOld, Arial, sans-serif">
+<div style="background:#fff;border-radius:10px;padding:28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);font-family: CairoOld, Arial, sans-serif">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
 <div style="font-size:16px;font-weight:600;color:#005B85">مجلد المشاركة</div>
 <button type="button" class="unified-round-close" aria-label="إغلاق" onclick="document.getElementById('share-overlay').style.display='none'"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-x" data-ink style="--icon-ink:#FFFFFF"><path style="fill:none!important;stroke:currentColor!important" d="M18 6l-12 12"/><path style="fill:none!important;stroke:currentColor!important" d="M6 6l12 12"/></svg></button>
 </div>
-<div style="background:#FFFFFF;border:1px solid rgba(30, 83, 116,.18);border-radius:0;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#1B2F3A;line-height:2">
+<div style="background:#FFFFFF;border:1px solid rgba(30, 83, 116,.18);border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;color:#1B2F3A;line-height:2">
       للوصول إلى ملفات المشاركة، تأكد أنك متصل بشبكة الكلية الداخلية.<br/>
       ثم انسخ الرابط التالي وافتحه في <strong>File Explorer</strong>:
     </div>
-<div style="background:#005B85;background-repeat:no-repeat;border-radius:0;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+<div style="background:#005B85;background-repeat:no-repeat;border-radius:10px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
 <code style="color:#fff;font-size:14px;font-family:CairoOld, Arial, sans-serif;direction:ltr">\\172.17.20.19</code>
-<button onclick="navigator.clipboard.writeText('\\\\172.17.20.19');this.textContent='✓ تم';setTimeout(()=&gt;{this.textContent='نسخ'},2000)" style="background:#005B85;background-repeat:no-repeat;border:none;color:#fff;font-size:12px;padding:6px 14px;border-radius:0;cursor:pointer;white-space:nowrap">نسخ</button>
+<button onclick="navigator.clipboard.writeText('\\\\172.17.20.19');this.textContent='✓ تم';setTimeout(()=&gt;{this.textContent='نسخ'},2000)" style="background:#005B85;background-repeat:no-repeat;border:none;color:#fff;font-size:12px;padding:6px 14px;border-radius:10px;cursor:pointer;white-space:nowrap">نسخ</button>
 </div>
 </div>
 </div>
@@ -5276,7 +5330,7 @@ div.org-modal .org-modal-body{
       card.style.setProperty('backdrop-filter', 'blur(22px) saturate(160%)', 'important');
       card.style.setProperty('-webkit-backdrop-filter', 'blur(22px) saturate(160%)', 'important');
       card.style.setProperty('border', '1px solid rgba(255,255,255,0.50)', 'important');
-      card.style.setProperty('border-radius', '0', 'important');
+      card.style.setProperty('border-radius', '10px', 'important');
       card.style.setProperty('box-shadow', 'none', 'important');
     });
 
@@ -8389,7 +8443,7 @@ html body footer.site-credit-footer{
 }
 </style>
 <style id="final-selective-radius-system">
-:root{ --ui-radius:0; }
+:root{ --ui-radius:10px; }
 
 /* ====================================================================
    نظام الحواف الانتقائي — يحل محل final-side-buttons-radius-10.
@@ -9868,7 +9922,7 @@ html body .national-gallery .conveyor-item img{
       + '<div class="news-date">' + CAL_ICON + ' ' + esc(item.date) + '</div>'
       + '<p class="news-title">' + esc(item.title) + '</p>'
       + '<a class="news-more" href="' + esc(item.link || '#') + '" target="_blank" rel="noopener">'
-      + '<span style="width:22px;height:22px;background:#005B85;background-repeat:no-repeat;border-radius:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>'
+      + '<span style="width:22px;height:22px;background:#005B85;background-repeat:no-repeat;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px">←</span>'
       + ' اقرأ المزيد</a>'
       + '</div></div>';
   }

@@ -1,15 +1,17 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-diamond"
->
-  <path style="fill:none!important;stroke:currentColor!important" d="M6 5h12l3 5l-8.5 9.5a.7 .7 0 0 1 -1 0l-8.5 -9.5l3 -5" />
-  <path style="fill:none!important;stroke:currentColor!important" d="M10 12l-2 -2.2l.6 -1" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+  <!-- Generator: Adobe Illustrator 30.8.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M9.93,20.11c1.18,1.12,3.05,1.1,4.21-.06l5.91-5.91c1.18-1.18,1.18-3.1,0-4.28l-5.91-5.91c-1.18-1.18-3.1-1.18-4.28,0l-5.91,5.91c-1.18,1.18-1.18,3.1,0,4.28l.73.73"/>
+  <line class="st0" x1="6.91" y1="17.1" x2="7.9" y2="18.09"/>
 </svg>

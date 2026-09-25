@@ -1575,6 +1575,64 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
   padding:0 !important;
 }
 </style>
+<style id="final-unified-section-panels">
+/* توحيد جميع الأقسام بنمط قسم «روابط الدخول على نظام رايات» (.rayat-band):
+   إطار خارجي أبيض بحد 1px وزوايا 10px وظل خفيف، والعنوان داخل الإطار بلا خط سفلي،
+   والعناصر الداخلية بحد 1px رمادي فاتح وزوايا 10px ومسافة 12px بينها.
+   للتراجع: احذف هذه الطبقة و class="sec-panel" من حاويات الأقسام. */
+html body .sec-panel,
+html body .rayat-band{
+  background:#FFFFFF !important;
+  border:1px solid #D6E0E6 !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  padding:20px 22px !important;
+  margin-bottom:24px !important;
+}
+html body .sec-panel > .sec-header{
+  border-bottom:0 !important;
+  padding:0 !important;
+  margin:0 0 14px !important;
+}
+html body .sec-panel > .sec-header .sec-title{
+  font-size:16px !important;
+  font-weight:600 !important;
+  gap:10px !important;
+  color:#005B85 !important;
+}
+/* شبكات العناصر داخل الإطار: نفس مسافة شبكة رايات */
+html body .sec-panel .services-grid,
+html body .sec-panel > div[style*="grid-template-columns:repeat(4"],
+html body .sec-panel .tl-grid,
+html body .sec-panel .news-grid{
+  gap:12px !important;
+}
+html body .sec-panel .services-grid,
+html body .sec-panel .news-grid{
+  margin-bottom:0 !important;
+}
+html body .sec-panel .tl-grid{ margin-bottom:12px !important; }
+html body .sec-panel .tl-grid:last-child{ margin-bottom:0 !important; }
+html body .sec-panel .news-rotator-controls{ margin:14px 0 0 !important; }
+/* العناصر الداخلية: نفس حدود بطاقات رايات (.r-card) */
+html body .sec-panel .svc-card,
+html body .sec-panel .tl-card,
+html body .sec-panel .news-card,
+html body .sec-panel .calendar-card,
+html body .sec-panel > .sec-header + div[style*="border:1.5px"]{
+  border:1px solid rgb(229, 231, 235) !important;
+  border-radius:10px !important;
+  box-shadow:0 1px 4px rgba(30, 83, 116, .06) !important;
+}
+html body .sec-panel .calendar-card,
+html body .sec-panel > .sec-header + div[style*="border:1.5px"]{
+  overflow:hidden !important;
+}
+body.site-high-contrast .sec-panel{
+  border-color:#1E5374 !important;
+  box-shadow:none !important;
+}
+</style>
 </head>
 <body><div id="first-paint-loader" aria-hidden="true" role="presentation"><div class="fp-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 <script>
@@ -1876,7 +1934,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 </div>
 <!-- الخدمات الإلكترونية -->
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header" style="cursor:default">
 <div class="sec-title">
 <svg class="icon" aria-hidden="true" focusable="false" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-layout-grid" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/></svg>
@@ -1919,7 +1977,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 </div>
 <!-- روابط مفيدة -->
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-link" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M9 15l6 -6"/><path style="fill:none!important;stroke:currentColor!important" d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path style="fill:none!important;stroke:currentColor!important" d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg>
@@ -1947,7 +2005,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- دليل التحويلات -->
 <div id="phone-section" style="position:relative;top:-70px"></div>
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-phone" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg>
@@ -1975,7 +2033,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- الهيكل التنظيمي -->
 <div id="org-section" style="position:relative;top:-70px"></div>
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg aria-hidden="true" height="24" width="24" viewBox="-85 -85 682 682" data-icon="layer-group-solid" data-ink style="--icon-ink:#005B85"><path style="fill:currentColor!important;stroke:none!important" d="M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 149.8C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8L232.5 5.2zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 277.8C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8l34.1-15.8zM13.9 362.2l34.1-15.8 164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 405.8C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8z"/></svg>
@@ -2331,7 +2389,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- الأخبار -->
 <div id="news-section" style="position:relative;top:-70px"></div>
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-align-left" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M4 6l16 0"/><path style="fill:none!important;stroke:currentColor!important" d="M4 12l10 0"/><path style="fill:none!important;stroke:currentColor!important" d="M4 18l14 0"/></svg>
@@ -2364,7 +2422,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- الخط الزمني -->
 <div id="timeline-section" style="position:relative;top:-70px"></div>
-<div class="" style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-clock" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path style="fill:none!important;stroke:currentColor!important" d="M12 7v5l3 3"/></svg>
@@ -2388,7 +2446,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- عداد الأحداث القادمة -->
 <div id="countdown-section" style="position:relative;top:-70px"></div>
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-clock" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path style="fill:none!important;stroke:currentColor!important" d="M12 7v5l3 3"/></svg>
@@ -2399,7 +2457,7 @@ html body .header-tools .portal-action-btn:not(#_t1):not(#_t2):not(#_t3):not(#_t
 </div>
 <!-- التقويم -->
 <div id="calendar-section" style="position:relative;top:-70px"></div>
-<div style="margin-bottom:2rem">
+<div class="sec-panel" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-calendar" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12"/><path style="fill:none!important;stroke:currentColor!important" d="M16 3v4"/><path style="fill:none!important;stroke:currentColor!important" d="M8 3v4"/><path style="fill:none!important;stroke:currentColor!important" d="M4 11h16"/><path style="fill:none!important;stroke:currentColor!important" d="M11 15h1"/><path style="fill:none!important;stroke:currentColor!important" d="M12 15v3"/></svg>

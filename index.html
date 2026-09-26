@@ -2739,7 +2739,7 @@ function renderCal(){
 
     const num = document.createElement('div');
     num.textContent = forceLatinDigits(d);
-    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:'+(isToday?'50%':'10px')+' !important;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:CairoOld, Arial, sans-serif;'
+    num.style.cssText = 'font-size:13px;font-weight:'+(isToday?'700':'400')+';width:28px;height:28px;border-radius:'+(isToday?'50%':'0')+' !important;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;font-family:CairoOld, Arial, sans-serif;'
       + (isToday ? 'background:#005B85;background-repeat:no-repeat;color:#fff;' : isSaturday ? 'color:#E01B21;' : isFriday ? 'color:#E01B21;' : 'color:#005B85;');
     cell.appendChild(num);
 
@@ -10004,7 +10004,23 @@ html body .national-gallery .conveyor-item img{
     }
     dots.innerHTML=out;
   }
+  /* شريط أخبار متحرك مستمر مثل صور اليوم الوطني: نسختان من الأخبار، الحركة 0 → -50% ثم تتكرر.
+     للعودة للتقليب بالصفحات: اجعل NEWS_CONVEYOR = false. */
+  var NEWS_CONVEYOR = true;
+  function conveyorHTML(){
+    var one='', dup='';
+    for(var i=0;i<NEWS_ITEMS.length;i++){ one += cardHTML(NEWS_ITEMS[i], false); }
+    /* تكرار لتحقيق حركة مستمرة */
+    dup = one.replace(/<div class="news-card"/g,'<div class="news-card" aria-hidden="true"')
+             .replace(/tabindex="0"/g,'tabindex="-1"')
+             .replace(/<a class="news-more"/g,'<a class="news-more" tabindex="-1"');
+    return '<div class="news-conveyor-track">' + one + dup + '</div>';
+  }
   function renderNews(animate){
+    if(NEWS_CONVEYOR){
+      if(!grid.querySelector('.news-conveyor-track')){ grid.classList.add('news-conveyor'); grid.innerHTML=conveyorHTML(); }
+      return;
+    }
     var per=itemsPerView();
     currentNewsIndex=(currentPage()*per)%NEWS_ITEMS.length;
     if(currentNewsIndex>=NEWS_ITEMS.length) currentNewsIndex=0;
@@ -10019,7 +10035,7 @@ html body .national-gallery .conveyor-item img{
   function nextNews(){ var per=itemsPerView(); currentNewsIndex=(currentNewsIndex+per)%NEWS_ITEMS.length; renderNews(true); }
   function prevNews(){ var per=itemsPerView(); currentNewsIndex=(currentNewsIndex-per+NEWS_ITEMS.length)%NEWS_ITEMS.length; renderNews(true); }
   function goToPage(p){ currentNewsIndex=(p*itemsPerView())%NEWS_ITEMS.length; renderNews(true); }
-  function startNewsAutoRotate(){ stopNewsAutoRotate(); if(NEWS_ITEMS.length>itemsPerView()){ rotateTimer=setInterval(nextNews,ROTATE_MS); } }
+  function startNewsAutoRotate(){ if(NEWS_CONVEYOR) return; stopNewsAutoRotate(); if(NEWS_ITEMS.length>itemsPerView()){ rotateTimer=setInterval(nextNews,ROTATE_MS); } }
   function stopNewsAutoRotate(){ if(rotateTimer){ clearInterval(rotateTimer); rotateTimer=null; } }
 
   document.addEventListener('click', function(ev){
@@ -10156,5 +10172,66 @@ html body .national-gallery .conveyor-item img{
 
 </script>
 
+<style id="final-credit-box-and-calendar-squares">
+/* مربع «تصميم الموقع» أسفل التقويم: حواف 2px — ومربعات التقويم: حواف 0px.
+   خصوصية ID مرتفعة لتجاوز طبقة الحواف الدائرية (50%) السابقة.
+   للاسترجاع: احذف هذه الطبقة وأعد '10px' في renderCalendar(). */
+html body footer.site-credit-footer #credit-btn:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5),
+html body footer.site-credit-footer #credit-card:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5){
+  border-radius:2px !important;
+}
+html body #cal-days:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5),
+html body #cal-days:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5) > div{
+  border-radius:0 !important;
+}
+</style>
+<style id="final-news-conveyor-and-dots">
+/* ====================================================================
+   1) الأخبار: شريط متحرك مستمر (conveyor) مثل صور اليوم الوطني.
+      يتوقف عند Hover، ويتوقف كليًا مع prefers-reduced-motion.
+      أزرار التقليب والنقاط مخفية (غير مستخدمة مع الحركة المستمرة) — الكود محفوظ.
+   2) نقاط الأخبار: حواف 5px.
+   للاسترجاع: احذف هذه الطبقة واجعل NEWS_CONVEYOR = false.
+   ==================================================================== */
+html body #news-grid.news-conveyor{
+  display:block !important;
+  overflow:hidden !important;
+  direction:ltr;
+  width:100%;
+}
+html body #news-grid.news-conveyor .news-conveyor-track{
+  display:flex;
+  align-items:stretch;
+  width:max-content;
+  animation:newsConveyor 45s linear infinite;
+  will-change:transform;
+}
+html body #news-grid.news-conveyor:hover .news-conveyor-track,
+html body #news-grid.news-conveyor:focus-within .news-conveyor-track{
+  animation-play-state:paused;
+}
+html body #news-grid.news-conveyor .news-card{
+  flex:0 0 auto;
+  width:clamp(260px, 26vw, 360px);
+  margin:0 6px !important;
+  direction:rtl;
+  opacity:1 !important;
+  transform:none !important;
+}
+@keyframes newsConveyor{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce){
+  html body #news-grid.news-conveyor .news-conveyor-track{ animation:none; }
+  html body #news-grid.news-conveyor{ overflow-x:auto !important; }
+}
+html body #news-rotator{ display:none !important; }
+
+html body .news-dot:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5),
+html body .news-dot.is-active:not(#_c1):not(#_c2):not(#_c3):not(#_c4):not(#_c5){
+  border-radius:5px !important;
+}
+</style>
 </body>
 </html>

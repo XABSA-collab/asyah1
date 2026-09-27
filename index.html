@@ -1666,6 +1666,8 @@ body.site-high-contrast .sec-panel{
 })();
 </script>
 <a class="skip-link" href="#main-content" id="skip-to-content">تخطي إلى المحتوى</a>
+<!-- ====== حاوية أب تجمع الهيدر + Hero لتدرج واحد مستمر (final-unified-header-gradient) ====== -->
+<div class="header-hero-band">
 <!-- شريط التاريخ والوقت -->
 <div class="site-header-stack">
 <div class="top-info rebuilt-top-info">
@@ -1813,6 +1815,7 @@ body.site-high-contrast .sec-panel{
 <!-- ====== تم حذف الشريحتين 2 و 3 (رايات + الخدمات) بناءً على طلب الإبقاء على صفحة واحدة فقط ====== -->
 <!-- ====== تم حذف نقاط التنقل (hero-dots) وأسهم التالي/السابق لعدم الحاجة إليها ====== -->
 </div>
+</div><!-- /header-hero-band -->
 <div class="content" id="main-content">
 <!-- ====== حملة ترشيد المياه (اللحظة تفرق) — صور توعوية بين الهيرو والاستبانات ======
      مضافة بناءً على طلب المستخدم. للاسترجاع/الإخفاء: احذف هذه الكتلة كاملة أو
@@ -6549,16 +6552,25 @@ html body .rayat-band {
 <style id="final-unified-header-gradient">
 /* ====================================================================
    A) هيدر موحّد كطبقة واحدة:
-      - تدرج أفقي واحد على الحاوية الأب .site-header-stack فقط: أبيض + rgba(163,199,226) شفافية 0 → 0.5 (52%) → 0.
+      - تدرج عمودي واحد على الحاوية الأب .header-hero-band (الهيدر + Hero): أبيض + rgba(163,199,226) شفافية 0 → 0.5 (50%) → 0.
       - الطبقات الداخلية (top-info / top-bar / nav / nav-inner) شفافة وبلا خطوط فاصلة.
       - لا تغيير على الأيقونات أو الأزرار أو الشعار أو التنقل.
       موضوعة قبل FORCE-LIGHT-THEME-FINAL؛ خصوصية ID (:not(#_hN)) لتتجاوز طبقات
       final-header-nav-white-invert و final-topbar-white-invert اللاحقة.
    للاسترجاع: احذف هذه الطبقة فقط.
    ==================================================================== */
-html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3){
+/* التدرج على الحاوية الأب .header-hero-band (الهيدر + Hero) — عمودي من الأعلى للأسفل */
+html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3){
   background-color:#FFFFFF !important;
-  background-image:linear-gradient(to right, rgba(163, 199, 226, 0) 0%, rgba(163, 199, 226, 0.5) 52%, rgba(163, 199, 226, 0) 100%) !important;
+  background-image:linear-gradient(to bottom, rgba(163, 199, 226, 0) 0%, rgba(163, 199, 226, 0.5) 50%, rgba(163, 199, 226, 0) 100%) !important;
+}
+html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3) > .site-header-stack,
+html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3) > #hero-slider,
+html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3) > #hero-slider > .slide{
+  background:transparent !important;
+  background-image:none !important;
+  border-top:0 !important;
+  box-shadow:none !important;
 }
 html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > .top-info,
 html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > .top-bar,
@@ -6585,6 +6597,19 @@ html body:not(#_w1) button:not(#_w2):not(#_w3),
 html body:not(#_w1) textarea:not(#_w2):not(#_w3),
 html body:not(#_w1) select:not(#_w2):not(#_w3){
   font-weight:700 !important;
+}
+</style>
+<style id="final-nav-hover-sharp-corners">
+/* روابط شريط التنقل: حواف 0 (تظهر عند hover بالخلفية البيضاء). الخلفية والتأثير بلا تغيير.
+   خصوصية 4×ID لتتجاوز final-radius-system (html body :not(#_z1):not(#_z2):not(#_z3) => 10px).
+   للاسترجاع: احذف هذه الطبقة. */
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-btn,
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-btn:hover,
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-btn:focus-visible,
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-btn.open,
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-btn.active,
+html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-item:hover > .nav-btn{
+  border-radius:0 !important;
 }
 </style>
 <style id="FORCE-LIGHT-THEME-FINAL">

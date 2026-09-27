@@ -6612,6 +6612,20 @@ html body nav:not(#_n1):not(#_n2):not(#_n3):not(#_n4) .nav-item:hover > .nav-btn
   border-radius:0 !important;
 }
 </style>
+<style id="final-hero-employee-btn-blend">
+/* زر «بوابة الموظفين» في الهيرو: حواف 0 وخلفية شفافة مدموجة مع تدرج الهيرو.
+   الحد والنص والأيقونة وتأثير hover/active بلا تغيير.
+   خصوصية 4×ID لتتجاوز final-radius-system و final-hero-employee-btn-white-teal.
+   للاسترجاع: احذف هذه الطبقة. */
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-wrap,
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn{
+  border-radius:0 !important;
+}
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:not(:hover):not(:active){
+  background:transparent !important;
+  background-image:none !important;
+}
+</style>
 <style id="FORCE-LIGHT-THEME-FINAL">
 /* Global Cairo Bold — applies to every element on the page.
    Inputs/buttons/textareas don't inherit font from body by default,

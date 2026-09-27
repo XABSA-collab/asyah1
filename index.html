@@ -6623,6 +6623,14 @@ html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-wrap,
 html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn{
   border-radius:0 !important;
 }
+/* بلا حدود في كل الحالات */
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn,
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:hover,
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:active,
+html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:focus-visible{
+  border:0 !important;
+  box-shadow:none !important;
+}
 html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:not(:hover):not(:active){
   background:transparent !important;
   background-image:none !important;
@@ -6632,6 +6640,71 @@ html body:not(#_e1):not(#_e2):not(#_e3):not(#_e4) .hero-employee-portal-btn:not(
 /* إخفاء قسم «صور متحركة بين الهيرو والربط المباشر» لحين إضافة صور.
    للإظهار: احذف class="hide-motion-gallery" من الحاوية. */
 html body:not(#_g1):not(#_g2):not(#_g3):not(#_g4) .hide-motion-gallery{ display:none !important; }
+</style>
+<style id="final-sections-no-outer-box">
+/* إزالة المربع الخارجي عن جميع الأقسام (روابط رايات، الخدمات الإلكترونية، روابط مفيدة،
+   دليل التحويلات، الهيكل التنظيمي، الأخبار، الخط الزمني، الأحداث القادمة، التقويم):
+   بلا حد ولا خلفية ولا ظل ولا حشوة. البطاقات الداخلية والعناوين والمسافة بين الأقسام بلا تغيير.
+   خصوصية 4×ID لتتجاوز final-unified-section-panels والطبقات اللاحقة لـ .rayat-band.
+   للاسترجاع: احذف هذه الطبقة. */
+html body:not(#_x1):not(#_x2):not(#_x3):not(#_x4) .sec-panel,
+html body:not(#_x1):not(#_x2):not(#_x3):not(#_x4) .rayat-band{
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+</style>
+<style id="final-dual-search-blend">
+/* شريط البحث المزدوج (بحث الموقع + زر البحث + بحث التحويلات):
+   بلا حدود وبلا خلفية — مدموج مع تدرج الهيدر.
+   عند hover (وأثناء الكتابة focus): خلفية بيضاء بشكل دائري وبلا حدود.
+   خصوصية 4×ID لتتجاوز final-topbar-white-invert و final-radius-system.
+   للاسترجاع: احذف هذه الطبقة. */
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #search-input,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #phone-search,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap .search-action{
+  border:0 !important;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  transition:background-color .2s ease !important;
+}
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #search-input:hover,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #search-input:focus,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #phone-search:hover,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap #phone-search:focus{
+  background:#FFFFFF !important;
+  border:0 !important;
+  border-radius:999px !important;
+}
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap .search-action:hover,
+html body:not(#_s1):not(#_s2):not(#_s3):not(#_s4) .dual-search-wrap .search-action:focus-visible{
+  background:#FFFFFF !important;
+  border:0 !important;
+  border-radius:50% !important;
+}
+</style>
+<style id="final-portal-actions-blend">
+/* أزرار أدوات الموقع (تكبير/تصغير/استعادة الخط، الرمادي، التباين، الطباعة، المشاركة):
+   بلا حدود وبلا خلفية — مدموجة مع تدرج الهيدر.
+   عند hover: دائرة بيضاء بلا حدود. لون الأيقونات وتأثير لونها عند hover بلا تغيير.
+   خصوصية 4×ID لتتجاوز final-topbar-white-invert و final-radius-system.
+   للاسترجاع: احذف هذه الطبقة. */
+html body:not(#_t1):not(#_t2):not(#_t3):not(#_t4) .portal-actions .portal-action-btn{
+  border:0 !important;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  transition:background-color .2s ease, color .2s ease !important;
+}
+html body:not(#_t1):not(#_t2):not(#_t3):not(#_t4) .portal-actions .portal-action-btn:hover,
+html body:not(#_t1):not(#_t2):not(#_t3):not(#_t4) .portal-actions .portal-action-btn:focus-visible{
+  background:#FFFFFF !important;
+  border:0 !important;
+  border-radius:50% !important;
+}
 </style>
 <style id="FORCE-LIGHT-THEME-FINAL">
 /* Global Cairo Bold — applies to every element on the page.

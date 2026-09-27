@@ -3638,7 +3638,7 @@ body{
     });
     qa('.top-info, .top-info *').forEach(function(el){
       important(el,'font-family',"CairoOld, Arial, sans-serif");
-      important(el,'font-weight','600');
+      important(el,'font-weight','700');
     });
     qa('.r-card').forEach(function(card){
       card.onmouseenter=function(){
@@ -6545,6 +6545,47 @@ html body .rayat-band {
 }
 .news-dot.is-active{ background:#005B85;background-repeat:no-repeat; width:22px; border-radius:0; }
 @media(max-width:760px){ .news-rotator-controls{ margin-top:.25rem; } }
+</style>
+<style id="final-unified-header-gradient">
+/* ====================================================================
+   A) هيدر موحّد كطبقة واحدة:
+      - تدرج أفقي واحد على الحاوية الأب .site-header-stack فقط: أبيض + rgba(163,199,226) شفافية 0 → 0.5 (52%) → 0.
+      - الطبقات الداخلية (top-info / top-bar / nav / nav-inner) شفافة وبلا خطوط فاصلة.
+      - لا تغيير على الأيقونات أو الأزرار أو الشعار أو التنقل.
+      موضوعة قبل FORCE-LIGHT-THEME-FINAL؛ خصوصية ID (:not(#_hN)) لتتجاوز طبقات
+      final-header-nav-white-invert و final-topbar-white-invert اللاحقة.
+   للاسترجاع: احذف هذه الطبقة فقط.
+   ==================================================================== */
+html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3){
+  background-color:#FFFFFF !important;
+  background-image:linear-gradient(to right, rgba(163, 199, 226, 0) 0%, rgba(163, 199, 226, 0.5) 52%, rgba(163, 199, 226, 0) 100%) !important;
+}
+html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > .top-info,
+html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > .top-bar,
+html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > nav,
+html body .site-header-stack:not(#_h1):not(#_h2):not(#_h3) > nav .nav-inner{
+  background:transparent !important;
+  background-image:none !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+  box-shadow:none !important;
+}
+</style>
+<style id="final-all-bold-700">
+/* ====================================================================
+   B) جميع أوزان الخطوط Bold 700 على كامل الموقع.
+      موضوعة قبل FORCE-LIGHT-THEME-FINAL؛ خصوصية 3×ID لتتجاوز final-font-weights
+      و final-semi-bold-bold-only-typography اللاحقتين (خصوصيتهما 1×ID).
+   للاسترجاع: احذف هذه الطبقة فقط.
+   ==================================================================== */
+html body:not(#_w1),
+html body:not(#_w1) :not(svg):not(svg *):not(#_w2):not(#_w3),
+html body:not(#_w1) input:not(#_w2):not(#_w3),
+html body:not(#_w1) button:not(#_w2):not(#_w3),
+html body:not(#_w1) textarea:not(#_w2):not(#_w3),
+html body:not(#_w1) select:not(#_w2):not(#_w3){
+  font-weight:700 !important;
+}
 </style>
 <style id="FORCE-LIGHT-THEME-FINAL">
 /* Global Cairo Bold — applies to every element on the page.

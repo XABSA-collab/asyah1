@@ -1707,13 +1707,17 @@ body.site-high-contrast .sec-panel{
 </div>
 <div class="header-tools">
 <!-- ====== شريط البحث المزدوج: بحث الموقع + بحث التحويلات الهاتفية ====== -->
-<div class="dual-search-wrap">
-<!-- البحث في الموقع -->
-<div class="header-search">
-<input id="search-input" onblur="closeSearch()" oninput="doSearch(this.value)" placeholder="ابحث في الموقع" type="text"/>
-<button class="portal-action-btn search-action" onclick="toggleSearch()" title="بحث" type="button">
+<!-- ====== أيقونة البحث (تفتح نافذة البحث العائمة) — طبقة final-search-overlay ====== -->
+<button class="portal-action-btn search-action" onclick="toggleSearch()" title="بحث" type="button" aria-haspopup="dialog" aria-controls="search-overlay-panel" aria-expanded="false">
 <svg aria-hidden="true" height="18" width="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-search"><path style="fill:none!important;stroke:currentColor!important" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path style="fill:none!important;stroke:currentColor!important" d="M21 21l-6 -6"/></svg>
 </button>
+<div class="search-overlay-backdrop" id="search-overlay-backdrop" onclick="closeSearchOverlay()" aria-hidden="true"></div>
+<div class="dual-search-wrap" id="search-overlay-panel" role="dialog" aria-modal="true" aria-label="البحث في الموقع">
+<button type="button" class="search-overlay-close" onclick="closeSearchOverlay()" aria-label="إغلاق البحث" title="إغلاق"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6L18 18M18 6L6 18"/></svg></button>
+<!-- البحث في الموقع -->
+<div class="header-search">
+<span class="search-overlay-icon" aria-hidden="true"><svg aria-hidden="true" height="18" width="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-search"><path style="fill:none!important;stroke:currentColor!important" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path style="fill:none!important;stroke:currentColor!important" d="M21 21l-6 -6"/></svg></span>
+<input id="search-input" onblur="closeSearch()" oninput="doSearch(this.value)" placeholder="ابحث في الموقع" type="text"/>
 <div id="search-results"></div>
 </div>
 <!-- البحث في دليل التحويلات الهاتفية -->
@@ -1912,7 +1916,7 @@ body.site-high-contrast .sec-panel{
 <span style="width:10px;height:10px;border-radius:50% !important;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
 <span style="font-size:12px;font-weight:600;color:#1B2F3A;font-family: CairoOld, Arial, sans-serif">الربط المباشر مع المؤسسة</span>
 </div>
-<div class="rayat-band" style="margin-bottom:2rem">
+<div class="rayat-band cards-grad" style="margin-bottom:2rem">
 <div class="rayat-head">
 <svg aria-hidden="true" class="rayat-link-icon" height="28" width="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-diamond" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M9.93,20.11c1.18,1.12,3.05,1.1,4.21-.06l5.91-5.91c1.18-1.18,1.18-3.1,0-4.28l-5.91-5.91c-1.18-1.18-3.1-1.18-4.28,0l-5.91,5.91c-1.18,1.18-1.18,3.1,0,4.28l.73.73"/><line style="fill:none!important;stroke:currentColor!important" x1="6.91" y1="17.1" x2="7.9" y2="18.09"/></svg>
 <h2>روابط الدخول على نظام رايات</h2>
@@ -1940,7 +1944,7 @@ body.site-high-contrast .sec-panel{
 </div>
 </div>
 <!-- الخدمات الإلكترونية -->
-<div class="sec-panel" style="margin-bottom:2rem">
+<div class="sec-panel cards-grad" style="margin-bottom:2rem">
 <div class="sec-header" style="cursor:default">
 <div class="sec-title">
 <svg class="icon" aria-hidden="true" focusable="false" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-layout-grid" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path style="fill:none!important;stroke:currentColor!important" d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/></svg>
@@ -1983,7 +1987,7 @@ body.site-high-contrast .sec-panel{
 </div>
 </div>
 <!-- روابط مفيدة -->
-<div class="sec-panel" style="margin-bottom:2rem">
+<div class="sec-panel cards-grad" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg class="icon" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-icon="tabler-link" data-ink style="--icon-ink:#005B85"><path style="fill:none!important;stroke:currentColor!important" d="M9 15l6 -6"/><path style="fill:none!important;stroke:currentColor!important" d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path style="fill:none!important;stroke:currentColor!important" d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg>
@@ -2039,7 +2043,7 @@ body.site-high-contrast .sec-panel{
 </div>
 <!-- الهيكل التنظيمي -->
 <div id="org-section" style="position:relative;top:-70px"></div>
-<div class="sec-panel" style="margin-bottom:2rem">
+<div class="sec-panel cards-grad" style="margin-bottom:2rem">
 <div class="sec-header">
 <div class="sec-title">
 <svg aria-hidden="true" height="24" width="24" viewBox="-85 -85 682 682" data-icon="layer-group-solid" data-ink style="--icon-ink:#005B85"><path style="fill:currentColor!important;stroke:none!important" d="M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 149.8C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8L232.5 5.2zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 277.8C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8l34.1-15.8zM13.9 362.2l34.1-15.8 164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 405.8C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8z"/></svg>
@@ -2582,13 +2586,27 @@ const searchData=[
   {t:'البريد الإلكتروني',u:'https://mail.tvtc.gov.sa/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.tvtc.gov.sa%2fowa%2f'},
         {t:'الكلية على X',u:'https://twitter.com/tvtc_g_alasyah'},
 ];
-function toggleSearch(){
-  const inp=document.getElementById('search-input');
-  const open=inp.style.width==='220px';
-  if(open){inp.style.width='0';inp.style.padding='0';inp.style.opacity='0';document.getElementById('search-results').style.display='none';}
-  else{inp.style.width='220px';inp.style.padding='6px 14px';inp.style.opacity='1';inp.focus();}
+/* البحث يظهر كنافذة عائمة (final-search-overlay) بدل الطيّ داخل الهيدر.
+   نفس محرك البحث (doSearch / filterPhones) بلا تغيير.
+   السلوك القديم: toggleSearch كان يوسّع/يطوي الخانة (width 0 <-> 220px)،
+   و closeSearch كان يطويها بعد 200ms عند فقدان التركيز. */
+function openSearchOverlay(){
+  document.body.classList.add('search-overlay-open');
+  var b=document.querySelector('.search-action'); if(b) b.setAttribute('aria-expanded','true');
+  setTimeout(function(){ var i=document.getElementById('search-input'); if(i) i.focus(); },30);
 }
-function closeSearch(){setTimeout(()=>{document.getElementById('search-input').style.width='0';document.getElementById('search-input').style.padding='0';document.getElementById('search-input').style.opacity='0';document.getElementById('search-results').style.display='none';},200);}
+function closeSearchOverlay(){
+  if(!document.body.classList.contains('search-overlay-open')) return;
+  document.body.classList.remove('search-overlay-open');
+  var r=document.getElementById('search-results'); if(r) r.style.display='none';
+  var pr=document.getElementById('phone-search-results'); if(pr) pr.classList.remove('is-open');
+  var b=document.querySelector('.search-action'); if(b){ b.setAttribute('aria-expanded','false'); b.focus(); }
+}
+function toggleSearch(){
+  if(document.body.classList.contains('search-overlay-open')) closeSearchOverlay(); else openSearchOverlay();
+}
+function closeSearch(){ /* داخل النافذة لا تُطوى الخانة عند فقدان التركيز */ }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeSearchOverlay(); });
 function doSearch(q){
   const box=document.getElementById('search-results');
   if(!q.trim()){box.style.display='none';return;}
@@ -3662,9 +3680,10 @@ body{
         important(card,'color','#005B85');
         important(card,'border-color','rgba(30, 83, 116,.20)');
         card.querySelectorAll('*').forEach(function(c){
-          important(c,'color','#005B85');
+          var ic = c.closest && c.closest('.r-icon');
+          important(c,'color', ic ? '#1FBBB4' : '#005B85');
           if(c.closest && c.closest('svg[data-icon]')) return;
-          important(c,'stroke','#005B85');
+          important(c,'stroke', ic ? '#1FBBB4' : '#005B85');
           important(c,'fill','none');
         });
       };
@@ -3965,7 +3984,8 @@ nav::after,
 
   function fixToolIcons(){
     document.querySelectorAll('.portal-action-btn').forEach(function(btn){
-      important(btn,'color','#005B85');
+      var baseColor = btn.classList.contains('search-action') ? '#FFFFFF' : '#005B85';
+      important(btn,'color',baseColor);
       important(btn,'visibility','visible');
       important(btn,'opacity','1');
 
@@ -3988,10 +4008,10 @@ nav::after,
       });
 
       btn.addEventListener('mouseenter', function(){
-        important(btn,'color','#1499A3');
+        important(btn,'color', btn.classList.contains('search-action') ? '#FFFFFF' : '#1499A3');
       });
       btn.addEventListener('mouseleave', function(){
-        important(btn,'color','#005B85');
+        important(btn,'color',baseColor);
       });
     });
   }
@@ -6564,7 +6584,7 @@ html body .rayat-band {
 /* التدرج على الحاوية الأب .header-hero-band (الهيدر + Hero) — عمودي من الأعلى للأسفل */
 html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3){
   background-color:#FFFFFF !important;
-  background-image:linear-gradient(to bottom, rgba(163, 199, 226, 0) 0%, rgba(163, 199, 226, 0.5) 50%, rgba(163, 199, 226, 0) 100%) !important;
+  background-image:none !important; /* كان: linear-gradient(to bottom, rgba(163,199,226,0) 0%, rgba(163,199,226,.5) 50%, rgba(163,199,226,0) 100%) */
 }
 html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3) > .site-header-stack,
 html body .header-hero-band:not(#_h1):not(#_h2):not(#_h3) > #hero-slider,
@@ -6704,6 +6724,228 @@ html body:not(#_t1):not(#_t2):not(#_t3):not(#_t4) .portal-actions .portal-action
   background:#FFFFFF !important;
   border:0 !important;
   border-radius:50% !important;
+}
+</style>
+<style id="final-cards-gradient-sections">
+/* ====================================================================
+   أقسام البطاقات (روابط رايات، الخدمات الإلكترونية، روابط مفيدة، الهيكل التنظيمي) — class="cards-grad":
+   - خلفية القسم: linear-gradient(199deg, #005B85 → #1FBBB4) + حشوة داخلية.
+   - عنوان القسم وأيقونته أبيض ليُقرأ على التدرج.
+   - البطاقات: خلفية بيضاء، نص #005B85، أيقونات #1FBBB4.
+   - hover: خلفية #005B85، نص وأيقونات بيضاء، transition ناعم، بلا حركة/تكبير.
+   للاسترجاع: احذف هذه الطبقة و class="cards-grad" من الأقسام.
+   ==================================================================== */
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad{
+  background:linear-gradient(199deg, #005B85 0%, #1FBBB4 100%) !important;
+  padding:24px 22px !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title *,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head h2, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-hint{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ stroke:#FFFFFF !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg [fill]:not([fill="none"]){ fill:#FFFFFF !important; }
+
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card{
+  background:#FFFFFF !important;
+  color:#005B85 !important;
+  transform:none !important;
+  transition:background-color .25s ease, color .25s ease, border-color .25s ease !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card .svc-title, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card .svc-desc,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-title, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-sub, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-footer{
+  color:#005B85 !important;
+  transition:color .25s ease !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card .r-icon, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card .r-icon svg,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card .svc-icon svg,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-icon svg{
+  color:#1FBBB4 !important;
+  stroke:#1FBBB4 !important;
+  transition:color .25s ease, stroke .25s ease !important;
+}
+
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card:hover, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover{
+  background:#005B85 !important;
+  border-color:#005B85 !important;
+  color:#FFFFFF !important;
+  transform:none !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card:hover *, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover *, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover *{
+  color:#FFFFFF !important;
+  -webkit-text-fill-color:#FFFFFF !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card:hover .r-icon svg,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover .svc-icon svg,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover .oc-card-icon svg{
+  color:#FFFFFF !important;
+  stroke:#FFFFFF !important;
+}
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover .svc-icon,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover .oc-card-icon{ background:transparent !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover .oc-card-footer::before{ background:#FFFFFF !important; }
+/* أيقونات Tabler تُلوَّن عبر المتغير --icon-ink (طبقة outline-icons) لا عبر color */
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card .r-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card .svc-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-icon svg{ --icon-ink:#1FBBB4 !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card:hover .r-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover .svc-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover .oc-card-icon svg{ --icon-ink:#FFFFFF !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ --icon-ink:#FFFFFF !important; }
+</style>
+<style id="final-search-overlay">
+/* ====================================================================
+   البحث في الهيدر: أيقونة فقط (#1FBBB4 بلا خلفية دائمة، دائرة بيضاء عند hover).
+   الضغط عليها يفتح نفس واجهة البحث الحالية (.dual-search-wrap: بحث الموقع + بحث التحويلات)
+   كنافذة عائمة بيضاء أعلى الصفحة فوق طبقة تعتيم — بلا تحريك لمحتوى الصفحة.
+   الإغلاق: زر X، الضغط خارج النافذة، أو Esc.
+   للاسترجاع: احذف هذه الطبقة وأعد toggleSearch/closeSearch القديمة.
+   ==================================================================== */
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5) .top-bar .search-action{
+  border:0 !important;
+  background:#1FBBB4 !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  color:#FFFFFF !important;
+  border-radius:50% !important;
+  transition:background-color .2s ease !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5) .top-bar .search-action:hover,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5) .top-bar .search-action:focus-visible{
+  background:#005B85 !important;
+  color:#FFFFFF !important;
+  border-radius:50% !important;
+}
+
+/* مخفية افتراضيًا — لم تعد جزءًا دائمًا من الهيدر */
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5) .dual-search-wrap,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5) .search-overlay-backdrop{ display:none !important; }
+
+/* فوق كل عناصر الصفحة أثناء الفتح فقط */
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .site-header-stack{ z-index:10000 !important; }
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .site-header-stack .header-shell{ z-index:10000 !important; }
+
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .search-overlay-backdrop{
+  display:block !important;
+  position:fixed !important;
+  inset:0 !important;
+  background:rgba(0, 43, 60, .35) !important;
+  z-index:10000 !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  flex-wrap:nowrap !important;
+  gap:12px !important;
+  position:fixed !important;
+  top:16px !important;
+  left:50% !important;
+  transform:translateX(-50%) !important;
+  width:min(1140px, calc(100% - 32px)) !important;
+  max-height:calc(100vh - 32px) !important;
+  overflow:auto !important;
+  box-sizing:border-box !important;
+  padding:24px 24px 24px 72px !important;
+  background:#FFFFFF !important;
+  border-radius:0 !important;
+  box-shadow:0 18px 48px rgba(0, 43, 60, .25) !important;
+  direction:rtl !important;
+  z-index:10001 !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .header-search,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .header-phone-search{
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #search-input,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  opacity:1 !important;
+  box-sizing:border-box !important;
+  background:#FFFFFF !important;
+  border:1px solid #005B85 !important;
+  border-radius:0 !important;
+  color:#005B85 !important;
+  -webkit-text-fill-color:#005B85 !important;
+  box-shadow:none !important;
+  direction:rtl !important;
+  text-align:right !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #search-input{
+  height:56px !important;
+  padding:0 52px 0 16px !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search{
+  height:46px !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #search-input:hover,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #search-input:focus,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search:hover,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search:focus{
+  border-color:#005B85 !important;
+  border-radius:0 !important;
+  background:#FFFFFF !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-icon{
+  position:absolute !important;
+  top:28px !important;
+  right:18px !important;
+  transform:translateY(-50%) !important;
+  display:inline-flex !important;
+  color:#1FBBB4 !important;
+  pointer-events:none !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-icon svg{ width:22px !important; height:22px !important; }
+/* أيقونتا حقل التحويلات (هاتف + عدسة) كانت top:50% من .header-phone-search؛ وبعد إدراج النتائج
+   داخل نفس الحاوية صار 50% في منتصف قائمة النتائج فظهرتا فوقها. تُثبَّتان بمنتصف الحقل (46px). */
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .header-phone-search .phone-search-icon,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .header-phone-search .phone-search-icon-search{
+  top:23px !important;
+}
+/* نتائج البحث داخل النافذة (بدل القائمة المنسدلة المطلقة) */
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #search-results,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .phone-search-results{
+  position:static !important;
+  width:100% !important;
+  max-height:40vh !important;
+  overflow:auto !important;
+  margin-top:6px !important;
+  box-sizing:border-box !important;
+  transform:none !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-close{
+  position:absolute !important;
+  top:24px !important;
+  left:20px !important;
+  width:40px !important;
+  height:40px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:0 !important;
+  background:transparent !important;
+  color:#005B85 !important;
+  cursor:pointer !important;
+  border-radius:50% !important;
+  padding:0 !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-close:hover,
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-close:focus-visible{
+  background:#EAF5FA !important;
+}
+html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-close svg{ stroke:currentColor !important; }
+@media (max-width:640px){
+  html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap{
+    top:12px !important;
+    width:calc(100% - 24px) !important;
+    padding:60px 16px 16px !important;
+  }
+  html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-close{
+    top:12px !important;
+    left:12px !important;
+  }
 }
 </style>
 <style id="FORCE-LIGHT-THEME-FINAL">

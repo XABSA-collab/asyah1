@@ -6729,24 +6729,26 @@ html body:not(#_t1):not(#_t2):not(#_t3):not(#_t4) .portal-actions .portal-action
 <style id="final-cards-gradient-sections">
 /* ====================================================================
    أقسام البطاقات (روابط رايات، الخدمات الإلكترونية، روابط مفيدة، الهيكل التنظيمي) — class="cards-grad":
-   - خلفية القسم: linear-gradient(199deg, #005B85 → #1FBBB4) + حشوة داخلية.
+   - خلفية القسم: linear-gradient(199deg, #005B85 → #1FBBB4) + حشوة داخلية — لقسم روابط رايات فقط
+     (أُزيل التدرج من الخدمات الإلكترونية وروابط مفيدة والهيكل التنظيمي).
    - عنوان القسم وأيقونته أبيض ليُقرأ على التدرج.
    - البطاقات: خلفية بيضاء، نص #005B85، أيقونات #1FBBB4.
    - hover: خلفية #005B85، نص وأيقونات بيضاء، transition ناعم، بلا حركة/تكبير.
    للاسترجاع: احذف هذه الطبقة و class="cards-grad" من الأقسام.
    ==================================================================== */
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad{
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad{
+  border-radius:16px !important;
   background:linear-gradient(199deg, #005B85 0%, #1FBBB4 100%) !important;
   padding:24px 22px !important;
 }
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title *,
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .sec-title, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .sec-title *,
 html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head h2, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg,
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-hint{
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .oc-hint{
   color:#FFFFFF !important;
   -webkit-text-fill-color:#FFFFFF !important;
 }
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ stroke:#FFFFFF !important; }
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg [fill]:not([fill="none"]){ fill:#FFFFFF !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ stroke:#FFFFFF !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .sec-title svg [fill]:not([fill="none"]){ fill:#FFFFFF !important; }
 
 html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card{
   background:#FFFFFF !important;
@@ -6789,7 +6791,7 @@ html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card
 /* أيقونات Tabler تُلوَّن عبر المتغير --icon-ink (طبقة outline-icons) لا عبر color */
 html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card .r-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card .svc-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card .oc-card-icon svg{ --icon-ink:#1FBBB4 !important; }
 html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .r-card:hover .r-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .svc-card:hover .svc-icon svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .oc-card:hover .oc-card-icon svg{ --icon-ink:#FFFFFF !important; }
-html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ --icon-ink:#FFFFFF !important; }
+html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .rayat-band.cards-grad .sec-title svg, html body:not(#_k1):not(#_k2):not(#_k3):not(#_k4):not(#_k5) .cards-grad .rayat-head svg{ --icon-ink:#FFFFFF !important; }
 </style>
 <style id="final-search-overlay">
 /* ====================================================================
@@ -6866,7 +6868,7 @@ html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open 
   box-sizing:border-box !important;
   background:#FFFFFF !important;
   border:1px solid #005B85 !important;
-  border-radius:0 !important;
+  border-radius:999px !important;
   color:#005B85 !important;
   -webkit-text-fill-color:#005B85 !important;
   box-shadow:none !important;
@@ -6885,7 +6887,7 @@ html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open 
 html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search:hover,
 html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap #phone-search:focus{
   border-color:#005B85 !important;
-  border-radius:0 !important;
+  border-radius:999px !important;
   background:#FFFFFF !important;
 }
 html body:not(#_q1):not(#_q2):not(#_q3):not(#_q4):not(#_q5).search-overlay-open .dual-search-wrap .search-overlay-icon{

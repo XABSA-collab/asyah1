@@ -1,0 +1,115 @@
+{
+  "checkedOn": "2026-10-13",
+  "verification": "طوبقت النصوص وتواريخ النشر وترتيب الصور على صفحات X الأصلية. استُخدمت بيانات FxTwitter لاستخراج ملفات الصور الأصلية والطابع الزمني.",
+  "titles": "العناوين مقترحة من النصوص، وليست عناوين منشورة منفصلة في X.",
+  "photos": [
+    {
+      "post_id": "2109914347216740570",
+      "photo_number": 1,
+      "relative_path": "assets/news/2026-10-13-mental-health/photo-01.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfr4d2W4AA_65P.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "39217e0e9824be8b533743e4858cd25684b826d209e34a17e7892f8e291236ed"
+    },
+    {
+      "post_id": "2109914347216740570",
+      "photo_number": 2,
+      "relative_path": "assets/news/2026-10-13-mental-health/photo-02.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfr4d7W4AA3Dz4.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "a741a522f022d3c24871ee2942c84e7b259bdafd406ad39ffe02b8c1f0c75060"
+    },
+    {
+      "post_id": "2109914347216740570",
+      "photo_number": 3,
+      "relative_path": "assets/news/2026-10-13-mental-health/photo-03.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfr4d7XsAA6Xwi.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "0d3b6bf659f2a8dde58108f7e8a9a831b8d49ca4c1153a3ac49cb9504a913872"
+    },
+    {
+      "post_id": "2109914347216740570",
+      "photo_number": 4,
+      "relative_path": "assets/news/2026-10-13-mental-health/photo-04.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfr4d4XIAA5Z7t.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "54f9e130eac1ba5e8e27c5cb0635e9c1018f5a76e32bd30d97440b157970170d"
+    },
+    {
+      "post_id": "2109893624406110627",
+      "photo_number": 1,
+      "relative_path": "assets/news/2026-10-13-green-qassim/photo-01.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfZAs2WsAAh-wZ.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "b0059679ddf19f4286f0ca106c43a2716f1cc366cd6573f5cab4dbeb6503fe8f"
+    },
+    {
+      "post_id": "2109893624406110627",
+      "photo_number": 2,
+      "relative_path": "assets/news/2026-10-13-green-qassim/photo-02.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfZAwiXYAAahGB.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "8dc866a03a049883198208a1a938d0b91ae45b5f33bb12cac06696c7d290d6a3"
+    },
+    {
+      "post_id": "2109893624406110627",
+      "photo_number": 3,
+      "relative_path": "assets/news/2026-10-13-green-qassim/photo-03.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfZAs4W4AAjOCS.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "51884efe11492683e0ef0cd4a7c67019d8b3adac3fed3425ece59efb173fb55e"
+    },
+    {
+      "post_id": "2109893624406110627",
+      "photo_number": 4,
+      "relative_path": "assets/news/2026-10-13-green-qassim/photo-04.jpg",
+      "source_url": "https://pbs.twimg.com/media/HUfZAs1WcAAnpcz.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "7f792b1078c64b4fa7e1a3fb5c91973f6bb3708725f82710d6d9551cce5f8f2d"
+    },
+    {
+      "post_id": "2104173344467923200",
+      "photo_number": 1,
+      "relative_path": "assets/news/2026-09-27-saudi-national-day/photo-01.jpg",
+      "source_url": "https://pbs.twimg.com/media/HTOGfKbWoAAQc76.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "786295598e3f69cc992ac224868af7efe49809421880d75bcbe858f8616e40e5"
+    },
+    {
+      "post_id": "2104173344467923200",
+      "photo_number": 2,
+      "relative_path": "assets/news/2026-09-27-saudi-national-day/photo-02.jpg",
+      "source_url": "https://pbs.twimg.com/media/HTOGfKiXwAAN0Uj.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "e91e4ce17a774176c4060cdfbbf08156dc0e61d1ca1a9a9652441ce98c77c1d3"
+    },
+    {
+      "post_id": "2104173344467923200",
+      "photo_number": 3,
+      "relative_path": "assets/news/2026-09-27-saudi-national-day/photo-03.jpg",
+      "source_url": "https://pbs.twimg.com/media/HTOGfKZWcAETqxh.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "75f35d875cb1faff691bd3b9e2de726ecd45c12e66ffb0b2049c26775030eb57"
+    },
+    {
+      "post_id": "2104173344467923200",
+      "photo_number": 4,
+      "relative_path": "assets/news/2026-09-27-saudi-national-day/photo-04.jpg",
+      "source_url": "https://pbs.twimg.com/media/HTOGfKjWYAAdOCW.jpg?name=orig",
+      "width": 3840,
+      "height": 2440,
+      "sha256": "9aa5a839ebf51e67a2e008294fcaa9074d79b8684be8b306cf70b3e5aced2644"
+    }
+  ]
+}

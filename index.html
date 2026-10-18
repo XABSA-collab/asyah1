@@ -1916,12 +1916,12 @@ body.site-high-contrast .sec-panel{
 <!-- ====== شريط متحرك: الإجازة الإضافية القادمة ======
      النص والمواعيد تُدار تلقائيًا من مصفوفة HOLIDAYS في السكربت أسفل الشريط. ====== -->
 <style id="holiday-ticker-css">
-.holiday-ticker{display:flex;align-items:stretch;margin:0 0 1.5rem;background:#fff;border:1px solid rgba(0,91,133,.22);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,91,133,.10);font-family:CairoOld,Cairo,Arial,sans-serif}
+.holiday-ticker{display:flex;align-items:stretch;margin:0 0 1.5rem;background:linear-gradient(199deg,#005B85 0%,#1FBBB4 100%);border:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,91,133,.10);font-family:CairoOld,Cairo,Arial,sans-serif}
 .holiday-ticker[hidden]{display:none}
 .holiday-ticker-viewport{flex:1;min-width:0;overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
 .holiday-ticker-track{display:flex;width:max-content;animation:holiday-ticker-move 40s linear infinite}
 .holiday-ticker:hover .holiday-ticker-track,.holiday-ticker:focus-within .holiday-ticker-track{animation-play-state:paused}
-.holiday-ticker-item{direction:rtl;display:inline-flex;align-items:center;gap:10px;padding:13px 48px;font-size:15px;font-weight:700;color:#1B2F3A;white-space:nowrap}
+.holiday-ticker-item{direction:rtl;display:inline-flex;align-items:center;gap:10px;padding:13px 48px;font-size:15px;font-weight:700;color:#fff;white-space:nowrap}
 @keyframes holiday-ticker-move{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media (max-width:760px){
   .holiday-ticker-item{font-size:14px;padding:11px 36px}

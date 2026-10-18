@@ -1913,6 +1913,80 @@ body.site-high-contrast .sec-panel{
 </section>
 </div>
 <!-- ====== /صور متحركة بين الهيرو والربط المباشر ====== -->
+<!-- ====== شريط متحرك: الإجازة الإضافية القادمة ======
+     النص والمواعيد تُدار تلقائيًا من مصفوفة HOLIDAYS في السكربت أسفل الشريط. ====== -->
+<style id="holiday-ticker-css">
+.holiday-ticker{display:flex;align-items:stretch;margin:0 0 1.5rem;background:#fff;border:1px solid rgba(0,91,133,.22);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,91,133,.10);font-family:CairoOld,Cairo,Arial,sans-serif}
+.holiday-ticker[hidden]{display:none}
+.holiday-ticker-viewport{flex:1;min-width:0;overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
+.holiday-ticker-track{display:flex;width:max-content;animation:holiday-ticker-move 40s linear infinite}
+.holiday-ticker:hover .holiday-ticker-track,.holiday-ticker:focus-within .holiday-ticker-track{animation-play-state:paused}
+.holiday-ticker-item{direction:rtl;display:inline-flex;align-items:center;gap:10px;padding:13px 48px;font-size:15px;font-weight:700;color:#1B2F3A;white-space:nowrap}
+@keyframes holiday-ticker-move{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (max-width:760px){
+  .holiday-ticker-item{font-size:14px;padding:11px 36px}
+}
+@media (prefers-reduced-motion:reduce){
+  .holiday-ticker-track{animation:none;width:auto}
+  .holiday-ticker-viewport{direction:rtl;-webkit-mask-image:none;mask-image:none}
+  .holiday-ticker-item{white-space:normal}
+  .holiday-ticker-item[aria-hidden="true"]{display:none}
+}
+body.site-high-contrast .holiday-ticker{background:#000;border-color:#fff}
+body.site-high-contrast .holiday-ticker-item{color:#fff}
+</style>
+<div class="holiday-ticker" id="holiday-ticker" role="region" aria-label="الإجازة الإضافية القادمة" hidden>
+<div class="holiday-ticker-viewport">
+<div class="holiday-ticker-track">
+<span class="holiday-ticker-item"></span>
+<span class="holiday-ticker-item" aria-hidden="true"></span>
+<span class="holiday-ticker-item" aria-hidden="true"></span>
+<span class="holiday-ticker-item" aria-hidden="true"></span>
+<span class="holiday-ticker-item" aria-hidden="true"></span>
+<span class="holiday-ticker-item" aria-hidden="true"></span>
+</div>
+</div>
+</div>
+<script>
+/* شريط الإجازات: يظهر قبل الإجازة بـ7 أيام (من 00:00) حتى نهاية يومها، حسب تاريخ الجهاز.
+   لإضافة/تعديل إجازة: عدّل مصفوفة HOLIDAYS فقط (y, m = رقم الشهر 1-12, d). */
+(function(){
+  var HOLIDAYS = [
+    { y:2026, m:10, d:25, text:'الأحد 25 أكتوبر 2026م الموافق 14 جمادى الأول 1448' },
+    { y:2026, m:11, d:29, text:'الأحد 29 نوفمبر 2026م الموافق 19 جمادى الآخر 1448' },
+    { y:2027, m:1,  d:7,  text:'الخميس 7 يناير 2027م الموافق 29 رجب 1448' },
+    { y:2027, m:4,  d:11, text:'الأحد 11 أبريل 2027م الموافق 4 ذو القعدة 1448' }
+  ];
+  var LEAD_DAYS = 7;
+  var box = document.getElementById('holiday-ticker');
+  if(!box) return;
+  var items = box.querySelectorAll('.holiday-ticker-item');
+  var shown = null;
+
+  function current(now){
+    for(var i=0;i<HOLIDAYS.length;i++){
+      var h = HOLIDAYS[i];
+      var start = new Date(h.y, h.m-1, h.d-LEAD_DAYS);
+      var end = new Date(h.y, h.m-1, h.d+1);
+      if(now >= start && now < end) return h;
+    }
+    return null;
+  }
+  function update(){
+    var h = current(new Date());
+    if(h === shown) return;
+    shown = h;
+    if(!h){ box.hidden = true; return; }
+    var msg = 'الإجازة الإضافية القادمة: ' + h.text;
+    for(var i=0;i<items.length;i++) items[i].textContent = msg;
+    box.hidden = false;
+  }
+  update();
+  setInterval(update, 60000);
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) update(); });
+})();
+</script>
+<!-- ====== /شريط متحرك: الإجازة الإضافية القادمة ====== -->
 <!-- ربط مباشر مع المؤسسة + رايات -->
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 14px;background:rgba(255,255,255,0.7);border-radius:10px;width:fit-content">
 <span style="width:10px;height:10px;border-radius:50% !important;background:#E01B21;display:inline-block;flex-shrink:0;box-shadow:0 0 0 0 rgba(224,27,33,0.6);animation:pulse 1.8s infinite"></span>
